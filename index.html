@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>preview</title>
+    <link rel="stylesheet" href="Character%20Sheet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <button class="sheet-togglebutton" data-target="#ours">show ours</button>
+    <button class="sheet-togglebutton" data-target="#theirs">show theirs</button>
+    <div class="sheet-toggle" id="ours">
+        <h1>OURS</h1>
+        <div id="oursContent"></div>
+    </div>
+    <div class="sheet-toggle" id="theirs">
+        <h1>THEIRS</h1>
+        <div id="theirsContent"></div>
+    </div>
+</div>
+
+<script type="application/javascript">
+    $(document).ready( function () {
+        $('#oursContent').load('Character%20Sheet.html');
+        $('#theirsContent').load('Original%20Character%20Sheet.html');
+        $('.sheet-toggle').hide();
+        $('.sheet-togglebutton').bind("click",function(){
+            var target = $(this).data("target");
+            alert(target);
+            $('.sheet-toggle').hide();
+            $(target).show();
+        });
+    });
+</script>
+</body>
+</html>
