@@ -1,6 +1,6 @@
 {
   "character_name_desc":"CHARACTER NAME",
   "character_race_desc":"VOLK",
-  "attr_character_profession":"PROFESSION",
-  "character_race_culture":"KULTUR"
+  "character_profession_desc":"PROFESSION",
+  "character_race_culture_desc":"KULTUR"
 }
