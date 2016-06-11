@@ -1,3 +1,51 @@
+/*css table markup*/
+.table {
+    display: table;
+}
+.row {
+    display: table-row;
+    width:100%;
+}
+
+.row.two-col-row .cell {
+    width: 50%;
+}
+
+.row.three-col-row .cell {
+    width: 33%;
+}
+
+.cell {
+    display: table-cell;
+}
+
+/*attribute css*/
+.table.attribute-table {
+    width: 400px;
+}
+
+.attribute-list {
+    position: relative;
+}
+
+.attribute-list > * {
+    margin: 5px;
+}
+
+.attribute-list span {
+    width: 50%;
+}
+
+.attribute-list input {
+    position: absolute;
+    right:0;
+    max-width: 30px;
+    text-align: right;
+    padding: 2px;
+}
+
+/*old css needs to get cleared*/
+
 .charsheet {
     background-image: url("http://www.akcni-figurky.cz/themes/petra/img/pozadi.jpg");
 }
