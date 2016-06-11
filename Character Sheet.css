@@ -1,47 +1,97 @@
 /*css table markup*/
-.table {
+.sheet-table {
     display: table;
 }
-.row {
+
+.sheet-row {
     display: table-row;
     width:100%;
 }
 
-.row.two-col-row .cell {
+.sheet-row.sheet-two-col-row > .sheet-cell {
     width: 50%;
 }
 
-.row.three-col-row .cell {
+.sheet-row.sheet-three-col-row > .sheet-cell {
     width: 33%;
 }
 
-.cell {
+.sheet-row.sheet-vmiddle .sheet-cell {
+    vertical-align: middle;
+}
+
+.sheet-cell {
     display: table-cell;
 }
 
-/*attribute css*/
-.table.attribute-table {
-    width: 400px;
+.sheet-cell.sheet-vmiddle {
+    vertical-align: middle;
 }
 
-.attribute-list {
+.sheet-clear {
+    clear: both;
+}
+
+/*attribute css*/
+.sheet-table.sheet-attribute-table {
+    width: 400px;
     position: relative;
 }
 
-.attribute-list > * {
+.sheet-table.sheet-attribute-table.sheet-right {
+    float: right ;
+}
+
+.sheet-table.sheet-attribute-table.sheet-left {
+    float: left ;
+}
+
+.sheet-table.sheet-attribute-table.sheet-full {
+    width: 100%;
+}
+
+.sheet-attribute-list {
+    position: relative;
+}
+
+.sheet-attribute-list > * {
     margin: 5px;
 }
 
-.attribute-list span {
+.sheet-attribute-list span {
     width: 50%;
 }
 
-.attribute-list input {
-    position: absolute;
+.sheet-attribute-list input {
     right:0;
     max-width: 30px;
     text-align: right;
     padding: 2px;
+}
+
+input.sheet-hidden-input {
+    opacity: 0;
+    width: 90px;
+    cursor: pointer;
+}
+
+/*css navigation*/
+input.sheet-navigation.sheet-talents:checked ~ div.sheet-talents,
+input.sheet-navigation.sheet-general:checked ~ div.sheet-general {
+    display: inherit !important;
+}
+
+input.sheet-navigation:checked + span.sheet-navigation {
+    background-color: black;
+    color: white;
+}
+
+span.sheet-navigation {
+    margin-left: -90px;
+}
+
+div.sheet-charsheet {
+    display: none;
 }
 
 /*old css needs to get cleared*/

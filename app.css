@@ -1713,7 +1713,6 @@ body {
     padding: 0;
     -webkit-user-select: none;
     background: url(https://d3clqjduf2gvxg.cloudfront.net/images/background.png);
-    overflow: hidden
 }
 
 #editor-wrapper.noshow,#canvas-overlay.noshow {

@@ -1,93 +1,516 @@
 <div class="container">
-    <div class="sheet-general">
-        <div class="table">
-            <div class="row two-col-row">
-                <div class="cell">
-                    <input type="text" name="attr_character_name" value="@{character_name}">
-                    <span data-i18n="character_name_desc">CHARACTER NAME</span>
-                </div>
-                <div class="cell">
-                    <input type="text" name="attr_character_profession">
-                    <span data-i18n="character_profession_desc">PROFESSION</span>
-                </div>
-            </div>
-            <div class="row two-col-row">
-                <div class="cell">
-                    <select name="attr_race">
-                        <option data-i18n="human" value="human">Mensch</option>
-                        <option data-i18n="elf" value="elf">Elf</option>
-                        <option data-i18n="halfelf" value="halfelf">Halbelf</option>
-                        <option data-i18n="dwarf" value="dwarf">Zwerg</option>
-                    </select>
-                    <span data-i18n="character_race_desc">VOLK</span>
-                </div>
-                <div class="cell">
-                    <input type="text" name="attr_character_culture">
-                    <span data-i18n="character_race_culture_desc">KULTUR</span>
-                </div>
-            </div>
-            <div class="row two-col-row">
-                <div class="cell">
-                    <select name="attr_sex">
-                        <option data-i18n="male" value="male">männlich</option>
-                        <option data-i18n="female" value="female">weiblich</option>
-                        <option data-i18n="unknown" value="unknown">unbekannt</option>
-                    </select>
-                    <span data-i18n="character_sex_desc">GESCHLECHT</span>
-                </div>
-                <div class="cell">
-                    <input type="text" name="attr_birthday_age">
-                    <span data-i18n="character_birthday_age_desc">GEBURTSTAG/ALTER</span>
-                </div>
-            </div>
-            <div class="row two-col-row">
 
+
+    <input type="radio" class="sheet-hidden-input sheet-navigation sheet-general" name="attr_pagenumber" title="PAGE 1" value="1" checked>
+    <span class="sheet-navigation" data-i18n="character_general_desc">PERSON</span>
+    <input type="radio" class="sheet-hidden-input sheet-navigation sheet-talents" name="attr_pagenumber" title="PAGE 2" value="2">
+    <span class="sheet-navigation" data-i18n="character_talents_desc">TALENTS</span>
+
+    <div class="sheet-general sheet-charsheet">
+
+        <!--basic attributes-->
+        <div class="sheet-table sheet-attribute-table sheet-right">
+            <div class="sheet-row sheet-attribute-list">
+                <div class="sheet-cell"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_MU" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_ch">CH</span><br><input type="number" name="attr_CH" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_ff">FF</span><br><input type="number" name="attr_FF" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_ge">GE</span><br><input type="number" name="attr_GE" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_ko">KO</span><br><input type="number" name="attr_KO" value="8"></label></div>
+                <div class="sheet-cell"><label><span data-i18n="attr_kk">KK</span><br><input type="number" name="attr_KK" value="8"></label></div>
             </div>
         </div>
-        <div class="table attribute-table">
-            <div class="row three-col-row">
-                <div class="cell attribute-list">
-                    <div><span data-i18n="attr_mu">MU</span><input type="number" name="attr_MU" value="8"></div>
-                    <div><span data-i18n="attr_kl">KL</span><input type="number" name="attr_KL" value="8"></div>
-                    <div><span data-i18n="attr_in">IN</span><input type="number" name="attr_MU" value="8"></div>
-                    <div><span data-i18n="attr_ch">CH</span><input type="number" name="attr_CH" value="8"></div>
-                    <div><span data-i18n="attr_ff">FF</span><input type="number" name="attr_FF" value="8"></div>
-                    <div><span data-i18n="attr_ge">GE</span><input type="number" name="attr_GE" value="8"></div>
-                    <div><span data-i18n="attr_ko">KO</span><input type="number" name="attr_KO" value="8"></div>
-                    <div><span data-i18n="attr_kk">KK</span><input type="number" name="attr_KK" value="8"></div>
+        <!--/basic attributes-->
+
+        <div class="sheet-table sheet-clear">
+            <div class="sheet-row sheet-two-col-row">
+                <div class="sheet-cell">
+                    <!--personal information-->
+                    <div class="sheet-table">
+                        <div class="sheet-row sheet-two-col-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_name" value="@{character_name}">
+                                    <span data-i18n="character_name_desc">CHARACTER NAME</span>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_profession">
+                                    <span data-i18n="character_profession_desc">PROFESSION</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-two-col-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <select name="attr_character_race">
+                                        <option data-i18n="human" value="human">Mensch</option>
+                                        <option data-i18n="elf" value="elf">Elf</option>
+                                        <option data-i18n="halfelf" value="halfelf">Halbelf</option>
+                                        <option data-i18n="dwarf" value="dwarf">Zwerg</option>
+                                    </select>
+                                    <span data-i18n="character_race_desc">VOLK</span>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_culture">
+                                    <span data-i18n="character_race_culture_desc">KULTUR</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-two-col-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <select name="attr_character_sex">
+                                        <option data-i18n="male" value="male">männlich</option>
+                                        <option data-i18n="female" value="female">weiblich</option>
+                                        <option data-i18n="unknown" value="unknown">unbekannt</option>
+                                    </select>
+                                    <span data-i18n="character_sex_desc">GESCHLECHT</span>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_birthday_age">
+                                    <span data-i18n="character_birthday_age_desc">GEBURTSTAG/ALTER</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-two-col-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_height">
+                                    <span data-i18n="character_height_desc">GRÖßE</span>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_weight">
+                                    <span data-i18n="character_weight_desc">GEWICHT</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-two-col-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_hair">
+                                    <span data-i18n="character_hair_desc">HAARFARBE</span>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <input type="text" name="attr_character_eye">
+                                    <span data-i18n="character_eye_desc">AUGENFARBE</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/personal information-->
                 </div>
-                <div class="cell attribute-list">
-                    <div><span data-i18n="attr_so">SO</span><input type="number" name="attr_SO" value="0"></div>
-                    <div><span data-i18n="attr_mr">MR</span><input type="number" name="attr_MR" value="-4"></div>
-                    <div><span data-i18n="attr_gs">GS</span><input type="number" name="attr_GS" value="8"></div>
-                </div>
-                <div class="cell attribute-list">
-                    <div><span data-i18n="attr_base_at">AT-Basis</span><input type="number" name="attr_AT_base" value="0" disabled></div>
-                    <div><span data-i18n="attr_base_pa">PA-Basis</span><input type="number" name="attr_PA_base" value="0" disabled></div>
-                    <div><span data-i18n="attr_base_fk">FK-Basis</span><input type="number" name="attr_FK_base" value="0" disabled></div>
-                    <div><span data-i18n="attr_base_dodge">Ausweichen</span><input type="number" name="attr_dodge_base" value="0" disabled></div>
-                    <div><span data-i18n="attr_base_ini">Initative</span><input type="number" name="attr_ini_base" value="0" disabled></div>
+                <div class="sheet-cell sheet-vmiddle">
+                    <!--more attributes-->
+                    <div class="sheet-table sheet-attribute-table sheet-full">
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_health">LEBENSENERGIE</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_le_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_le_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_le_max">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_mana">ASTRALENERGIE</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_as_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_as_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_as_max">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_mr">MAGIERESISTENZ</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_mr_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_mr_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_mr_max">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_base_dodge">AUSWEICHEN</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_dodge_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_dodge_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_dodge_max">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_base_ini">INITIATIVE</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_ini_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_ini_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_ini_max">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-attribute-list sheet-vmiddle">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="attr_base_gs">GESCHWINDIGKEIT</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="value">WERT</span><br>
+                                    <input type="number" name="attr_character_gs_basis">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span><br>
+                                    <input type="number" name="attr_character_gs_mod">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="max">MAX</span><br>
+                                    <input type="number" name="attr_character_gs_max">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/more attributes-->
                 </div>
             </div>
+        </div>
 
+        <!--advantages&disadvantages-->
+        <div class="sheet-table">
+            <div class="sheet-row sheet-two-col-row">
+                <div class="sheet-cell">
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="character_advantages_desc">VORTEIL</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <h3 data-i18n="info">INFO</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="repeating_advantages">
+                        <div class="sheet-table">
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_advantages_name" />
+                                </div>
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_advantages_info" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="sheet-cell">
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="character_disadvantages_desc">NACHTEIL</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <h3 data-i18n="info">INFO</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="repeating_disadvantages">
+                        <div class="sheet-table">
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_disadvantages_name" />
+                                </div>
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_disadvantages_info" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <!--/advantages&disadvantages-->
+
+        <!--basic special abilities-->
+        <div class="sheet-table">
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <h3 data-i18n="character_basic_abilities_desc">ALLGEMEINE SONDERFERTIGKEIT</h3>
+                            </div>
+                            <div class="sheet-cell">
+                                <h3 data-i18n="info">INFO</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="repeating_disadvantages">
+                        <div class="sheet-table">
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_basic_abilities_name" />
+                                </div>
+                                <div class="sheet-cell">
+                                    <input type="text" name="attr_basic_abilities_info" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <!--/basic special abilities-->
+
+    </div>
+    <div class="sheet-talents sheet-charsheet">
+        <div class="sheet-table">
+            <!--headline of talents-->
+            <div class="sheet-row sheet-two-col-row">
+                <div class="sheet-cell">
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="character_talent">TALENT</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_test">PROBE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_be">BE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_inc">STG.</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_fw">FW</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="info">INFO</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="roll">ROLL</span>
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="character_physical_talents_desc">Körpertalente</span>
+                            </div>
+                            <div class="sheet-cell"></div><div class="sheet-cell"></div>
+                            <div class="sheet-cell">D</div><div class="sheet-cell"></div>
+                            <div class="sheet-cell"></div><div class="sheet-cell"></div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_acrobatics_desc">Akrobatik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_acrobatics_test">MU/IN/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_acrobatics">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_acrobatics_info">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_athletics_desc">Athletik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_athletics_test">GE/KO/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_acrobatics">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_acrobatics_info">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheet-cell">
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="character_talent">TALENT</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_test">PROBE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_be">BE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_inc">STG.</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="character_fw">FW</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="info">INFO</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <span data-i18n="roll">ROLL</span>
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_acrobatics_desc">Akrobatik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--headline of talents-->
         </div>
     </div>
-    <div class="sheet-talents">
+    <div class="sheet-fighting sheet-charsheet">
 
     </div>
-    <div class="sheet-fighting">
+    <div class="sheet-magic sheet-charsheet">
 
     </div>
-    <div class="sheet-magic">
+    <div class="sheet-divine sheet-charsheet">
 
     </div>
-    <div class="sheet-divine">
+    <div class="sheet-inventory sheet-charsheet">
 
     </div>
-    <div class="sheet-inventory">
-
-    </div>
-    <div class="sheet-config">
+    <div class="sheet-config sheet-charsheet">
 
     </div>
 </div>
