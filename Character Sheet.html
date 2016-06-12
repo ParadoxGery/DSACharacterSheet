@@ -346,10 +346,10 @@
     </div>
     <div class="sheet-talents sheet-charsheet">
         <div class="sheet-table">
-            <!--headline of talents-->
             <div class="sheet-row sheet-two-col-row">
                 <div class="sheet-cell">
                     <div class="sheet-table">
+                        <!--headline of talents-->
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <span data-i18n="character_talent">TALENT</span>
@@ -370,18 +370,31 @@
                                 <span data-i18n="info">INFO</span>
                             </div>
                             <div class="sheet-cell">
-                                <span data-i18n="roll">ROLL</span>
+                                <span data-i18n="roll">WURF</span>
                             </div>
                         </div>
+                        <!--/headline of talents-->
+
+                        <!--physical talents-->
                         <div class="sheet-row">
+                            <!--TALENT-->
                             <div class="sheet-cell">
                                 <span data-i18n="character_physical_talents_desc">Körpertalente</span>
                             </div>
-                            <div class="sheet-cell"></div><div class="sheet-cell"></div>
-                            <div class="sheet-cell">D</div><div class="sheet-cell"></div>
-                            <div class="sheet-cell"></div><div class="sheet-cell"></div>
+                            <!--PROBE-->
+                            <div class="sheet-cell"></div>
+                            <!--BE-->
+                            <div class="sheet-cell"></div>
+                            <!--STG-->
+                            <div class="sheet-cell">D</div>
+                            <!--FW-->
+                            <div class="sheet-cell"></div>
+                            <!--INFO-->
+                            <div class="sheet-cell"></div>
+                            <!--ROLL-->
+                            <div class="sheet-cell"></div>
                         </div>
-                        <div class="sheet-row">
+                        <div class="sheet-row sheet-talent-acrobatics">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_acrobatics_desc">Akrobatik</span>
@@ -405,13 +418,14 @@
                             <div class="sheet-cell">
                                 <!--INFO-->
                                 <input type="text" title="INFO" name="attr_fw_acrobatics_info">
+                                <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <!--TODO ROLL BUTTON-->
                             </div>
                         </div>
-                        <div class="sheet-row">
+                        <div class="sheet-row sheet-talent-athletics">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_athletics_desc">Athletik</span>
@@ -435,12 +449,701 @@
                             <div class="sheet-cell">
                                 <!--INFO-->
                                 <input type="text" title="INFO" name="attr_fw_acrobatics_info">
+                                <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <!--TODO ROLL BUTTON-->
                             </div>
                         </div>
+                        <div class="sheet-row sheet-talent-jugglery">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_jugglery_desc">Gaukeleien</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_jugglery_test">MU/CH/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_jugglery">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_jugglery_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-climbing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_climbing_desc">Klettern</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_climbing_test">MU/GE/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_climbing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_climbing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-bodycontrol">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_bodycontrol_desc">Körperbeherrschung</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_bodycontrol_test">MU/IN/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_bodycontrol">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_bodycontrol_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-riding">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_riding_desc">Reiten</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_riding_test">CH/GE/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_riding">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_riding_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-sneaking">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_sneaking_desc">Schleichen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_sneaking_test">MU/IN/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_sneaking">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_sneaking_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-swimming">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_swimming_desc">Schwimmen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_swimming_test">GE/KO/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_swimming">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_swimming_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-selfcontrol">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_selfcontrol_desc">Selbstbeherrschung</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_selfcontrol_test">MU/KO/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_selfcontrol">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_selfcontrol_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-hiding">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_hiding_desc">Sich Verstecken</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_hiding_test">MU/IN/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_hiding">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_hiding_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-singing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_singing_desc">Singen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_singing_test">IN/CH/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_singing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_singing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-senses">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_senses_desc">Sinnenschärfe</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_senses_test">KL/IN/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_senses">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_senses_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-voiceacting">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_voiceacting_desc">Stimmen Imitieren</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_voiceacting_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_voiceacting">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_voiceacting_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-dancing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_dancing_desc">Tanzen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_dancing_test">CH/GE/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_dancing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_dancing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-pickpocketing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_pickpocketing_desc">Taschendiebstahl</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_pickpocketing_test">MU/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_pickpocketing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_pickpocketing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-quaffing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_quaffing_desc">Zechen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_quaffing_test">IN/KO/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_quaffing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_quaffing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <!--/physical talents-->
+
+                        <!--social talents-->
+                        <div class="sheet-row sheet-talent-bewitching">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_bewitching_desc">Betören</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_bewitching_test">IN/CH/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_bewitching">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_bewitching_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-etiquette">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_etiquette_desc">Etikette</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_etiquette_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_etiquette">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_etiquette_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-street-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_street-wise_desc">Gassenwissen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_street-wise_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="yes">JA</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_street-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_street-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-teaching">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_teaching_desc">Lehren</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_teaching_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_teaching">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_teaching_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-human-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_human-wise_desc">Menschenkenntnis</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_human-wise_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_human-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_human-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-disguising">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_disguising_desc">Sich Verkleiden</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_disguising_test">MU/CH/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_disguising">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_disguising_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-persuading">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_persuading_desc">Überreden</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_persuading_test">MU/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_persuading">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_persuading_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-convincing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_convincing_desc">Überzeugen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_convincing_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_convincing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_convincing_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <!--/social talents-->
+
+
                     </div>
                 </div>
                 <div class="sheet-cell">
@@ -465,13 +1168,12 @@
                                 <span data-i18n="info">INFO</span>
                             </div>
                             <div class="sheet-cell">
-                                <span data-i18n="roll">ROLL</span>
+                                <span data-i18n="roll">WURF</span>
                             </div>
                         </div>
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
-                                <span data-i18n="character_acrobatics_desc">Akrobatik</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -495,7 +1197,6 @@
                     </div>
                 </div>
             </div>
-            <!--headline of talents-->
         </div>
     </div>
     <div class="sheet-fighting sheet-charsheet">
