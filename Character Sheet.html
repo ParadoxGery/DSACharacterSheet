@@ -1417,6 +1417,8 @@
                 </div>
                 <div class="sheet-cell">
                     <div class="sheet-table">
+
+                        <!--headline of talents-->
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <span data-i18n="character_talent">TALENT</span>
@@ -1440,9 +1442,13 @@
                                 <span data-i18n="roll">WURF</span>
                             </div>
                         </div>
+                        <!--/headline of talents-->
+
+                        <!--knowledge talents-->
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
+                                <span data-i18n="character_knowledge_talents_desc">WISSEN</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -1452,6 +1458,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--STG-->
+                                <span>B</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
@@ -1463,6 +1470,566 @@
                                 <!--ROLL-->
                             </div>
                         </div>
+                        <div class="sheet-row sheet-talent-anatomy">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_anatomy_desc">Anatomie</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_anatomy_test">MU/KL/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_anatomy">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_anatomy_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-board-card-game-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_board-card-game-wise_desc">Brett-/Kartenspiel</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_board-card-game-wise_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_board-card-game-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_board-card-game-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-geography">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_geography_desc">Geographie</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_geography_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_geography">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_geography_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-history-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_history-wise_desc">Geschichtswissen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_history-wise_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_history-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_history-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-geology">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_geology_desc">Gesteinskunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_geology_test">KL/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_geology">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_geology_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-gods-cults">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_gods-cults_desc">Götter/Kulte</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_gods-cults_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_gods-cults">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_gods-cults_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-heraldry">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_heraldry_desc">Heraldik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_heraldry_test">KL/KL/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_heraldry">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_heraldry_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-war-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_war-wise_desc">Kriegskunst</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_war-wise_test">MU/KL/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_war-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_war-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-magic-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_magic-wise_desc">Magiekunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_magic-wise_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_magic-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_magic-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-mechanic">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_mechanic_desc">Mechanik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_mechanic_test">KL/KL/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_mechanic">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_mechanic_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-plant-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_plant-wise_desc">Pflanzenkunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_plant-wise_test">KL/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_plant-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_plant-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-mathematics">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_mathematics_desc">Mathematik</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_mathematics_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_mathematics">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_mathematics_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-law-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_law-wise_desc">Rechtskunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_law-wise_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_law-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_law-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-legend-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_legend-wise_desc">Sagen/Legenden</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_legend-wise_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_legend-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_legend-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-estimating">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_estimating_desc">Schätzen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_estimating_test">KL/IN/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_estimating">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_estimating_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-language-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_language-wise_desc">Sprachkunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_language-wise_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_language-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_language-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-astronomy">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_astronomy_desc">Sternkunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_astronomy_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_astronomy">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_astronomy_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-animal-wise">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_animal-wise_desc">Tierkunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_animal-wise_test">MU/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--BE-->
+                                <span data-i18n="no">NEIN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--STG-->
+                                <span></span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_animal-wise">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                <input type="text" title="INFO" name="attr_fw_animal-wise_info">
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <!--TODO ROLL BUTTON-->
+                            </div>
+                        </div>
+                        <!--/knowledge talents-->
+
                     </div>
                 </div>
             </div>
@@ -1486,348 +2053,348 @@
 </div>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Eigenschaft">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">Eigenschaft</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Probe:</span>{{Probe}}</td></tr>
-    </table>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">Eigenschaft</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Probe:</span>{{Probe}}</div></div>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-AT">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Attackewurf: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Attackewurf: </span>{{wurf}}</div></div>
         {{#rollGreater() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollGreater() mod 0}}
         {{#rollLess() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollLess() mod 0}}
         {{#rollGreater() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollGreater() wurf wert}}
         {{#rollTotal() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollTotal() wurf wert}}
         {{#rollLess() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollLess() wurf wert}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-AT-Patzer">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
         {{#rollTotal() wurf 2}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe zerstört</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe zerstört</div></div>
         {{/rollTotal() wurf 2}}
         {{#rollTotal() wurf 3}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</div></div>
         {{/rollTotal() wurf 3}}
         {{#rollTotal() wurf 4}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe beschädigt</div></div>
         {{/rollTotal() wurf 4}}
         {{#rollTotal() wurf 5}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe verloren</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe verloren</div></div>
         {{/rollTotal() wurf 5}}
         {{#rollTotal() wurf 6}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe stecken geblieben</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe stecken geblieben</div></div>
         {{/rollTotal() wurf 6}}
         {{#rollTotal() wurf 7}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Sturz</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sturz</div></div>
         {{/rollTotal() wurf 7}}
         {{#rollTotal() wurf 8}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Stolpern</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Stolpern</div></div>
         {{/rollTotal() wurf 8}}
         {{#rollTotal() wurf 9}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Fuß verdreht</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fuß verdreht</div></div>
         {{/rollTotal() wurf 9}}
         {{#rollTotal() wurf 10}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Beule</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Beule</div></div>
         {{/rollTotal() wurf 10}}
         {{#rollTotal() wurf 11}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Selbst verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
         {{/rollTotal() wurf 11}}
         {{#rollTotal() wurf 12}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</div></div>
         {{/rollTotal() wurf 12}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-Schild-Patzer">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
         {{#rollTotal() wurf 2}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schild zerstört</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild zerstört</div></div>
         {{/rollTotal() wurf 2}}
         {{#rollTotal() wurf 3}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schild schwer beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild schwer beschädigt</div></div>
         {{/rollTotal() wurf 3}}
         {{#rollTotal() wurf 4}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schild beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild beschädigt</div></div>
         {{/rollTotal() wurf 4}}
         {{#rollTotal() wurf 5}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schild verloren</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild verloren</div></div>
         {{/rollTotal() wurf 5}}
         {{#rollTotal() wurf 6}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schild stecken geblieben</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild stecken geblieben</div></div>
         {{/rollTotal() wurf 6}}
         {{#rollTotal() wurf 7}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Stolpern</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Stolpern</div></div>
         {{/rollTotal() wurf 7}}
         {{#rollTotal() wurf 8}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Sturz</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sturz</div></div>
         {{/rollTotal() wurf 8}}
         {{#rollTotal() wurf 9}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Fuß verdreht</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fuß verdreht</div></div>
         {{/rollTotal() wurf 9}}
         {{#rollTotal() wurf 10}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Beule</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Beule</div></div>
         {{/rollTotal() wurf 10}}
         {{#rollTotal() wurf 11}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Selbst verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
         {{/rollTotal() wurf 11}}
         {{#rollTotal() wurf 12}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</div></div>
         {{/rollTotal() wurf 12}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-VE">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Verteidigungswurf: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Verteidigungswurf: </span>{{wurf}}</div></div>
         {{#rollGreater() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollGreater() mod 0}}
         {{#rollLess() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollLess() mod 0}}
         {{#rollGreater() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollGreater() wurf wert}}
         {{#rollTotal() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollTotal() wurf wert}}
         {{#rollLess() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollLess() wurf wert}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-AT">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Attackewurf: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Attackewurf: </span>{{wurf}}</div></div>
         {{#rollGreater() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollGreater() mod 0}}
         {{#rollLess() mod 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{mod}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
         {{/rollLess() mod 0}}
         {{#rollGreater() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollGreater() wurf wert}}
         {{#rollTotal() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollTotal() wurf wert}}
         {{#rollLess() wurf wert}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollLess() wurf wert}}
-    </table>
+    </div>
 </rolltemplate>
 
 
 <rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-AT-Patzer">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>{{wurf}}</td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
         {{#rollTotal() wurf 2}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe zerstört</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe zerstört</div></div>
         {{/rollTotal() wurf 2}}
         {{#rollTotal() wurf 3}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</div></div>
         {{/rollTotal() wurf 3}}
         {{#rollTotal() wurf 4}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe beschädigt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe beschädigt</div></div>
         {{/rollTotal() wurf 4}}
         {{#rollTotal() wurf 5}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Waffe verloren</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe verloren</div></div>
         {{/rollTotal() wurf 5}}
         {{#rollTotal() wurf 6}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Kamerad/Unschuldiger getroffen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Kamerad/Unschuldiger getroffen</div></div>
         {{/rollTotal() wurf 6}}
         {{#rollTotal() wurf 7}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Fehlschuss</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fehlschuss</div></div>
         {{/rollTotal() wurf 7}}
         {{#rollTotal() wurf 8}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Zerrung</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Zerrung</div></div>
         {{/rollTotal() wurf 8}}
         {{#rollTotal() wurf 9}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Sehne herausgerutscht / Waffe nicht richtig gegriffen / Ladehemmung</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sehne herausgerutscht / Waffe nicht richtig gegriffen / Ladehemmung</div></div>
         {{/rollTotal() wurf 9}}
         {{#rollTotal() wurf 10}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Zu konzentriert</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Zu konzentriert</div></div>
         {{/rollTotal() wurf 10}}
         {{#rollTotal() wurf 11}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Selbst verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
         {{/rollTotal() wurf 11}}
         {{#rollTotal() wurf 12}}
-        <tr class="rowcolor"><td><span class="tcat">Auswirkung: </span>Schwer verletzt</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schwer verletzt</div></div>
         {{/rollTotal() wurf 12}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-TP">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Trefferpunkte:</span>{{damage}}</td></tr>
-    </table>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Trefferpunkte:</span>{{damage}}</div></div>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-TP">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Trefferpunkte:</span>{{damage}}</td></tr>
-    </table>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Trefferpunkte:</span>{{damage}}</div></div>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Talente">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
         {{#rollGreater() Talent -1}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollGreater() Talent -1}}
         {{#rollLess() Talent 0}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollLess() Talent 0}}
-        <tr class="rowcolor"><td><span class="tcat">FP: </span>{{Talent}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Talent}}</div></div>
         {{#rollBetween() Talent 0 3}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>1</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
         {{/rollBetween() Talent 0 3}}
         {{#rollBetween() Talent 4 6}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>2</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
         {{/rollBetween() Talent 4 6}}
         {{#rollBetween() Talent 7 9}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>3</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
         {{/rollBetween() Talent 7 9}}
         {{#rollBetween() Talent 10 12}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>4</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
         {{/rollBetween() Talent 10 12}}
         {{#rollBetween() Talent 13 15}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>5</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
         {{/rollBetween() Talent 13 15}}
         {{#rollBetween() Talent 16 18}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>6</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
         {{/rollBetween() Talent 16 18}}
         {{#rollBetween() Talent 19 21}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>7</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
         {{/rollBetween() Talent 19 21}}
         {{#rollGreater() Modifikator 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{Modifikator}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{Modifikator}}</div></div>
         {{/rollGreater() Modifikator 0}}
         {{#rollLess() Modifikator 0}}
-        <tr class="rowcolor"><td><span class="tcat">Modifikator: </span>{{Modifikator}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{Modifikator}}</div></div>
         {{/rollLess() Modifikator 0}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Zauber">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtag}}, {{subtag1}}, {{subtag2}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtag}}, {{subtag1}}, {{subtag2}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
         {{#rollGreater() Zauber -1}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollGreater() Zauber -1}}
         {{#rollLess() Zauber 0}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollLess() Zauber 0}}
-        <tr class="rowcolor"><td><span class="tcat">FP: </span>{{Zauber}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Zauber}}</div></div>
         {{#rollBetween() Zauber 0 3}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>1</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
         {{/rollBetween() Zauber 0 3}}
         {{#rollBetween() Zauber 4 6}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>2</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
         {{/rollBetween() Zauber 4 6}}
         {{#rollBetween() Zauber 7 9}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>3</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
         {{/rollBetween() Zauber 7 9}}
         {{#rollBetween() Zauber 10 12}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>4</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
         {{/rollBetween() Zauber 10 12}}
         {{#rollBetween() Zauber 13 15}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>5</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
         {{/rollBetween() Zauber 13 15}}
         {{#rollBetween() Zauber 16 18}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>6</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
         {{/rollBetween() Zauber 16 18}}
         {{#rollBetween() Zauber 19 21}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>7</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
         {{/rollBetween() Zauber 19 21}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-DSA-Liturgie">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtag}}, {{subtag1}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtag}}, {{subtag1}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
         {{#rollGreater() Liturgie -1}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Gelungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
         {{/rollGreater() Liturgie -1}}
         {{#rollLess() Liturgie 0}}
-        <tr class="rowcolor"><td><span class="tcat">Ergebnis: </span>Mißlungen</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
         {{/rollLess() Liturgie 0}}
-        <tr class="rowcolor"><td><span class="tcat">FP: </span>{{Liturgie}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Liturgie}}</div></div>
         {{#rollBetween() Liturgie 0 3}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>1</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
         {{/rollBetween() Liturgie 0 3}}
         {{#rollBetween() Liturgie 4 6}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>2</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
         {{/rollBetween() Liturgie 4 6}}
         {{#rollBetween() Liturgie 7 9}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>3</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
         {{/rollBetween() Liturgie 7 9}}
         {{#rollBetween() Liturgie 10 12}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>4</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
         {{/rollBetween() Liturgie 10 12}}
         {{#rollBetween() Liturgie 13 15}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>5</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
         {{/rollBetween() Liturgie 13 15}}
         {{#rollBetween() Liturgie 16 18}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>6</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
         {{/rollBetween() Liturgie 16 18}}
         {{#rollBetween() Liturgie 19 21}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>7</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
         {{/rollBetween() Liturgie 19 21}}
-    </table>
+    </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-Routineprobe">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr><td class="subheader">{{subtags}}</td></tr>
-        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
-        <tr class="rowcolor"><td><span class="tcat">Eigenschaften: </span>
+    <div class="sheet-table">
+        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
+        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
+        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Eigenschaften: </span>
             {{#rollGreater() Eigenschaft1 12}}
             ✓
             {{/rollGreater() Eigenschaft1 12}}
@@ -1848,38 +2415,38 @@
             {{#rollLess() Eigenschaft3 13}}
             X
             {{/rollLess() Eigenschaft3 13}}
-        </td></tr>
+        </div></div>
         {{#rollTotal() FP 0}}
-        <tr class="rowcolor"><td><span class="tcat">FW-Minimum nicht erfüllt</span></td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FW-Minimum nicht erfüllt</span></div></div>
         {{/rollTotal() FP 0}}
         {{#rollGreater() FP 0}}
-        <tr class="rowcolor"><td><span class="tcat">FP: </span>{{FP}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{FP}}</div></div>
         {{/rollGreater() FP 0}}
         {{#rollBetween() FP 1 3}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>1</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
         {{/rollBetween() FP 1 3}}
         {{#rollBetween() FP 4 6}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>2</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
         {{/rollBetween() FP 4 6}}
         {{#rollBetween() FP 7 9}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>3</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
         {{/rollBetween() FP 7 9}}
         {{#rollBetween() FP 10 12}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>4</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
         {{/rollBetween() FP 10 12}}
         {{#rollBetween() FP 13 15}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>5</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
         {{/rollBetween() FP 13 15}}
         {{#rollBetween() FP 16 18}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>6</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
         {{/rollBetween() FP 16 18}}
         {{#rollBetween() FP 19 21}}
-        <tr class="rowcolor"><td><span class="tcat">QS: </span>7</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
         {{/rollBetween() FP 19 21}}
         {{#rollGreater() FP 0}}
-        <tr class="rowcolor"><td><span class="tcat">Max. Modifikator: </span>{{Modifikator}}</td></tr>
+        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Max. Modifikator: </span>{{Modifikator}}</div></div>
         {{/rollGreater() FP 0}}
-    </table>
+    </div>
 </rolltemplate>
 
 <script type="text/worker">
