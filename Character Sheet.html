@@ -1,5 +1,48 @@
 <div class="container">
 
+    <!--basic attributes-->
+    <div class="sheet-table sheet-attribute-table sheet-right">
+        <div class="sheet-row sheet-attribute-list">
+            <div class="sheet-cell"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_MU" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_ch">CH</span><br><input type="number" name="attr_CH" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_ff">FF</span><br><input type="number" name="attr_FF" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_ge">GE</span><br><input type="number" name="attr_GE" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_ko">KO</span><br><input type="number" name="attr_KO" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_kk">KK</span><br><input type="number" name="attr_KK" value="8"></label></div>
+        </div>
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Mut}} {{name=@{character_name} }} {{roll=[[@{mu}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Klugheit}} {{name=@{character_name} }} {{roll=[[@{kl}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Intuition}} {{name=@{character_name} }} {{roll=[[@{in}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Charisma}} {{name=@{character_name} }} {{roll=[[@{ch}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Fingerfertigkeit}} {{name=@{character_name} }} {{roll=[[@{ff}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Gewandheit}} {{name=@{character_name} }} {{roll=[[@{ge}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Konstitution}} {{name=@{character_name} }} {{roll=[[@{ko}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+            <div class="sheet-cell">
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{name=@{character_name} }} {{roll=[[@{kk}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+            </div>
+        </div>
+    </div>
+    <!--TODO roll buttons translation-->
+    <!--/basic attributes-->
+
+    <br>
 
     <input type="radio" class="sheet-hidden-input sheet-navigation sheet-general" name="attr_pagenumber" title="PAGE 1" value="1" checked>
     <span class="sheet-navigation" data-i18n="character_general_desc">PERSON</span>
@@ -8,28 +51,13 @@
     <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting" name="attr_pagenumber" title="PAGE 3" value="3">
     <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
 
-    <div class="sheet-general sheet-charsheet">
+    <div class="sheet-general sheet-navigation">
 
-        <!--basic attributes-->
-        <div class="sheet-table sheet-attribute-table sheet-right">
-            <div class="sheet-row sheet-attribute-list">
-                <div class="sheet-cell"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_MU" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_ch">CH</span><br><input type="number" name="attr_CH" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_ff">FF</span><br><input type="number" name="attr_FF" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_ge">GE</span><br><input type="number" name="attr_GE" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_ko">KO</span><br><input type="number" name="attr_KO" value="8"></label></div>
-                <div class="sheet-cell"><label><span data-i18n="attr_kk">KK</span><br><input type="number" name="attr_KK" value="8"></label></div>
-            </div>
-        </div>
-        <!--/basic attributes-->
-
-        <div class="sheet-table sheet-clear">
+        <div class="sheet-table sheet-side-padded sheet-clear">
             <div class="sheet-row sheet-two-col-row">
                 <div class="sheet-cell">
                     <!--personal information-->
-                    <div class="sheet-table">
+                    <div class="sheet-table sheet-vmiddle">
                         <div class="sheet-row sheet-two-col-row">
                             <div class="sheet-cell">
                                 <label>
@@ -114,10 +142,10 @@
                 </div>
                 <div class="sheet-cell sheet-vmiddle">
                     <!--more attributes-->
-                    <div class="sheet-table sheet-attribute-table sheet-full">
+                    <div class="sheet-table sheet-attribute-table">
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_health">LEBENSENERGIE</h3>
+                                <span data-i18n="attr_health">LEBENSENERGIE</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -140,7 +168,7 @@
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_mana">ASTRALENERGIE</h3>
+                                <span data-i18n="attr_mana">ASTRALENERGIE</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -163,7 +191,7 @@
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_mr">MAGIERESISTENZ</h3>
+                                <span data-i18n="attr_mr">MAGIERESISTENZ</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -186,7 +214,7 @@
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_base_dodge">AUSWEICHEN</h3>
+                                <span data-i18n="attr_base_dodge">AUSWEICHEN</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -209,7 +237,7 @@
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_base_ini">INITIATIVE</h3>
+                                <span data-i18n="attr_base_ini">INITIATIVE</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -232,7 +260,7 @@
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <h3 data-i18n="attr_base_gs">GESCHWINDIGKEIT</h3>
+                                <span data-i18n="attr_base_gs">GESCHWINDIGKEIT</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -260,16 +288,16 @@
         </div>
 
         <!--advantages&disadvantages-->
-        <div class="sheet-table">
+        <div class="sheet-table sheet-side-padded">
             <div class="sheet-row sheet-two-col-row">
                 <div class="sheet-cell">
                     <div class="sheet-table">
                         <div class="sheet-row">
                             <div class="sheet-cell">
-                                <h3 data-i18n="character_advantages_desc">VORTEIL</h3>
+                                <span data-i18n="character_advantages_desc">VORTEIL</span>
                             </div>
                             <div class="sheet-cell">
-                                <h3 data-i18n="info">INFO</h3>
+                                <span data-i18n="info">INFO</span>
                             </div>
                         </div>
                     </div>
@@ -290,10 +318,10 @@
                     <div class="sheet-table">
                         <div class="sheet-row">
                             <div class="sheet-cell">
-                                <h3 data-i18n="character_disadvantages_desc">NACHTEIL</h3>
+                                <span data-i18n="character_disadvantages_desc">NACHTEIL</span>
                             </div>
                             <div class="sheet-cell">
-                                <h3 data-i18n="info">INFO</h3>
+                                <span data-i18n="info">INFO</span>
                             </div>
                         </div>
                     </div>
@@ -315,16 +343,16 @@
         <!--/advantages&disadvantages-->
 
         <!--basic special abilities-->
-        <div class="sheet-table">
+        <div class="sheet-table sheet-side-padded">
             <div class="sheet-row">
                 <div class="sheet-cell">
                     <div class="sheet-table">
                         <div class="sheet-row">
                             <div class="sheet-cell">
-                                <h3 data-i18n="character_basic_abilities_desc">ALLGEMEINE SONDERFERTIGKEIT</h3>
+                                <span data-i18n="character_basic_abilities_desc">ALLGEMEINE SONDERFERTIGKEIT</span>
                             </div>
                             <div class="sheet-cell">
-                                <h3 data-i18n="info">INFO</h3>
+                                <span data-i18n="info">INFO</span>
                             </div>
                         </div>
                     </div>
@@ -346,11 +374,11 @@
         <!--/basic special abilities-->
 
     </div>
-    <div class="sheet-talents sheet-charsheet">
+    <div class="sheet-talents sheet-navigation">
         <div class="sheet-table">
             <div class="sheet-row sheet-two-col-row">
                 <div class="sheet-cell">
-                    <div class="sheet-table">
+                    <div class="sheet-table sheet-padded">
                         <!--headline of talents-->
                         <div class="sheet-row">
                             <div class="sheet-cell">
@@ -375,7 +403,7 @@
                         <div class="sheet-row">
                             <!--TALENT-->
                             <div class="sheet-cell">
-                                <span data-i18n="character_physical_talents_desc">KÖRPER</span>
+                                <span data-i18n="character_physical_talents_desc">KÖRPER (D)</span>
                             </div>
                             <!--PROBE-->
                             <div class="sheet-cell"></div>
@@ -406,7 +434,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Akrobatik}} {{name=@{character_name} }} {{roll=[[@{fw_acrobatics} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-athletics">
@@ -420,7 +448,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_acrobatics">
+                                <input type="number" title="FW" name="attr_fw_athletics">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -429,7 +457,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Athletik}} {{name=@{character_name} }} {{roll=[[@{fw_athletics} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-jugglery">
@@ -452,7 +480,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Gaukeleien}} {{name=@{character_name} }} {{roll=[[@{fw_jugglery} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-climbing">
@@ -475,7 +503,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Klettern}} {{name=@{character_name} }} {{roll=[[@{fw_climbing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-bodycontrol">
@@ -498,7 +526,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Körperbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_bodycontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-riding">
@@ -521,7 +549,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Reiten}} {{name=@{character_name} }} {{roll=[[@{fw_riding} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{gr}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-sneaking">
@@ -544,7 +572,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Schleichen}} {{name=@{character_name} }} {{roll=[[@{fw_sneaking} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-swimming">
@@ -567,7 +595,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Schwimmen}} {{name=@{character_name} }} {{roll=[[@{fw_swimming} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-selfcontrol">
@@ -590,7 +618,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Selbstbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_selfcontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-hiding">
@@ -613,7 +641,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sich Verstecken}} {{name=@{character_name} }} {{roll=[[@{fw_hiding} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-singing">
@@ -636,7 +664,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Singen}} {{name=@{character_name} }} {{roll=[[@{fw_singing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-senses">
@@ -659,7 +687,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sinnesschärfe}} {{name=@{character_name} }} {{roll=[[@{fw_senses} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-voiceacting">
@@ -682,7 +710,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Stimmen Imitieren}} {{name=@{character_name} }} {{roll=[[@{fw_voiceacting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-dancing">
@@ -705,7 +733,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Tanzen}} {{name=@{character_name} }} {{roll=[[@{fw_dancing} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-pickpocketing">
@@ -728,7 +756,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Taschendiebstahl}} {{name=@{character_name} }} {{roll=[[@{fw_pickpocketing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-quaffing">
@@ -751,7 +779,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Zechen}} {{name=@{character_name} }} {{roll=[[@{fw_quaffing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <!--/physical talents-->
@@ -760,7 +788,7 @@
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
-                                <span data-i18n="character_social_talents_desc">GESELLSCHAFT</span>
+                                <span data-i18n="character_social_talents_desc">GESELLSCHAFT (B)</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -795,7 +823,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Betören}} {{name=@{character_name} }} {{roll=[[@{fw_bewitching} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-etiquette">
@@ -818,7 +846,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Etikette}} {{name=@{character_name} }} {{roll=[[@{fw_etiquette} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-street-wise">
@@ -841,7 +869,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Gassenwissen}} {{name=@{character_name} }} {{roll=[[@{fw_street-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-teaching">
@@ -864,7 +892,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Lehren}} {{name=@{character_name} }} {{roll=[[@{fw_teaching} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-human-wise">
@@ -887,7 +915,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Menschenkenntnis}} {{name=@{character_name} }} {{roll=[[@{fw_human-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-disguising">
@@ -910,7 +938,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sich Verkleiden}} {{name=@{character_name} }} {{roll=[[@{fw_disguising} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-persuading">
@@ -933,7 +961,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Überreden}} {{name=@{character_name} }} {{roll=[[@{fw_persuading} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-convincing">
@@ -956,7 +984,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Überzeugen}} {{name=@{character_name} }} {{roll=[[@{fw_convincing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <!--/social talents-->
@@ -965,7 +993,7 @@
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
-                                <span data-i18n="character_nautre_talents_desc">NATUR</span>
+                                <span data-i18n="character_nature_talents_desc">NATUR (B)</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -1000,7 +1028,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fährtensuche}} {{name=@{character_name} }} {{roll=[[@{fw_tracking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-trapping">
@@ -1023,7 +1051,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fallenstellen}} {{name=@{character_name} }} {{roll=[[@{fw_trapping} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-shackling">
@@ -1046,7 +1074,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fesseln}} {{name=@{character_name} }} {{roll=[[@{fw_shackling} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-fishing">
@@ -1069,7 +1097,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fischen}} {{name=@{character_name} }} {{roll=[[@{fw_fishing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-orientating">
@@ -1092,7 +1120,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Orientierung}} {{name=@{character_name} }} {{roll=[[@{fw_orientating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-weather-forecast">
@@ -1115,7 +1143,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Wettervorhersagen}} {{name=@{character_name} }} {{roll=[[@{fw_weather-forecast} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wilderness">
@@ -1138,13 +1166,13 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Wildnisleben}} {{name=@{character_name} }} {{roll=[[@{fw_wilderness} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <!--/nature talents-->
 
                     </div>
-
+                    <div class="sheet-spacer"></div>
                     <!--languages-->
                     <div class="sheet-table">
                         <div class="sheet-row">
@@ -1152,19 +1180,23 @@
                                 <span data-i18n="character_languages_desc">Sprachen/Schriften:</span>
                             </div>
                         </div>
-                        <fieldset class="repeating_languages">
-                            <div class="sheet-row">
-                                <div class="sheet-cell">
-                                    <input type="text" name="attr_languages_desc" />
+                        <div class="sheet-row">
+                            <fieldset class="repeating_languages">
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <input type="text" name="attr_languages_desc" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                        </div>
                     </div>
                     <!--/languages-->
 
                 </div>
                 <div class="sheet-cell">
-                    <div class="sheet-table">
+                    <div class="sheet-table sheet-padded">
 
                         <!--headline of talents-->
                         <div class="sheet-row">
@@ -1190,7 +1222,7 @@
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
-                                <span data-i18n="character_knowledge_talents_desc">HANDWERK</span>
+                                <span data-i18n="character_knowledge_talents_desc">WISSEN (B)</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -1225,7 +1257,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Anatomie}} {{name=@{character_name} }} {{roll=[[@{fw_anatomy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-board-card-game-wise">
@@ -1248,7 +1280,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Brett-/Kartenspiel}} {{name=@{character_name} }} {{roll=[[@{fw_board-card-game-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-geography">
@@ -1271,7 +1303,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Geographie}} {{name=@{character_name} }} {{roll=[[@{fw_geography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-history-wise">
@@ -1294,7 +1326,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Geschichtswissen}} {{name=@{character_name} }} {{roll=[[@{fw_history-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-geology">
@@ -1317,7 +1349,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Gesteinskunde}} {{name=@{character_name} }} {{roll=[[@{fw_geology} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-gods-cults">
@@ -1340,7 +1372,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Götter/Kulte}} {{name=@{character_name} }} {{roll=[[@{fw_gods-cults} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-heraldry">
@@ -1363,7 +1395,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Heraldik}} {{name=@{character_name} }} {{roll=[[@{fw_heraldry} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-war-wise">
@@ -1386,7 +1418,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Kriegskunst}} {{name=@{character_name} }} {{roll=[[@{fw_war-wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-magic-wise">
@@ -1409,7 +1441,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Magiekunde}} {{name=@{character_name} }} {{roll=[[@{fw_magic-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-mechanic">
@@ -1432,7 +1464,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Mechanik}} {{name=@{character_name} }} {{roll=[[@{fw_mechanic} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-plant-wise">
@@ -1455,7 +1487,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Pflanzenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_plant-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-mathematics">
@@ -1478,7 +1510,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Mathematik}} {{name=@{character_name} }} {{roll=[[@{fw_mathematics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-law-wise">
@@ -1501,7 +1533,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Rechtskunde}} {{name=@{character_name} }} {{roll=[[@{fw_law-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-legend-wise">
@@ -1524,7 +1556,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sagen/Legenden}} {{name=@{character_name} }} {{roll=[[@{fw_legend-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-estimating">
@@ -1547,7 +1579,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Schätzen}} {{name=@{character_name} }} {{roll=[[@{fw_estimating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-language-wise">
@@ -1570,7 +1602,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sprachkunde}} {{name=@{character_name} }} {{roll=[[@{fw_language-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-astronomy">
@@ -1593,7 +1625,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Sternkunde}} {{name=@{character_name} }} {{roll=[[@{fw_astronomy} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-animal-wise">
@@ -1615,7 +1647,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Tierkunde}} {{name=@{character_name} }} {{roll=[[@{fw_animal-wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <!--/knowledge talents-->
@@ -1624,7 +1656,7 @@
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <!--TALENT-->
-                                <span data-i18n="character_knowledge_talents_desc">WISSEN</span>
+                                <span data-i18n="character_crafting_talents_desc">HANDWERK (B)</span>
                             </div>
                             <div class="sheet-cell">
                                 <!--PROBE-->
@@ -1659,7 +1691,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Abrichten}} {{name=@{character_name} }} {{roll=[[@{fw_drill} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-agriculture">
@@ -1682,7 +1714,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Ackerbau}} {{name=@{character_name} }} {{roll=[[@{fw_agriculture} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-alchemy">
@@ -1705,7 +1737,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Alchimie}} {{name=@{character_name} }} {{roll=[[@{fw_alchemy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-mining">
@@ -1728,7 +1760,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Bergbau}} {{name=@{character_name} }} {{roll=[[@{fw_mining} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-bow-crafting">
@@ -1751,7 +1783,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Bogenbau}} {{name=@{character_name} }} {{roll=[[@{fw_bow-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-boat-driving">
@@ -1774,7 +1806,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Boote Fahren}} {{name=@{character_name} }} {{roll=[[@{fw_boat-driving} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-vehicle-driving">
@@ -1797,7 +1829,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fahrzeuge Lenken}} {{name=@{character_name} }} {{roll=[[@{fw_vehicle-driving} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-cheating">
@@ -1820,7 +1852,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Falschspiel}} {{name=@{character_name} }} {{roll=[[@{fw_cheating} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-precision-mechanics">
@@ -1843,7 +1875,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Feinmechanik}} {{name=@{character_name} }} {{roll=[[@{fw_precision-mechanics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-butcher">
@@ -1866,7 +1898,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Fleischer}} {{name=@{character_name} }} {{roll=[[@{fw_butchery} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-skinning">
@@ -1889,7 +1921,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Gerber/Kürschner}} {{name=@{character_name} }} {{roll=[[@{fw_skinning} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-blacksmith">
@@ -1912,7 +1944,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Grobschmied}} {{name=@{character_name} }} {{roll=[[@{fw_blacksmith} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-poison-medicine">
@@ -1935,7 +1967,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Gift}} {{name=@{character_name} }} {{roll=[[@{fw_poison-medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-illness-medicine">
@@ -1958,7 +1990,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Krankheiten}} {{name=@{character_name} }} {{roll=[[@{fw_illness-medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wound-medicine">
@@ -1981,7 +2013,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Wunden}} {{name=@{character_name} }} {{roll=[[@{fw_wound-medicine} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wood-crafting">
@@ -2004,7 +2036,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Holzbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_wood-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-cartography">
@@ -2027,7 +2059,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Kartopraphie}} {{name=@{character_name} }} {{roll=[[@{fw_cartography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-cooking">
@@ -2050,7 +2082,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Kochen}} {{name=@{character_name} }} {{roll=[[@{fw_cooking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-leather-crafting">
@@ -2073,7 +2105,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Lederbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_leather-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-drawing">
@@ -2096,7 +2128,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Malen/Zeichnen}} {{name=@{character_name} }} {{roll=[[@{fw_drawning} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-music-making">
@@ -2119,7 +2151,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Musizieren}} {{name=@{character_name} }} {{roll=[[@{fw_music-making} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-lock-picking">
@@ -2142,7 +2174,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Schlösser Knacken}} {{name=@{character_name} }} {{roll=[[@{fw_lock-picking} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-seafaring">
@@ -2165,7 +2197,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Seefahrt}} {{name=@{character_name} }} {{roll=[[@{fw_seafaring} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-mason">
@@ -2188,7 +2220,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Steinmetz}} {{name=@{character_name} }} {{roll=[[@{fw_mason} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-jeweler">
@@ -2211,7 +2243,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Steinschneider/Juwelier}} {{name=@{character_name} }} {{roll=[[@{fw_jeweler} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-tattooer">
@@ -2234,7 +2266,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Tätowierer}} {{name=@{character_name} }} {{roll=[[@{fw_tattooer} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-carpenter">
@@ -2257,7 +2289,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <!--TODO ROLL BUTTON-->
+                                <button type="roll" value="&{template:talent} {{talent=Zimmermann}} {{name=@{character_name} }} {{roll=[[@{fw_carpenter} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <!--/crafting talents-->
@@ -2266,56 +2298,786 @@
             </div>
         </div>
     </div>
-    <div class="sheet-fighting sheet-charsheet">
+    <div class="sheet-fighting sheet-navigation">
+
+        <!--fighting-->
+        <div class="sheet-table">
+            <!--heading-->
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <span data-i18n="character_weaponname_desc">WAFFE</span>
+                </div>
+                <div class="sheet-cell">
+                    <span data-i18n="character_wapon_tp_desc">TP</span>
+                </div>
+                <div class="sheet-cell">
+                    <span data-i18n="character_weapon_at_desc">AT</span>
+                </div>
+                <div class="sheet-cell">
+                    <span data-i18n="character_weapon_pa_desc">PA</span>
+                </div>
+                <div class="sheet-cell">
+                    <span data-i18n="roll">WURF</span>
+                </div>
+            </div>
+            <!--heading-->
+
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <input type="text" title="WAFFE" name="attr_weapon_1_name">
+                </div>
+                <div class="sheet-cell">
+                    <input type="text" title="TP" name="attr_weapon_1_tp">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="AT" name="attr_weapon_1_at">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="PA" name="attr_weapon_1_pa">
+                </div>
+                <div class="sheet-cell">
+                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_1_tp}]]}}" >TP</button>
+                </div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <input type="text" title="WAFFE" name="attr_weapon_2_name">
+                </div>
+                <div class="sheet-cell">
+                    <input type="text" title="TP" name="attr_weapon_2_tp">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="AT" name="attr_weapon_2_at">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="PA" name="attr_weapon_2_pa">
+                </div>
+                <div class="sheet-cell">
+                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_2_tp}]]}}" >TP</button>
+                </div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <input type="text" title="WAFFE" name="attr_weapon_3_name">
+                </div>
+                <div class="sheet-cell">
+                    <input type="text" title="TP" name="attr_weapon_3_tp">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="AT" name="attr_weapon_3_at">
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" title="PA" name="attr_weapon_3_pa">
+                </div>
+                <div class="sheet-cell">
+                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_3_tp}]]}}" >TP</button>
+                </div>
+            </div>
+
+        </div>
+        <!--/fighting-->
+
+
+        <!--
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 1" value="1" checked>
+        <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">Kampftalente</span>
+        -->
+        <div class="sheet-navigation sheet-fighting-talents">
+            <div class="sheet-table">
+                <!--table heading-->
+                <div class="sheet-row">
+                    <div class="sheet-cell">
+                        <span data-i18n="character_fighting_talents_desc">KAMPFTECHNIK</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <span data-i18n="character_inc">STG.</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <span data-i18n="character_fw">FW</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <span data-i18n="character_at">AT</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <span data-i18n="character_pa">PA</span>
+                    </div>
+                </div>
+                <!--/table heading-->
+
+                <div class="sheet-row sheet-fighting-talent-bastard-sword">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_bastard-sword_desc">Anderthalbhänder</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_bastard-sword">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_bastard-sword">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_bastard-sword">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-crossbow">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_crossbow_desc">Armbrust</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>C</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_crossbow">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_crossbow">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_crossbow">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-bow">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_bow_desc">Bogen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_bow">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_bow">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_bow">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-dagger">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_dagger_desc">Dolch</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_dagger">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_dagger">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_dagger">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-fencing-weapon">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_fencing-weapon_desc">Fechtwaffen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_fencing-weapon">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_fencing-weapon">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_fencing-weapon">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-baton">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_baton_desc">Hiebwaffen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_baton">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_baton">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_baton">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-infantry-weapons">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_infantry-weapons_desc">Infanteriewaffen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_infantry-weapons">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_infantry-weapons">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_infantry-weapons">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-chain-waepons">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_chain-waepons_desc">Kettenwaffen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_chain-waepons">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_chain-waepons">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_chain-waepons">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-lancing">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_lancing_desc">Lanzenreiten</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_lancing">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_lancing">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_lancing">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-brawl">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_brawl_desc">Raufen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>C</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_brawl">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_brawl">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_brawl">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-wrestle">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_wrestle_desc">Ringen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_wrestle">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_wrestle">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_wrestle">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-sabre">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_sabre_desc">Säbel</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_sabre">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_sabre">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_sabre">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-sword">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_sword_desc">Schwerter</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_sword">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_sword">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_sword">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-spear">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_spear_desc">Speere</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_spear">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_spear">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_spear">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-staff">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_staff_desc">Stäbe</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_staff">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_staff">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_staff">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-throwing-axe">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_throwing-axe_desc">Wurfbeile</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_throwing-axe">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_throwing-axe">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_throwing-axe">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-throwing-knife">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_throwing-knife_desc">Wurfmesser</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>C</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_throwing-knife">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_throwing-knife">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_throwing-knife">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-throwing-spear">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_throwing-spear_desc">Wurfspeer</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>C</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_throwing-spear">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_throwing-spear">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_throwing-spear">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-twohanded-baton">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>D</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_twohanded-baton">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_twohanded-baton">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_twohanded-baton">
+                    </div>
+                </div>
+                <div class="sheet-row sheet-fighting-talent-twohanded-swords">
+                    <div class="sheet-cell">
+                        <!--KAMPFTALENT-->
+                        <span data-i18n="character_twohanded-swords_desc">Zweihandschwerter</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--STG-->
+                        <span>E</span>
+                    </div>
+                    <div class="sheet-cell">
+                        <!--FW-->
+                        <input type="number" title="FW" name="attr_fw_twohanded-swords">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--AT-->
+                        <input type="number" title="AT" name="attr_at_twohanded-swords">
+                    </div>
+                    <div class="sheet-cell">
+                        <!--PA-->
+                        <input type="number" title="PA" name="attr_pa_twohanded-swords">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="sheet-magic sheet-navigation">
 
     </div>
-    <div class="sheet-magic sheet-charsheet">
+    <div class="sheet-divine sheet-navigation">
 
     </div>
-    <div class="sheet-divine sheet-charsheet">
+    <div class="sheet-inventory sheet-navigation">
 
     </div>
-    <div class="sheet-inventory sheet-charsheet">
-
-    </div>
-    <div class="sheet-config sheet-charsheet">
+    <div class="sheet-config sheet-navigation">
 
     </div>
 </div>
 
-<rolltemplate class="sheet-rolltemplate-DSA-Eigenschaft">
+<rolltemplate class="sheet-rolltemplate-attribute">
     <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">Eigenschaft</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Probe:</span>{{Probe}}</div></div>
+        <div class="sheet-row sheet-template-head">
+            <div class="sheet-cell">
+                <span>{{eigenschaft}}</span><span data-i18n="template_test"> Probe</span>
+            </div>
+        </div>
+        <div class="sheet-row sheet-template-subhead">
+            <div class="sheet-cell">
+                <span>{{name}}</span>
+            </div>
+        </div>
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span>Probe:</span>{{roll}}
+            </div>
+        </div>
     </div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-AT">
+<rolltemplate class="sheet-rolltemplate-atpa">
     <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Attackewurf: </span>{{wurf}}</div></div>
+        <div class="sheet-row sheet-template-head">
+            <div class="sheet-cell">
+                {{#at}}
+                <span data-i18n="template_attack">Angriff</span>
+                {{/at}}
+                {{#pa}}
+                <span data-i18n="template_parry">Parieren</span>
+                {{/pa}}
+                {{#dodge}}
+                <span data-i18n="template_dodge">Ausweichen</span>
+                {{/dodge}}
+            </div>
+        </div>
+        <div class="sheet-row">
+            <div class="sheet-cell sheet-template-subhead">
+                <span>{{name}}</span>
+            </div>
+        </div>
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                {{#at}}
+                <span data-i18n="template_at_roll">AT Wurf: </span>
+                {{/at}}
+                {{#pa}}
+                <span data-i18n="template_pa_roll">PA Wurf: </span>
+                {{/pa}}
+                {{#dodge}}
+                <span data-i18n="template_dodge_roll">Ausweichen Wurf: </span>
+                {{/dodge}}
+                <span>{{roll}}</span>
+            </div>
+        </div>
         {{#rollGreater() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+            </div>
+        </div>
         {{/rollGreater() mod 0}}
         {{#rollLess() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+            </div>
+        </div>
         {{/rollLess() mod 0}}
-        {{#rollGreater() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollGreater() wurf wert}}
-        {{#rollTotal() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollTotal() wurf wert}}
-        {{#rollLess() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollLess() wurf wert}}
+        {{#rollGreater() roll value}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
+            </div>
+        </div>
+        {{/rollGreater() roll value}}
+        {{#rollTotal() roll value}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+            </div>
+        </div>
+        {{/rollTotal() roll value}}
+        {{#rollLess() roll value}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+            </div>
+        </div>
+        {{/rollLess() roll value}}
     </div>
 </rolltemplate>
 
+<rolltemplate class="sheet-rolltemplate-tp">
+    <div class="sheet-table">
+        <div class="sheet-row sheet-template-head">
+            <div class="sheet-cell">
+                <span data-i18n="template_dmg">Schaden</span>
+            </div>
+        </div>
+        <div class="sheet-row">
+            <div class="sheet-cell sheet-template-subhead">
+                <span>{{name}}</span>
+            </div>
+        </div>
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_tp_roll">TP Verlust:</span><span>{{damage}}</span>
+            </div>
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-talent">
+    <div class="sheet-table">
+        <div class="sheet-row sheet-template-head">
+            <div class="sheet-cell">
+                <span>{{talent}}</span><span data-i18n="template_test"> Probe</span>
+            </div>
+        </div>
+        <div class="sheet-row">
+            <div class="sheet-cell sheet-template-subhead">
+                <span>{{name}}</span>
+            </div>
+        </div>
+        {{#rollGreater() roll -1}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+            </div>
+        </div>
+        {{/rollGreater() roll -1}}
+        {{#rollLess() roll 0}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
+            </div>
+        </div>
+        {{/rollLess() roll 0}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_fp">FP: </span><span>{{roll}}</span>
+            </div>
+        </div>
+        {{#rollBetween() roll 0 3}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>1</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 0 3}}
+        {{#rollBetween() roll 4 6}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>2</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 4 6}}
+        {{#rollBetween() roll 7 9}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>3</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 7 9}}
+        {{#rollBetween() roll 10 12}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>4</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 10 12}}
+        {{#rollBetween() roll 13 15}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>5</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 13 15}}
+        {{#rollBetween() roll 16 18}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>6</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 16 18}}
+        {{#rollBetween() roll 19 21}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_qs">QS: </span><span>7</span>
+            </div>
+        </div>
+        {{/rollBetween() roll 19 21}}
+        {{#rollGreater() mod 0}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+            </div>
+        </div>
+        {{/rollGreater() mod 0}}
+        {{#rollLess() mod 0}}
+        <div class="sheet-row sheet-template-result">
+            <div class="sheet-cell">
+                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+            </div>
+        </div>
+        {{/rollLess() mod 0}}
+    </div>
+</rolltemplate>
+
+<!--
 <rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-AT-Patzer">
     <div class="sheet-table">
         <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
@@ -2679,7 +3441,6 @@
         {{/rollGreater() FP 0}}
     </div>
 </rolltemplate>
-
 <script type="text/worker">
 
 on("change:erfahrungsgrad", function() {
