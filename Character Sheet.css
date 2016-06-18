@@ -30,6 +30,18 @@ div.sheet-spacer,
     display: table-cell;
 }
 
+.sheet-cell.sheet-80pxcell {
+    width: 80px;
+}
+
+.sheet-cell.sheet-100pxcell {
+    width: 100px;
+}
+
+.sheet-cell.sheet-160pxcell {
+    width: 160px;
+}
+
 .sheet-table.sheet-padded > .sheet-row > .sheet-cell {
     padding: 5px;
 }
@@ -46,6 +58,10 @@ div.sheet-spacer,
     clear: both;
 }
 
+.sheet-centered {
+    margin: 0 auto;
+}
+
 /*attribute css*/
 .sheet-table.sheet-attribute-table {
     width: 400px;
@@ -54,6 +70,12 @@ div.sheet-spacer,
 
 .sheet-table.sheet-attribute-table.sheet-right {
     float: right;
+}
+
+.sheet-table.sheet-attribute-table.sheet-top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .sheet-table.sheet-attribute-table.sheet-left {
@@ -83,6 +105,10 @@ div.sheet-spacer,
     padding: 2px;
 }
 
+.sheet-hidden {
+    display: none;
+}
+
 /*css navigation*/
 input.sheet-hidden-input {
     opacity: 0;
@@ -91,7 +117,8 @@ input.sheet-hidden-input {
     height: 13px;
     margin-bottom: 10px;
 }
-
+input.sheet-navigation.sheet-fighting-ranged:checked ~ div.sheet-navigation.sheet-fighting-ranged,
+input.sheet-navigation.sheet-fighting-melee:checked ~ div.sheet-navigation.sheet-fighting-melee,
 input.sheet-navigation.sheet-fighting-talents:checked ~ div.sheet-navigation.sheet-fighting-talents,
 input.sheet-navigation.sheet-fighting:checked ~ div.sheet-navigation.sheet-fighting,
 input.sheet-navigation.sheet-talents:checked ~ div.sheet-navigation.sheet-talents,
@@ -102,6 +129,14 @@ input.sheet-navigation.sheet-general:checked ~ div.sheet-navigation.sheet-genera
 input.sheet-navigation:checked + span.sheet-navigation {
     background-color: black;
     color: white;
+}
+input.sheet-ranged-weapon-1:checked ~ div.sheet-navigation.sheet-ranged-weapon-1,
+input.sheet-ranged-weapon-2:checked ~ div.sheet-navigation.sheet-ranged-weapon-2,
+input.sheet-ranged-weapon-3:checked ~ div.sheet-navigation.sheet-ranged-weapon-3,
+input.sheet-melee-weapon-1:checked ~ div.sheet-navigation.sheet-melee-weapon-1,
+input.sheet-melee-weapon-2:checked ~ div.sheet-navigation.sheet-melee-weapon-2,
+input.sheet-melee-weapon-3:checked ~ div.sheet-navigation.sheet-melee-weapon-3{
+    display: inherit !important;
 }
 
 span.sheet-navigation {

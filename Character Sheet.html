@@ -1,7 +1,7 @@
-<div class="container">
-
+<div class="container" style="position: relative">
+    <h1>DSA 4.1 Charactersheet</h1>
     <!--basic attributes-->
-    <div class="sheet-table sheet-attribute-table sheet-right">
+    <div class="sheet-table sheet-attribute-table sheet-top-right">
         <div class="sheet-row sheet-attribute-list">
             <div class="sheet-cell"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
             <div class="sheet-cell"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
@@ -50,6 +50,7 @@
     <span class="sheet-navigation" data-i18n="character_talents_desc">TALENTE</span>
     <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting" name="attr_pagenumber" title="PAGE 3" value="3">
     <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
+    <hr>
 
     <div class="sheet-general sheet-navigation">
 
@@ -142,7 +143,7 @@
                 </div>
                 <div class="sheet-cell sheet-vmiddle">
                     <!--more attributes-->
-                    <div class="sheet-table sheet-attribute-table">
+                    <div class="sheet-table sheet-attribute-table sheet-centered">
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
                                 <span data-i18n="attr_health">LEBENSENERGIE</span>
@@ -2299,559 +2300,900 @@
         </div>
     </div>
     <div class="sheet-fighting sheet-navigation">
+        <div class="sheet-full">
+            <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-melee" name="attr_fighting_pagenumber" title="PAGE 1" value="1" checked>
+            <span class="sheet-navigation" data-i18n="character_fighting-melee_desc">NAHKAMPF</span>
+            <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-ranged" name="attr_fighting_pagenumber" title="PAGE 2" value="2">
+            <span class="sheet-navigation" data-i18n="character_fighting-ranged_desc">FERNKAMPF</span>
+            <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 4" value="4">
+            <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">KAMPFTECHNIK</span>
+            <!--
+            <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-abilities" name="attr_fighting_pagenumber" title="PAGE 5" value="5">
+            <span class="sheet-navigation" data-i18n="character_fighting-abilities_desc">KAMPF-SONDERFERTIGKEITEN</span>
+            -->
+            <hr>
 
-        <!--fighting-->
-        <div class="sheet-table">
-            <!--heading-->
-            <div class="sheet-row">
-                <div class="sheet-cell">
-                    <span data-i18n="character_weaponname_desc">WAFFE</span>
+            <!--melee-->
+            <div class="sheet-navigation sheet-fighting-melee">
+                <!--weapon information-->
+                <div class="sheet-table sheet-padded">
+                    <!--heading-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weaponname_desc">WAFFE</span>
+                        </div>
+                        <div class="sheet-cell sheet-160pxcell">
+                            <span data-i18n="character_talent">TALENT</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="attr_kk">KK</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weapon_tpkk_desc">TP/KK</span>
+                        </div>
+                        <div class="sheet-cell sheet-80pxcell">
+                            <span data-i18n="character_wapon_tp_desc">TP</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weapon_at_desc">AT-MOD</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weapon_pa_desc">PA-MOD</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="active">AKTIV</span>
+                        </div>
+                    </div>
+                    <!--/heading-->
+
+                    <!--weapon 1-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_melee_weapon_1_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_melee_weapon_1_talent">
+                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="9" data-i18n="character_spear_desc">Speere</option>
+                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="KK" name="attr_melee_weapon_1_kk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP/KK" name="attr_melee_weapon_1_tpkk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_melee_weapon_1_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="AT" name="attr_melee_weapon_1_at">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_melee_weapon_1_pa">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="1">
+                        </div>
+                    </div>
+                    <!--/weapon 1-->
+
+                    <!--weapon 2-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_melee_weapon_2_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_melee_weapon_2_talent">
+                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="9" data-i18n="character_spear_desc">Speere</option>
+                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="KK" name="attr_melee_weapon_2_kk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP/KK" name="attr_melee_weapon_2_tpkk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_melee_weapon_2_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="AT" name="attr_melee_weapon_2_at">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_melee_weapon_2_pa">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="2">
+                        </div>
+                    </div>
+                    <!--/weapon 2-->
+
+                    <!--weapon 3-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_melee_weapon_3_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_melee_weapon_3_talent">
+                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="9" data-i18n="character_spear_desc">Speere</option>
+                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="KK" name="attr_melee_weapon_3_kk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP/KK" name="attr_melee_weapon_3_tpkk">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_melee_weapon_3_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="AT" name="attr_melee_weapon_3_at">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_melee_weapon_3_pa">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="3">
+                        </div>
+                    </div>
+                    <!--/weapon 3-->
                 </div>
-                <div class="sheet-cell">
-                    <span data-i18n="character_wapon_tp_desc">TP</span>
+                <!--/weapon information-->
+
+                <!--weapon rolls-->
+
+                <!--weapon 1 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_weapon" value="1">
+                <div class="sheet-navigation sheet-melee-weapon-1">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_pa}}}" >PA</button>
                 </div>
-                <div class="sheet-cell">
-                    <span data-i18n="character_weapon_at_desc">AT</span>
+                <!--/weapon 1 roll-->
+
+                <!--weapon 2 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-2" name="attr_active_melee_weapon" value="2">
+                <div class="sheet-navigation sheet-melee-weapon-2">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_pa}}}" >PA</button>
                 </div>
-                <div class="sheet-cell">
-                    <span data-i18n="character_weapon_pa_desc">PA</span>
+                <!--/weapon 2 roll-->
+
+                <!--weapon 3 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-3" name="attr_active_melee_weapon" value="3">
+                <div class="sheet-navigation sheet-melee-weapon-3">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_pa}}}" >PA</button>
                 </div>
-                <div class="sheet-cell">
-                    <span data-i18n="roll">WURF</span>
+                <!--/weapon 3 roll-->
+
+                <!--dodge roll-->
+                <div>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
                 </div>
+                <!--/dodge roll-->
+
+                <!--/weapon rolls-->
+
+                <!--active melee abilities-->
+                <!--TODO show active abilities-->
+                <!--/active melee abilities-->
             </div>
-            <!--heading-->
+            <!--/melee-->
 
-            <div class="sheet-row">
-                <div class="sheet-cell">
-                    <input type="text" title="WAFFE" name="attr_weapon_1_name">
+            <!--ranged-->
+            <div class="sheet-navigation sheet-fighting-ranged">
+                <!--weapon information-->
+                <div class="sheet-table sheet-padded">
+                    <!--heading-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weaponname_desc">WAFFE</span>
+                        </div>
+                        <div class="sheet-cell sheet-100pxcell">
+                            <span data-i18n="character_talent">TALENT</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="ranges">REICHWEITEN</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weapon_tp+">TP+</span>
+                        </div>
+                        <div class="sheet-cell sheet-80pxcell">
+                            <span data-i18n="character_weapon_tp_desc">TP</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_weapon_load">LADEN</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="active">AKTIV</span>
+                        </div>
+                    </div>
+                    <!--/heading-->
+
+                    <!--weapon 1-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_ranged_weapon_1_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_ranged_weapon_1_talent">
+                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_1_ranges_1">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_1_ranges_2">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_1_ranges_3">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_1_ranges_4">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_1_ranges_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_1_tp+_1">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_1_tp+_2">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_1_tp+_3">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_1_tp+_4">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_1_tp+_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_ranged_weapon_1_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_ranged_weapon_1_load">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="1">
+                        </div>
+                    </div>
+                    <!--/weapon 1-->
+
+                    <!--weapon 2-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_ranged_weapon_2_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_ranged_weapon_2_talent">
+                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_2_ranges_1">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_2_ranges_2">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_2_ranges_3">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_2_ranges_4">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_2_ranges_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_2_tp+_1">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_2_tp+_2">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_2_tp+_3">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_2_tp+_4">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_2_tp+_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_ranged_weapon_2_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_ranged_weapon_2_load">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="2">
+                        </div>
+                    </div>
+                    <!--/weapon 2-->
+
+                    <!--weapon 3-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" title="WAFFE" name="attr_ranged_weapon_3_name">
+                        </div>
+                        <div class="sheet-cell">
+                            <select name="attr_ranged_weapon_3_talent">
+                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                            </select>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_3_ranges_1">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_3_ranges_2">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_3_ranges_3">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_3_ranges_4">
+                            <input type="number" title="RANGES" name="attr_ranged_weapon_3_ranges_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_3_tp+_1">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_3_tp+_2">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_3_tp+_3">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_3_tp+_4">
+                            <input type="number" title="TP+" name="attr_ranged_weapon_3_tp+_5">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="text" title="TP" name="attr_ranged_weapon_3_tp">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="PA" name="attr_ranged_weapon_3_load">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="3">
+                        </div>
+                    </div>
+                    <!--/weapon 3-->
                 </div>
-                <div class="sheet-cell">
-                    <input type="text" title="TP" name="attr_weapon_1_tp">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="AT" name="attr_weapon_1_at">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="PA" name="attr_weapon_1_pa">
-                </div>
-                <div class="sheet-cell">
-                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_pa}}}" >PA</button>
+                <!--/weapon information-->
+
+                <!--weapon rolls-->
+
+                <!--weapon 1 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-1" name="attr_active_ranged_weapon" value="1">
+                <div class="sheet-navigation sheet-ranged-weapon-1">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_at}}}" >AT</button>
                     <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_1_tp}]]}}" >TP</button>
                 </div>
-            </div>
-            <div class="sheet-row">
-                <div class="sheet-cell">
-                    <input type="text" title="WAFFE" name="attr_weapon_2_name">
-                </div>
-                <div class="sheet-cell">
-                    <input type="text" title="TP" name="attr_weapon_2_tp">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="AT" name="attr_weapon_2_at">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="PA" name="attr_weapon_2_pa">
-                </div>
-                <div class="sheet-cell">
-                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_pa}}}" >PA</button>
+                <!--/weapon 1 roll-->
+
+                <!--weapon 2 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-2" name="attr_active_ranged_weapon" value="2">
+                <div class="sheet-navigation sheet-ranged-weapon-2">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_at}}}" >AT</button>
                     <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_2_tp}]]}}" >TP</button>
                 </div>
-            </div>
-            <div class="sheet-row">
-                <div class="sheet-cell">
-                    <input type="text" title="WAFFE" name="attr_weapon_3_name">
-                </div>
-                <div class="sheet-cell">
-                    <input type="text" title="TP" name="attr_weapon_3_tp">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="AT" name="attr_weapon_3_at">
-                </div>
-                <div class="sheet-cell">
-                    <input type="number" title="PA" name="attr_weapon_3_pa">
-                </div>
-                <div class="sheet-cell">
-                    <button type="roll" value="&{template:atpa} {{AT=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{PA=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_pa}}}" >PA</button>
+                <!--/weapon 2 roll-->
+
+                <!--weapon 3 roll-->
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-3" name="attr_active_ranged_weapon" value="3">
+                <div class="sheet-navigation sheet-ranged-weapon-3">
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_at}}}" >AT</button>
                     <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_3_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_pa}}}" >PA</button>
+                </div>
+                <!--/weapon 3 roll-->
+
+                <!--dodge roll-->
+                <div>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                </div>
+                <!--/dodge roll-->
+
+                <!--/weapon rolls-->
+
+                <!--active melee abilities-->
+                <!--TODO show active abilities-->
+                <!--/active melee abilities-->
+            </div>
+            <!--/ranged-->
+
+            <!--fighting-talents-->
+            <div class="sheet-navigation sheet-fighting-talents">
+                <div class="sheet-table sheet-padded">
+                    <!--table heading-->
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span data-i18n="character_fighting_talents_desc">KAMPFTECHNIK</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_inc">STG.</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_fw">FW</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_at">AT</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span data-i18n="character_pa">PA</span>
+                        </div>
+                    </div>
+                    <!--/table heading-->
+
+                    <div class="sheet-row sheet-fighting-talent-bastard-sword">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_bastard-sword_desc">Anderthalbhänder</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_bastard-sword">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_bastard-sword">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_bastard-sword">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-crossbow">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_crossbow_desc">Armbrust</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>C</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_crossbow">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_crossbow">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_crossbow">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-bow">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_bow_desc">Bogen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_bow">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_bow">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_bow">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-dagger">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_dagger_desc">Dolch</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_dagger">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_dagger">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_dagger">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-fencing-weapon">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_fencing-weapon_desc">Fechtwaffen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_fencing-weapon">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_fencing-weapon">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_fencing-weapon">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-baton">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_baton_desc">Hiebwaffen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_baton">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_baton">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_baton">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-infantry-weapons">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_infantry-weapons_desc">Infanteriewaffen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_infantry-weapons">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_infantry-weapons">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_infantry-weapons">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-chain-waepons">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_chain-waepons_desc">Kettenwaffen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_chain-waepons">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_chain-waepons">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_chain-waepons">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-lancing">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_lancing_desc">Lanzenreiten</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_lancing">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_lancing">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_lancing">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-brawl">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_brawl_desc">Raufen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>C</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_brawl">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_brawl">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_brawl">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-wrestle">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_wrestle_desc">Ringen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_wrestle">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_wrestle">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_wrestle">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-sabre">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_sabre_desc">Säbel</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_sabre">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_sabre">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_sabre">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-sword">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_sword_desc">Schwerter</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_sword">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_sword">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_sword">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-spear">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_spear_desc">Speere</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_spear">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_spear">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_spear">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-staff">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_staff_desc">Stäbe</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_staff">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_staff">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_staff">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-throwing-axe">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_throwing-axe_desc">Wurfbeile</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_throwing-axe">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_throwing-axe">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_throwing-axe">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-throwing-knife">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_throwing-knife_desc">Wurfmesser</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>C</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_throwing-knife">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_throwing-knife">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_throwing-knife">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-throwing-spear">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_throwing-spear_desc">Wurfspeer</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>C</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_throwing-spear">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_throwing-spear">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_throwing-spear">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-twohanded-baton">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>D</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_twohanded-baton">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_twohanded-baton">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_twohanded-baton">
+                        </div>
+                    </div>
+                    <div class="sheet-row sheet-fighting-talent-twohanded-swords">
+                        <div class="sheet-cell">
+                            <!--KAMPFTALENT-->
+                            <span data-i18n="character_twohanded-swords_desc">Zweihandschwerter</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--STG-->
+                            <span>E</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <!--FW-->
+                            <input type="number" title="FW" name="attr_fw_twohanded-swords">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--AT-->
+                            <input type="number" title="AT" name="attr_at_twohanded-swords">
+                        </div>
+                        <div class="sheet-cell">
+                            <!--PA-->
+                            <input type="number" title="PA" name="attr_pa_twohanded-swords">
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <!--/fighting-talents-->
 
+            <!--fighting abilities-->
+            <div class="sheet-navigation sheet-fighting-abilities">
+                <!--header-->
+
+                <!--/header-->
+            </div>
+            <!--/fighting abilities-->
         </div>
-        <!--/fighting-->
-
-
-        <!--
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 1" value="1" checked>
-        <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">Kampftalente</span>
-        -->
-        <div class="sheet-navigation sheet-fighting-talents">
-            <div class="sheet-table">
-                <!--table heading-->
-                <div class="sheet-row">
-                    <div class="sheet-cell">
-                        <span data-i18n="character_fighting_talents_desc">KAMPFTECHNIK</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <span data-i18n="character_inc">STG.</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <span data-i18n="character_fw">FW</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <span data-i18n="character_at">AT</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <span data-i18n="character_pa">PA</span>
-                    </div>
-                </div>
-                <!--/table heading-->
-
-                <div class="sheet-row sheet-fighting-talent-bastard-sword">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_bastard-sword_desc">Anderthalbhänder</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_bastard-sword">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_bastard-sword">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_bastard-sword">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-crossbow">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_crossbow_desc">Armbrust</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>C</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_crossbow">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_crossbow">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_crossbow">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-bow">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_bow_desc">Bogen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_bow">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_bow">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_bow">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-dagger">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_dagger_desc">Dolch</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_dagger">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_dagger">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_dagger">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-fencing-weapon">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_fencing-weapon_desc">Fechtwaffen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_fencing-weapon">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_fencing-weapon">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_fencing-weapon">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-baton">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_baton_desc">Hiebwaffen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_baton">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_baton">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_baton">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-infantry-weapons">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_infantry-weapons_desc">Infanteriewaffen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_infantry-weapons">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_infantry-weapons">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_infantry-weapons">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-chain-waepons">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_chain-waepons_desc">Kettenwaffen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_chain-waepons">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_chain-waepons">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_chain-waepons">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-lancing">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_lancing_desc">Lanzenreiten</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_lancing">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_lancing">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_lancing">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-brawl">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_brawl_desc">Raufen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>C</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_brawl">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_brawl">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_brawl">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-wrestle">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_wrestle_desc">Ringen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_wrestle">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_wrestle">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_wrestle">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-sabre">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_sabre_desc">Säbel</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_sabre">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_sabre">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_sabre">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-sword">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_sword_desc">Schwerter</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_sword">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_sword">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_sword">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-spear">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_spear_desc">Speere</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_spear">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_spear">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_spear">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-staff">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_staff_desc">Stäbe</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_staff">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_staff">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_staff">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-throwing-axe">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_throwing-axe_desc">Wurfbeile</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_throwing-axe">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_throwing-axe">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_throwing-axe">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-throwing-knife">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_throwing-knife_desc">Wurfmesser</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>C</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_throwing-knife">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_throwing-knife">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_throwing-knife">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-throwing-spear">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_throwing-spear_desc">Wurfspeer</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>C</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_throwing-spear">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_throwing-spear">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_throwing-spear">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-twohanded-baton">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>D</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_twohanded-baton">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_twohanded-baton">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_twohanded-baton">
-                    </div>
-                </div>
-                <div class="sheet-row sheet-fighting-talent-twohanded-swords">
-                    <div class="sheet-cell">
-                        <!--KAMPFTALENT-->
-                        <span data-i18n="character_twohanded-swords_desc">Zweihandschwerter</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--STG-->
-                        <span>E</span>
-                    </div>
-                    <div class="sheet-cell">
-                        <!--FW-->
-                        <input type="number" title="FW" name="attr_fw_twohanded-swords">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--AT-->
-                        <input type="number" title="AT" name="attr_at_twohanded-swords">
-                    </div>
-                    <div class="sheet-cell">
-                        <!--PA-->
-                        <input type="number" title="PA" name="attr_pa_twohanded-swords">
-                    </div>
-                </div>
-
-            </div>
+        <div class="sheet-full">
+            <!--TODO status/wunden-->
+        </div>
+        <div class="sheet-full">
+            <!--TODO rüstung-->
         </div>
     </div>
     <div class="sheet-magic sheet-navigation">
