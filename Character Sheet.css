@@ -4,6 +4,14 @@
     width: 100%;
 }
 
+.sheet-table.sheet-checktable {
+    width: 500px;
+}
+
+.sheet-table.sheet-checktable > .sheet-row > .sheet-cell {
+    text-align: center;
+}
+
 .sheet-row {
     display: table-row;
     width: 100%;
