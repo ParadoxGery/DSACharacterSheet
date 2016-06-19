@@ -5,7 +5,7 @@
         <div class="sheet-row sheet-attribute-list">
             <div class="sheet-cell"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
             <div class="sheet-cell"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
-            <div class="sheet-cell"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_MU" value="8"></label></div>
+            <div class="sheet-cell"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_IN" value="8"></label></div>
             <div class="sheet-cell"><label><span data-i18n="attr_ch">CH</span><br><input type="number" name="attr_CH" value="8"></label></div>
             <div class="sheet-cell"><label><span data-i18n="attr_ff">FF</span><br><input type="number" name="attr_FF" value="8"></label></div>
             <div class="sheet-cell"><label><span data-i18n="attr_ge">GE</span><br><input type="number" name="attr_GE" value="8"></label></div>
@@ -163,7 +163,7 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_le_max" disabled>
+                                    <input type="number" name="attr_character_le_max" readonly>
                                 </label>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_as_max" disabled>
+                                    <input type="number" name="attr_character_as_max" readonly>
                                 </label>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_mr_max" disabled>
+                                    <input type="number" name="attr_character_mr_max" readonly>
                                 </label>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_dodge_max" disabled>
+                                    <input type="number" name="attr_character_dodge_max" readonly>
                                 </label>
                             </div>
                         </div>
@@ -255,13 +255,13 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_ini_max" disabled>
+                                    <input type="number" name="attr_character_ini_max" readonly>
                                 </label>
                             </div>
                         </div>
                         <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                             <div class="sheet-cell">
-                                <span data-i18n="attr_base_gs">GESCHWINDIGKEIT</span>
+                                <span data-i18n="attr_gs">GESCHWINDIGKEIT</span>
                             </div>
                             <div class="sheet-cell">
                                 <label>
@@ -278,7 +278,7 @@
                             <div class="sheet-cell">
                                 <label>
                                     <span data-i18n="max">MAX</span><br>
-                                    <input type="number" name="attr_character_gs_max" disabled>
+                                    <input type="number" name="attr_character_gs_max" readonly>
                                 </label>
                             </div>
                         </div>
@@ -2332,7 +2332,7 @@
                             <span data-i18n="character_weapon_tpkk_desc">TP/KK</span>
                         </div>
                         <div class="sheet-cell sheet-80pxcell">
-                            <span data-i18n="character_wapon_tp_desc">TP</span>
+                            <span data-i18n="character_weapon_tp_desc">TP</span>
                         </div>
                         <div class="sheet-cell">
                             <span data-i18n="character_weapon_at_desc">AT-MOD</span>
@@ -2353,19 +2353,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_1_talent">
-                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
                                 <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
                                 <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
                                 <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
                                 <option value="7" data-i18n="character_sabre_desc">Säbel</option>
                                 <option value="8" data-i18n="character_sword_desc">Schwerter</option>
                                 <option value="9" data-i18n="character_spear_desc">Speere</option>
                                 <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2396,19 +2396,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_2_talent">
-                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
                                 <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
                                 <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
                                 <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
                                 <option value="7" data-i18n="character_sabre_desc">Säbel</option>
                                 <option value="8" data-i18n="character_sword_desc">Schwerter</option>
                                 <option value="9" data-i18n="character_spear_desc">Speere</option>
                                 <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2440,19 +2440,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_3_talent">
-                                <option value="0" data-i18n="character_bastard-sword_desc">Anderthalbhänder</option>
+                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
                                 <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing-weapons_desc">Fechtwaffen</option>
+                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
                                 <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry-weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain-weapons_desc">Kettenwaffen</option>
+                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
                                 <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
                                 <option value="7" data-i18n="character_sabre_desc">Säbel</option>
                                 <option value="8" data-i18n="character_sword_desc">Schwerter</option>
                                 <option value="9" data-i18n="character_spear_desc">Speere</option>
                                 <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded-swords_desc">Zweihandschwerter</option>
+                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2480,19 +2480,19 @@
 
                 <!--weapon rolls-->
 
-                <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_1_at">
-                <input class="sheet-hidden" type="number" title="PA" name="attr_melee_weapon_1_pa">
-                <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_2_at">
-                <input class="sheet-hidden" type="number" title="PA" name="attr_melee_weapon_2_pa">
-                <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_3_at">
-                <input class="sheet-hidden" type="number" title="PA" name="attr_melee_weapon_3_pa">
+                <input class="" type="number" title="AT" name="attr_melee_weapon_1_at" readonly>
+                <input class="" type="number" title="PA" name="attr_melee_weapon_1_pa" readonly>
+                <input class="" type="number" title="AT" name="attr_melee_weapon_2_at" readonly>
+                <input class="" type="number" title="PA" name="attr_melee_weapon_2_pa" readonly>
+                <input class="" type="number" title="AT" name="attr_melee_weapon_3_at" readonly>
+                <input class="" type="number" title="PA" name="attr_melee_weapon_3_pa" readonly>
 
                 <!--weapon 1 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_weapon" value="1">
                 <div class="sheet-navigation sheet-melee-weapon-1">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_at}}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{meleeWeapon1name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{meleeWeapon1at}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{meleeWeapon1tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{meleeWeapon1name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{meleeWeapon1pa}}}" >PA</button>
                 </div>
                 <!--/weapon 1 roll-->
 
@@ -2749,10 +2749,10 @@
                     </div>
                     <!--/table heading-->
 
-                    <div class="sheet-row sheet-fighting-talent-bastard-sword">
+                    <div class="sheet-row sheet-fighting-talent-bastard_sword">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_bastard-sword_desc">Anderthalbhänder</span>
+                            <span data-i18n="character_bastard_sword_desc">Anderthalbhänder</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -2760,15 +2760,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_bastard-sword">
+                            <input type="number" title="FW" name="attr_fw_bastard_sword">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_bastard-sword">
+                            <input type="number" title="AT" name="attr_at_bastard_sword">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_bastard-sword">
+                            <input type="number" title="PA" name="attr_pa_bastard_sword">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-crossbow">
@@ -2837,10 +2837,10 @@
                             <input type="number" title="PA" name="attr_pa_dagger">
                         </div>
                     </div>
-                    <div class="sheet-row sheet-fighting-talent-fencing-weapon">
+                    <div class="sheet-row sheet-fighting-talent-fencing_weapon">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_fencing-weapon_desc">Fechtwaffen</span>
+                            <span data-i18n="character_fencing_weapon_desc">Fechtwaffen</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -2848,15 +2848,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_fencing-weapon">
+                            <input type="number" title="FW" name="attr_fw_fencing_weapon">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_fencing-weapon">
+                            <input type="number" title="AT" name="attr_at_fencing_weapon">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_fencing-weapon">
+                            <input type="number" title="PA" name="attr_pa_fencing_weapon">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-baton">
@@ -2881,10 +2881,10 @@
                             <input type="number" title="PA" name="attr_pa_baton">
                         </div>
                     </div>
-                    <div class="sheet-row sheet-fighting-talent-infantry-weapons">
+                    <div class="sheet-row sheet-fighting-talent-infantry_weapons">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_infantry-weapons_desc">Infanteriewaffen</span>
+                            <span data-i18n="character_infantry_weapons_desc">Infanteriewaffen</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -2892,21 +2892,21 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_infantry-weapons">
+                            <input type="number" title="FW" name="attr_fw_infantry_weapons">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_infantry-weapons">
+                            <input type="number" title="AT" name="attr_at_infantry_weapons">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_infantry-weapons">
+                            <input type="number" title="PA" name="attr_pa_infantry_weapons">
                         </div>
                     </div>
-                    <div class="sheet-row sheet-fighting-talent-chain-waepons">
+                    <div class="sheet-row sheet-fighting-talent-chain_weapons">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_chain-waepons_desc">Kettenwaffen</span>
+                            <span data-i18n="character_chain_weapons_desc">Kettenwaffen</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -2914,15 +2914,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_chain-waepons">
+                            <input type="number" title="FW" name="attr_fw_chain_weapons">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_chain-waepons">
+                            <input type="number" title="AT" name="attr_at_chain_weapons">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_chain-waepons">
+                            <input type="number" title="PA" name="attr_pa_chain_weapons">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-lancing">
@@ -3145,10 +3145,10 @@
                             <input type="number" title="PA" name="attr_pa_throwing-spear">
                         </div>
                     </div>
-                    <div class="sheet-row sheet-fighting-talent-twohanded-baton">
+                    <div class="sheet-row sheet-fighting-talent-twohanded_baton">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_twohanded-baton_desc">Zweihand-Hiebwaffen</span>
+                            <span data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -3156,21 +3156,21 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_twohanded-baton">
+                            <input type="number" title="FW" name="attr_fw_twohanded_baton">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_twohanded-baton">
+                            <input type="number" title="AT" name="attr_at_twohanded_baton">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_twohanded-baton">
+                            <input type="number" title="PA" name="attr_pa_twohanded_baton">
                         </div>
                     </div>
-                    <div class="sheet-row sheet-fighting-talent-twohanded-swords">
+                    <div class="sheet-row sheet-fighting-talent-twohanded_swords">
                         <div class="sheet-cell">
                             <!--KAMPFTALENT-->
-                            <span data-i18n="character_twohanded-swords_desc">Zweihandschwerter</span>
+                            <span data-i18n="character_twohanded_swords_desc">Zweihandschwerter</span>
                         </div>
                         <div class="sheet-cell">
                             <!--STG-->
@@ -3178,15 +3178,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_twohanded-swords">
+                            <input type="number" title="FW" name="attr_fw_twohanded_swords">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_twohanded-swords">
+                            <input type="number" title="AT" name="attr_at_twohanded_swords">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_twohanded-swords">
+                            <input type="number" title="PA" name="attr_pa_twohanded_swords">
                         </div>
                     </div>
 
@@ -3559,7 +3559,7 @@
 on("change:character_le_basis change:character_le_mod",function(){
     getAttrs(["character_le_basis","character_le_mod"], function(values) {
         setAttrs({
-            character_le_max: values.character_le_basis + values.character_le_mod
+            character_le_max: parseInt(values.character_le_basis) + parseInt(values.character_le_mod)
         });
     });
 });
@@ -3567,7 +3567,7 @@ on("change:character_le_basis change:character_le_mod",function(){
 on("change:character_as_basis change:character_as_mod",function(){
     getAttrs(["character_as_basis","character_as_mod"], function(values) {
         setAttrs({
-            character_as_max: values.character_as_basis + values.character_as_mod
+            character_as_max: parseInt(values.character_as_basis) + parseInt(values.character_as_mod)
         });
     });
 });
@@ -3575,7 +3575,7 @@ on("change:character_as_basis change:character_as_mod",function(){
 on("change:character_mr_basis change:character_mr_mod",function(){
     getAttrs(["character_mr_basis","character_mr_mod"], function(values) {
         setAttrs({
-            character_mr_max: values.character_mr_basis + values.character_mr_mod
+            character_mr_max: parseInt(values.character_mr_basis) + parseInt(values.character_mr_mod)
         });
     });
 });
@@ -3583,7 +3583,7 @@ on("change:character_mr_basis change:character_mr_mod",function(){
 on("change:character_dodge_basis change:character_dodge_mod",function(){
     getAttrs(["character_dodge_basis","character_dodge_mod"], function(values) {
         setAttrs({
-            character_dodge_max: values.character_dodge_basis + values.character_dodge_mod
+            character_dodge_max: parseInt(values.character_dodge_basis) + parseInt(values.character_dodge_mod)
         });
     });
 });
@@ -3591,7 +3591,7 @@ on("change:character_dodge_basis change:character_dodge_mod",function(){
 on("change:character_ini_basis change:character_ini_mod",function(){
     getAttrs(["character_ini_basis","character_ini_mod"], function(values) {
         setAttrs({
-            character_ini_max: values.character_ini_basis + values.character_ini_mod
+            character_ini_max: parseInt(values.character_ini_basis) + parseInt(values.character_ini_mod)
         });
     });
 });
@@ -3599,1674 +3599,172 @@ on("change:character_ini_basis change:character_ini_mod",function(){
 on("change:character_gs_basis change:character_gs_mod",function(){
     getAttrs(["character_gs_basis","character_gs_mod"], function(values) {
         setAttrs({
-            character_gs_max: values.character_gs_basis + values.character_gs_mod
+            character_gs_max: parseInt(values.character_gs_basis) + parseInt(values.character_gs_mod)
         });
     });
 });
 
 //---attributes---//
 
-//---weapon---//
-var meleeTriggers = " change:at_bastard-sword change:pa_bastard-sword";
-meleeTriggers +=    " change:at_dagger change:pa_dagger";
-meleeTriggers +=    " change:at_fencing-weapons change:pa_fencing-weapons";
-meleeTriggers +=    " change:at_baton change:pa_baton";
-meleeTriggers +=    " change:at_infantry-weapons change:pa_infantry-weapons";
-meleeTriggers +=    " change:at_chain-weapons change:pa_chain-weapons";
-meleeTriggers +=    " change:at_lancing change:pa_lancing";
-meleeTriggers +=    " change:at_sabre change:pa_sabre";
-meleeTriggers +=    " change:at_sword change:pa_sword";
-meleeTriggers +=    " change:at_spear change:pa_spear";
-meleeTriggers +=    " change:at_staff change:pa_staff";
-meleeTriggers +=    " change:at_twohanded-baton change:pa_twohanded-baton";
-meleeTriggers +=    " change:at_twohanded-swords change:pa_twohanded-swords";
+on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapon_1_talent change:wounds",function(){
+    var weapon1at = 0;
+    var weapon1pa = 0;
+    getAttrs(["melee_weapon_1_at_mod", "melee_weapon_1_pa_mod", "melee_weapon_1_talent", "wounds"],function(values) {
+        getMeleeWeaponTalentValues(parseInt(values.melee_weapon_1_talent),function(talent) {
+            weapon1at += parseInt(values.melee_weapon_1_at_mod);
+            weapon1at += talent["at"];
+            weapon1at -= 2*parseInt(values.wounds);
+            weapon1pa += parseInt(values.melee_weapon_1_pa_mod);
+            weapon1pa += talent["pa"];
+            weapon1pa -= 2*parseInt(values.wounds);
 
-on("change:melee_weapon_1_talent change:wounds" + meleeTriggers,function(){
-    getAttrs(["melee_weapon_1_talent"],function(talent) {
-        var atpa = ["melee_weapon_1_at_mod","melee_weapon_1_pa_mod", "wounds"];
-        switch(talent.melee_weapon_1_talent){
-            case 0:
-                atpa.push("at_bastard-sword");
-                atpa.push("pa_bastard-sword");
-                break;
-            case 1:
-                atpa.push("at_dagger");
-                atpa.push("pa_dagger");
-                break;
-            case 2:
-                atpa.push("at_fencing-weapon");
-                atpa.push("pa_fencing-weapon");
-                break;
-            case 3:
-                atpa.push("at_baton");
-                atpa.push("pa_baton");
-                break;
-            case 4:
-                atpa.push("at_infantry-weapons");
-                atpa.push("pa_infantry-weapons");
-                break;
-            case 5:
-                atpa.push("at_chain-weapons");
-                atpa.push("pa_chain-weapons");
-                break;
-            case 6:
-                atpa.push("at_lancing");
-                atpa.push("pa_lancing");
-                break;
-            case 7:
-                atpa.push("at_sabre");
-                atpa.push("pa_sabre");
-                break;
-            case 8:
-                atpa.push("at_sword");
-                atpa.push("pa_sword");
-                break;
-            case 9:
-                atpa.push("at_spear");
-                atpa.push("pa_spear");
-                break;
-            case 10:
-                atpa.push("at_staff");
-                atpa.push("pa_staff");
-                break;
-            case 11:
-                atpa.push("at_twohanded-baton");
-                atpa.push("pa_twohanded-baton");
-                break;
-            case 12:
-                atpa.push("at_twohanded-swords");
-                atpa.push("pa_twohanded-swords");
-                break;
-            default:
-
-        }
-        getAttrs(atpa, function(values) {
             setAttrs({
-                melee_weapon_1_at: values[atpa[2]] + values.melee_weapons_1_at_mod - (2*values.wounds),
-                melee_weapon_1_pa: values[atpa[3]] + values.melee_weapons_1_pa_mod - (2*values.wounds)
+                melee_weapon_1_at: weapon1at,
+                melee_weapon_1_pa: weapon1pa
             });
         });
     });
-});
-on("change:melee_weapon_2_talent change:wounds" + meleeTriggers,function(){
-    getAttrs(["melee_weapon_2_talent"],function(talent) {
-        var atpa = ["melee_weapon_2_at_mod","melee_weapon_2_pa_mod", "wounds"];
-        switch(talent.melee_weapon_2_talent){
-            case 0:
-                atpa.push("at_bastard-sword");
-                atpa.push("pa_bastard-sword");
-                break;
-            case 1:
-                atpa.push("at_dagger");
-                atpa.push("pa_dagger");
-                break;
-            case 2:
-                atpa.push("at_fencing-weapon");
-                atpa.push("pa_fencing-weapon");
-                break;
-            case 3:
-                atpa.push("at_baton");
-                atpa.push("pa_baton");
-                break;
-            case 4:
-                atpa.push("at_infantry-weapons");
-                atpa.push("pa_infantry-weapons");
-                break;
-            case 5:
-                atpa.push("at_chain-weapons");
-                atpa.push("pa_chain-weapons");
-                break;
-            case 6:
-                atpa.push("at_lancing");
-                atpa.push("pa_lancing");
-                break;
-            case 7:
-                atpa.push("at_sabre");
-                atpa.push("pa_sabre");
-                break;
-            case 8:
-                atpa.push("at_sword");
-                atpa.push("pa_sword");
-                break;
-            case 9:
-                atpa.push("at_spear");
-                atpa.push("pa_spear");
-                break;
-            case 10:
-                atpa.push("at_staff");
-                atpa.push("pa_staff");
-                break;
-            case 11:
-                atpa.push("at_twohanded-baton");
-                atpa.push("pa_twohanded-baton");
-                break;
-            case 12:
-                atpa.push("at_twohanded-swords");
-                atpa.push("pa_twohanded-swords");
-                break;
-            default:
 
-        }
-        getAttrs(atpa, function(values) {
-            setAttrs({
-                melee_weapon_2_at: values[atpa[2]] + values.melee_weapons_2_at_mod - (2*values.wounds),
-                melee_weapon_2_pa: values[atpa[3]] + values.melee_weapons_2_pa_mod - (2*values.wounds)
+});
+
+var getMeleeWeaponTalentValues = function(number,callback) {
+    var result = {
+        at: 0,
+        pa: 0
+    };
+    switch(number){
+        case 0:
+            getAttrs(["at_bastard_sword","pa_bastard_sword"],function(values){
+                result.at = parseInt(values.at_bastard_sword);
+                result.pa = parseInt(values.pa_bastard_sword);
+                callback(result);
             });
-        });
-    });
-});
-on("change:melee_weapon_3_talent change:wounds" + meleeTriggers,function(){
-    getAttrs(["melee_weapon_3_talent"],function(talent) {
-        var atpa = ["melee_weapon_3_at_mod","melee_weapon_3_pa_mod", "wounds"];
-        switch(talent.melee_weapon_3_talent){
-            case 0:
-                atpa.push("at_bastard-sword");
-                atpa.push("pa_bastard-sword");
-                break;
-            case 1:
-                atpa.push("at_dagger");
-                atpa.push("pa_dagger");
-                break;
-            case 2:
-                atpa.push("at_fencing-weapon");
-                atpa.push("pa_fencing-weapon");
-                break;
-            case 3:
-                atpa.push("at_baton");
-                atpa.push("pa_baton");
-                break;
-            case 4:
-                atpa.push("at_infantry-weapons");
-                atpa.push("pa_infantry-weapons");
-                break;
-            case 5:
-                atpa.push("at_chain-weapons");
-                atpa.push("pa_chain-weapons");
-                break;
-            case 6:
-                atpa.push("at_lancing");
-                atpa.push("pa_lancing");
-                break;
-            case 7:
-                atpa.push("at_sabre");
-                atpa.push("pa_sabre");
-                break;
-            case 8:
-                atpa.push("at_sword");
-                atpa.push("pa_sword");
-                break;
-            case 9:
-                atpa.push("at_spear");
-                atpa.push("pa_spear");
-                break;
-            case 10:
-                atpa.push("at_staff");
-                atpa.push("pa_staff");
-                break;
-            case 11:
-                atpa.push("at_twohanded-baton");
-                atpa.push("pa_twohanded-baton");
-                break;
-            case 12:
-                atpa.push("at_twohanded-swords");
-                atpa.push("pa_twohanded-swords");
-                break;
-            default:
-
-        }
-        getAttrs(atpa, function(values) {
-            setAttrs({
-                melee_weapon_3_at: values[atpa[2]] + values.melee_weapons_3_at_mod - (2*values.wounds),
-                melee_weapon_3_pa: values[atpa[3]] + values.melee_weapons_3_pa_mod - (2*values.wounds)
+            break;
+        case 1:
+            getAttrs(["at_dagger","pa_dagger"],function(values){
+                result["at"] = parseInt(values.at_dagger);
+                result["pa"] = parseInt(values.pa_dagger);
+                callback(result);
             });
-        });
-    });
-});
-
-var rangedTriggers = " change:fw_crossbow change:fw_bow change:fw_throwing-axe change:fw_throwing-knife change:fw_throwing-spear"
-
-on("change:ranged_weapon_1_talent change:wounds" + rangedTriggers,function(){
-    getAttrs(["ranged_weapon_1_talent"],function(talent) {
-        switch(talent.ranged_weapon_1_talent){
-            case 0:
-                getAttrs(["fw_crossbow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_1_fk: values.fw_crossbow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 1:
-                getAttrs(["fw_bow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_1_fk: values.fw_bow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 2:
-                getAttrs(["fw_throwing-axe", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_1_fk: values.fw_throwing-axe - (2*values.wounds)
-                    });
-                });
-                break;
-            case 3:
-                getAttrs(["fw_throwing-knife", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_1_fk: values.fw_throwing-knife - (2*values.wounds)
-                    });
-                });
-                break;
-            case 4:
-                getAttrs(["fw_throwing-spear", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_1_fk: values.fw_throwing-spear - (2*values.wounds)
-                    });
-                });
-                break;
-            default:
-
-        }
-    });
-});
-on("change:ranged_weapon_2_talent change:wounds" + rangedTriggers,function(){
-    getAttrs(["ranged_weapon_2_talent"],function(talent) {
-        switch(talent.ranged_weapon_2_talent){
-            case 0:
-                getAttrs(["fw_crossbow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_2_fk: values.fw_crossbow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 1:
-                getAttrs(["fw_bow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_2_fk: values.fw_bow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 2:
-                getAttrs(["fw_throwing-axe", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_2_fk: values.fw_throwing-axe - (2*values.wounds)
-                    });
-                });
-                break;
-            case 3:
-                getAttrs(["fw_throwing-knife", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_2_fk: values.fw_throwing-knife - (2*values.wounds)
-                    });
-                });
-                break;
-            case 4:
-                getAttrs(["fw_throwing-spear", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_2_fk: values.fw_throwing-spear - (2*values.wounds)
-                    });
-                });
-                break;
-            default:
-
-        }
-    });
-});
-on("change:ranged_weapon_3_talent change:wounds" + rangedTriggers,function(){
-    getAttrs(["ranged_weapon_3_talent"],function(talent) {
-        switch(talent.ranged_weapon_3_talent){
-            case 0:
-                getAttrs(["fw_crossbow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_3_fk: values.fw_crossbow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 1:
-                getAttrs(["fw_bow", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_3_fk: values.fw_bow - (2*values.wounds)
-                    });
-                });
-                break;
-            case 2:
-                getAttrs(["fw_throwing-axe", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_3_fk: values.fw_throwing-axe - (2*values.wounds)
-                    });
-                });
-                break;
-            case 3:
-                getAttrs(["fw_throwing-knife", "wounds"], function(values) {
-                    setAttrs({
-                        ranged_weapon_3_fk: values.fw_throwing-knife - (2*values.wounds)
-                    });
-                });
-                break;
-            case 4:
-                getAttrs(["fw_throwing-spear", "wounsd"], function(values) {
-                    setAttrs({
-                        ranged_weapon_3_fk: values.fw_throwing-spear - (2*values.wounds)
-                    });
-                });
-                break;
-            default:
-
-        }
-    });
-});
-//---weapon---//
-</script>
-
-<!--
-<rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-AT-Patzer">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
-        {{#rollTotal() wurf 2}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe zerstört</div></div>
-        {{/rollTotal() wurf 2}}
-        {{#rollTotal() wurf 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</div></div>
-        {{/rollTotal() wurf 3}}
-        {{#rollTotal() wurf 4}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe beschädigt</div></div>
-        {{/rollTotal() wurf 4}}
-        {{#rollTotal() wurf 5}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe verloren</div></div>
-        {{/rollTotal() wurf 5}}
-        {{#rollTotal() wurf 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe stecken geblieben</div></div>
-        {{/rollTotal() wurf 6}}
-        {{#rollTotal() wurf 7}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sturz</div></div>
-        {{/rollTotal() wurf 7}}
-        {{#rollTotal() wurf 8}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Stolpern</div></div>
-        {{/rollTotal() wurf 8}}
-        {{#rollTotal() wurf 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fuß verdreht</div></div>
-        {{/rollTotal() wurf 9}}
-        {{#rollTotal() wurf 10}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Beule</div></div>
-        {{/rollTotal() wurf 10}}
-        {{#rollTotal() wurf 11}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
-        {{/rollTotal() wurf 11}}
-        {{#rollTotal() wurf 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</div></div>
-        {{/rollTotal() wurf 12}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-Schild-Patzer">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
-        {{#rollTotal() wurf 2}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild zerstört</div></div>
-        {{/rollTotal() wurf 2}}
-        {{#rollTotal() wurf 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild schwer beschädigt</div></div>
-        {{/rollTotal() wurf 3}}
-        {{#rollTotal() wurf 4}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild beschädigt</div></div>
-        {{/rollTotal() wurf 4}}
-        {{#rollTotal() wurf 5}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild verloren</div></div>
-        {{/rollTotal() wurf 5}}
-        {{#rollTotal() wurf 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schild stecken geblieben</div></div>
-        {{/rollTotal() wurf 6}}
-        {{#rollTotal() wurf 7}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Stolpern</div></div>
-        {{/rollTotal() wurf 7}}
-        {{#rollTotal() wurf 8}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sturz</div></div>
-        {{/rollTotal() wurf 8}}
-        {{#rollTotal() wurf 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fuß verdreht</div></div>
-        {{/rollTotal() wurf 9}}
-        {{#rollTotal() wurf 10}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Beule</div></div>
-        {{/rollTotal() wurf 10}}
-        {{#rollTotal() wurf 11}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
-        {{/rollTotal() wurf 11}}
-        {{#rollTotal() wurf 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst schwer verletzt</div></div>
-        {{/rollTotal() wurf 12}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-VE">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Verteidigungswurf: </span>{{wurf}}</div></div>
-        {{#rollGreater() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
-        {{/rollGreater() mod 0}}
-        {{#rollLess() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
-        {{/rollLess() mod 0}}
-        {{#rollGreater() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollGreater() wurf wert}}
-        {{#rollTotal() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollTotal() wurf wert}}
-        {{#rollLess() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollLess() wurf wert}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-AT">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Attackewurf: </span>{{wurf}}</div></div>
-        {{#rollGreater() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
-        {{/rollGreater() mod 0}}
-        {{#rollLess() mod 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{mod}}</div></div>
-        {{/rollLess() mod 0}}
-        {{#rollGreater() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollGreater() wurf wert}}
-        {{#rollTotal() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollTotal() wurf wert}}
-        {{#rollLess() wurf wert}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollLess() wurf wert}}
-    </div>
-</rolltemplate>
-
-
-<rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-AT-Patzer">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>{{wurf}}</div></div>
-        {{#rollTotal() wurf 2}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe zerstört</div></div>
-        {{/rollTotal() wurf 2}}
-        {{#rollTotal() wurf 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe schwer beschädigt</div></div>
-        {{/rollTotal() wurf 3}}
-        {{#rollTotal() wurf 4}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe beschädigt</div></div>
-        {{/rollTotal() wurf 4}}
-        {{#rollTotal() wurf 5}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Waffe verloren</div></div>
-        {{/rollTotal() wurf 5}}
-        {{#rollTotal() wurf 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Kamerad/Unschuldiger getroffen</div></div>
-        {{/rollTotal() wurf 6}}
-        {{#rollTotal() wurf 7}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Fehlschuss</div></div>
-        {{/rollTotal() wurf 7}}
-        {{#rollTotal() wurf 8}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Zerrung</div></div>
-        {{/rollTotal() wurf 8}}
-        {{#rollTotal() wurf 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Sehne herausgerutscht / Waffe nicht richtig gegriffen / Ladehemmung</div></div>
-        {{/rollTotal() wurf 9}}
-        {{#rollTotal() wurf 10}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Zu konzentriert</div></div>
-        {{/rollTotal() wurf 10}}
-        {{#rollTotal() wurf 11}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Selbst verletzt</div></div>
-        {{/rollTotal() wurf 11}}
-        {{#rollTotal() wurf 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Auswirkung: </span>Schwer verletzt</div></div>
-        {{/rollTotal() wurf 12}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Nahkampf-TP">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Trefferpunkte:</span>{{damage}}</div></div>
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Fernkampf-TP">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Trefferpunkte:</span>{{damage}}</div></div>
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Talente">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        {{#rollGreater() Talent -1}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollGreater() Talent -1}}
-        {{#rollLess() Talent 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollLess() Talent 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Talent}}</div></div>
-        {{#rollBetween() Talent 0 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
-        {{/rollBetween() Talent 0 3}}
-        {{#rollBetween() Talent 4 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
-        {{/rollBetween() Talent 4 6}}
-        {{#rollBetween() Talent 7 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
-        {{/rollBetween() Talent 7 9}}
-        {{#rollBetween() Talent 10 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
-        {{/rollBetween() Talent 10 12}}
-        {{#rollBetween() Talent 13 15}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
-        {{/rollBetween() Talent 13 15}}
-        {{#rollBetween() Talent 16 18}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
-        {{/rollBetween() Talent 16 18}}
-        {{#rollBetween() Talent 19 21}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
-        {{/rollBetween() Talent 19 21}}
-        {{#rollGreater() Modifikator 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{Modifikator}}</div></div>
-        {{/rollGreater() Modifikator 0}}
-        {{#rollLess() Modifikator 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Modifikator: </span>{{Modifikator}}</div></div>
-        {{/rollLess() Modifikator 0}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Zauber">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtag}}, {{subtag1}}, {{subtag2}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        {{#rollGreater() Zauber -1}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollGreater() Zauber -1}}
-        {{#rollLess() Zauber 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollLess() Zauber 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Zauber}}</div></div>
-        {{#rollBetween() Zauber 0 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
-        {{/rollBetween() Zauber 0 3}}
-        {{#rollBetween() Zauber 4 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
-        {{/rollBetween() Zauber 4 6}}
-        {{#rollBetween() Zauber 7 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
-        {{/rollBetween() Zauber 7 9}}
-        {{#rollBetween() Zauber 10 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
-        {{/rollBetween() Zauber 10 12}}
-        {{#rollBetween() Zauber 13 15}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
-        {{/rollBetween() Zauber 13 15}}
-        {{#rollBetween() Zauber 16 18}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
-        {{/rollBetween() Zauber 16 18}}
-        {{#rollBetween() Zauber 19 21}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
-        {{/rollBetween() Zauber 19 21}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-DSA-Liturgie">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtag}}, {{subtag1}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        {{#rollGreater() Liturgie -1}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Gelungen</div></div>
-        {{/rollGreater() Liturgie -1}}
-        {{#rollLess() Liturgie 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Ergebnis: </span>Mißlungen</div></div>
-        {{/rollLess() Liturgie 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{Liturgie}}</div></div>
-        {{#rollBetween() Liturgie 0 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
-        {{/rollBetween() Liturgie 0 3}}
-        {{#rollBetween() Liturgie 4 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
-        {{/rollBetween() Liturgie 4 6}}
-        {{#rollBetween() Liturgie 7 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
-        {{/rollBetween() Liturgie 7 9}}
-        {{#rollBetween() Liturgie 10 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
-        {{/rollBetween() Liturgie 10 12}}
-        {{#rollBetween() Liturgie 13 15}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
-        {{/rollBetween() Liturgie 13 15}}
-        {{#rollBetween() Liturgie 16 18}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
-        {{/rollBetween() Liturgie 16 18}}
-        {{#rollBetween() Liturgie 19 21}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
-        {{/rollBetween() Liturgie 19 21}}
-    </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-Routineprobe">
-    <div class="sheet-table">
-        <div class="sheet-row"><div class="sheet-cell">{{name}}</div></div>
-        <div class="sheet-row"><div class="sheet-cell  subheader">{{subtags}}</div></div>
-        <div class="sheet-row arrow-container"><div class="sheet-cell"><div class="arrow-right"></div></div></div>
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Eigenschaften: </span>
-            {{#rollGreater() Eigenschaft1 12}}
-            ✓
-            {{/rollGreater() Eigenschaft1 12}}
-            /
-            {{#rollLess() Eigenschaft1 13}}
-            X
-            {{/rollLess() Eigenschaft1 13}}
-            {{#rollGreater() Eigenschaft2 12}}
-            ✓
-            {{/rollGreater() Eigenschaft2 12}}
-            {{#rollLess() Eigenschaft2 13}}
-            X
-            {{/rollLess() Eigenschaft2 13}}
-            /
-            {{#rollGreater() Eigenschaft3 12}}
-            ✓
-            {{/rollGreater() Eigenschaft3 12}}
-            {{#rollLess() Eigenschaft3 13}}
-            X
-            {{/rollLess() Eigenschaft3 13}}
-        </div></div>
-        {{#rollTotal() FP 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FW-Minimum nicht erfüllt</span></div></div>
-        {{/rollTotal() FP 0}}
-        {{#rollGreater() FP 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">FP: </span>{{FP}}</div></div>
-        {{/rollGreater() FP 0}}
-        {{#rollBetween() FP 1 3}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>1</div></div>
-        {{/rollBetween() FP 1 3}}
-        {{#rollBetween() FP 4 6}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>2</div></div>
-        {{/rollBetween() FP 4 6}}
-        {{#rollBetween() FP 7 9}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>3</div></div>
-        {{/rollBetween() FP 7 9}}
-        {{#rollBetween() FP 10 12}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>4</div></div>
-        {{/rollBetween() FP 10 12}}
-        {{#rollBetween() FP 13 15}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>5</div></div>
-        {{/rollBetween() FP 13 15}}
-        {{#rollBetween() FP 16 18}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>6</div></div>
-        {{/rollBetween() FP 16 18}}
-        {{#rollBetween() FP 19 21}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">QS: </span>7</div></div>
-        {{/rollBetween() FP 19 21}}
-        {{#rollGreater() FP 0}}
-        <div class="sheet-row rowcolor"><div class="sheet-cell"><span class="tcat">Max. Modifikator: </span>{{Modifikator}}</div></div>
-        {{/rollGreater() FP 0}}
-    </div>
-</rolltemplate>
-<script type="text/worker">
-
-on("change:erfahrungsgrad", function() {
-   getAttrs(["Erfahrungsgrad", "APgesamt"], function(values) {
-		if (values.APgesamt == null || values.APgesamt == 0 || values.APgesamt == 900 || values.APgesamt == 1000 || values.APgesamt == 1100 || values.APgesamt == 1200 || values.APgesamt == 1400 || values.APgesamt == 1700 || values.APgesamt == 2100 ) {
-			if (values.Erfahrungsgrad == "Unerfahren") {
-				setAttrs({
-          			APgesamt: 900
-      			});
-			}
-			if (values.Erfahrungsgrad == "Durchschnittlich") {
-				setAttrs({
-          			APgesamt: 1000
-      			});
-			}
-			if (values.Erfahrungsgrad == "Erfahren") {
-				setAttrs({
-          			APgesamt: 1100
-      			});
-			}
-			if (values.Erfahrungsgrad == "Kompetent") {
-				setAttrs({
-          			APgesamt: 1200
-      			});
-			}
-			if (values.Erfahrungsgrad == "Meisterlich") {
-				setAttrs({
-          			APgesamt: 1400
-      			});
-			}
-			if (values.Erfahrungsgrad == "Brillant") {
-				setAttrs({
-          			APgesamt: 1700
-      			});
-			}
-			if (values.Erfahrungsgrad == "Legendaer") {
-				setAttrs({
-          			APgesamt: 2100
-      			});
-			}
-		}
-   });
-});
-
-on("change:spezies", function() {
-   getAttrs(["Spezies"], function(values) {
-		if (values.Spezies == "Mensch") {
-			setAttrs({
-       			LE_Spezies: 5,
-				SK_Spezies: -5,
-				ZK_Spezies: -5,
-				GS_Spezies: 8
-   			});
-		}
-		if (values.Spezies == "Elf") {
-			setAttrs({
-       			LE_Spezies: 2,
-				SK_Spezies: -4,
-				ZK_Spezies: -6,
-				GS_Spezies: 8
-   			});
-		}
-		if (values.Spezies == "Halbelf") {
-			setAttrs({
-       			LE_Spezies: 5,
-				SK_Spezies: -4,
-				ZK_Spezies: -6,
-				GS_Spezies: 8
-    		});
-		}
-		if (values.Spezies == "Zwerg") {
-			setAttrs({
-          		LE_Spezies: 8,
-				SK_Spezies: -4,
-				ZK_Spezies: -4,
-				GS_Spezies: 6
-      		});
-		}
-   });
-});
-
-on("change:mu_grundwert change:mu_zukauf", function() {
-   getAttrs(["MU_Grundwert", "MU_Zukauf"], function(values) {
-		setAttrs({
-			MU_Wert: parseInt(values.MU_Grundwert) + parseInt(values.MU_Zukauf)
-		});
-   });
-});
-
-on("change:kl_grundwert change:kl_zukauf", function() {
-   getAttrs(["KL_Grundwert", "KL_Zukauf"], function(values) {
-		setAttrs({
-			KL_Wert: parseInt(values.KL_Grundwert) + parseInt(values.KL_Zukauf)
-		});
-   });
-});
-
-on("change:in_grundwert change:in_zukauf", function() {
-   getAttrs(["IN_Grundwert", "IN_Zukauf"], function(values) {
-		setAttrs({
-			IN_Wert: parseInt(values.IN_Grundwert) + parseInt(values.IN_Zukauf)
-		});
-   });
-});
-
-on("change:ch_grundwert change:ch_zukauf", function() {
-   getAttrs(["CH_Grundwert", "CH_Zukauf"], function(values) {
-		setAttrs({
-			CH_Wert: parseInt(values.CH_Grundwert) + parseInt(values.CH_Zukauf)
-		});
-   });
-});
-
-on("change:ff_grundwert change:ff_zukauf", function() {
-   getAttrs(["FF_Grundwert", "FF_Zukauf"], function(values) {
-		setAttrs({
-			FF_Wert: parseInt(values.FF_Grundwert) + parseInt(values.FF_Zukauf)
-		});
-   });
-});
-
-on("change:ge_grundwert change:ge_zukauf", function() {
-   getAttrs(["GE_Grundwert", "GE_Zukauf"], function(values) {
-		setAttrs({
-			GE_Wert: parseInt(values.GE_Grundwert) + parseInt(values.GE_Zukauf)
-		});
-   });
-});
-
-on("change:ko_grundwert change:ko_zukauf", function() {
-   getAttrs(["KO_Grundwert", "KO_Zukauf"], function(values) {
-		setAttrs({
-			KO_Wert: parseInt(values.KO_Grundwert) + parseInt(values.KO_Zukauf)
-		});
-   });
-});
-
-on("change:kk_grundwert change:kk_zukauf", function() {
-   getAttrs(["KK_Grundwert", "KK_Zukauf"], function(values) {
-		setAttrs({
-			KK_Wert: parseInt(values.KK_Grundwert) + parseInt(values.KK_Zukauf)
-		});
-   });
-});
-
-on("change:mu_wert", function() {
-   getAttrs(["MU_Wert"], function(values) {
-		setAttrs({
-			Leiteigenschaft_AT_Mod: Math.floor((parseInt(values.MU_Wert)-8)/3)
-		});
-   });
-});
-
-
-
-
-on("change:tradition", function() {
-   getAttrs(["Tradition"], function(values) {
-		if (values.Tradition == "---") {
-			setAttrs({
-       			tradition_gildenmagier: 0,
-				tradition_hexe: 0,
-				tradition_elf: 0,
-				tradition_goblin: 0,
-				tradition_zibilja: 0,
-				Tradition_Leiteigenschaft: "--"
-   			});
-		}
-		if (values.Tradition == "Gildenmagier") {
-			setAttrs({
-       			tradition_gildenmagier: 1,
-				tradition_hexe: 0,
-				tradition_elf: 0,
-				tradition_goblin: 0,
-				tradition_zibilja: 0,
-				Tradition_Leiteigenschaft: "KL"
-   			});
-		}
-		if (values.Tradition == "Hexe") {
-			setAttrs({
-       			tradition_gildenmagier: 0,
-				tradition_hexe: 1,
-				tradition_elf: 0,
-				tradition_goblin: 0,
-				tradition_zibilja: 0,
-				Tradition_Leiteigenschaft: "CH"
-   			});
-		}
-		if (values.Tradition == "Elf") {
-			setAttrs({
-       			tradition_gildenmagier: 0,
-				tradition_hexe: 0,
-				tradition_elf: 1,
-				tradition_goblin: 0,
-				tradition_zibilja: 0,
-				Tradition_Leiteigenschaft: "IN"
-   			});
-		}
-		if (values.Tradition == "Goblinzauberinnen") {
-			setAttrs({
-       			tradition_gildenmagier: 0,
-				tradition_hexe: 0,
-				tradition_elf: 0,
-				tradition_goblin: 1,
-				tradition_zibilja: 0,
-				Tradition_Leiteigenschaft: "IN"
-   			});
-		}
-		if (values.Tradition == "Zibilja") {
-			setAttrs({
-       			tradition_gildenmagier: 0,
-				tradition_hexe: 0,
-				tradition_elf: 0,
-				tradition_goblin: 0,
-				tradition_zibilja: 1,
-				Tradition_Leiteigenschaft: "IN"
-   			});
-		}
-   });
-});
-
-on("change:tradition_leiteigenschaft", function() {
-   getAttrs(["Tradition_Leiteigenschaft", "KL_Wert", "IN_Wert", "CH_Wert"], function(values) {
-		if (values.Tradition_Leiteigenschaft == "--") {
-			setAttrs({
-				AE_Leiteigenschaft: 0
-   			});
-		}
-		if (values.Tradition_Leiteigenschaft == "KL") {
-			setAttrs({
-				AE_Leiteigenschaft: values.KL_Wert
-   			});
-		}
-		if (values.Tradition_Leiteigenschaft == "IN") {
-			setAttrs({
-				AE_Leiteigenschaft: values.IN_Wert
-   			});
-		}
-		if (values.Tradition_Leiteigenschaft == "CH") {
-			setAttrs({
-				AE_Leiteigenschaft: values.CH_Wert
-   			});
-		}
-   });
-});
-
-on("change:tradition_goetter", function() {
-   getAttrs(["tradition_goetter"], function(values) {
-		if (values.tradition_goetter == "---") {
-			setAttrs({
-				tradition_goetter_leiteigenschaft: "--"
-   			});
-		}
-		if (values.tradition_goetter == "Praios") {
-			setAttrs({
-       			tradition_goetter_leiteigenschaft: "KL"
-   			});
-		}
-		if (values.tradition_goetter == "Rondra") {
-			setAttrs({
-       			tradition_goetter_leiteigenschaft: "MU"
-   			});
-		}
-		if (values.tradition_goetter == "Boron") {
-			setAttrs({
-				tradition_goetter_leiteigenschaft: "MU"
-   			});
-		}
-		if (values.tradition_goetter == "Hesinde") {
-			setAttrs({
-				tradition_goetter_leiteigenschaft: "KL"
-   			});
-		}
-		if (values.tradition_goetter == "Phex") {
-			setAttrs({
-				tradition_goetter_leiteigenschaft: "IN"
-   			});
-		}
-		if (values.tradition_goetter == "Peraine") {
-			setAttrs({
-				tradition_goetter_leiteigenschaft: "IN"
-   			});
-		}
-   });
-});
-
-on("change:tradition_goetter_leiteigenschaft", function() {
-   getAttrs(["tradition_goetter_leiteigenschaft", "KL_Wert", "IN_Wert", "MU_Wert"], function(values) {
-		if (values.tradition_goetter_leiteigenschaft == "--") {
-			setAttrs({
-				KE_Leiteigenschaft: 0
-   			});
-		}
-		if (values.tradition_goetter_leiteigenschaft == "KL") {
-			setAttrs({
-				KE_Leiteigenschaft: values.KL_Wert
-   			});
-		}
-		if (values.tradition_goetter_leiteigenschaft == "IN") {
-			setAttrs({
-				KE_Leiteigenschaft: values.IN_Wert
-   			});
-		}
-		if (values.tradition_goetter_leiteigenschaft == "MU") {
-			setAttrs({
-				KE_Leiteigenschaft: values.MU_Wert
-   			});
-		}
-   });
-});
-
-on("change:nkw_aktiv change:at_nkw1 change:at_nkw2 change:at_nkw3 change:at_nkw4 change:pa_nkw1 change:pa_nkw2 change:pa_nkw3 change:pa_nkw4 change:reichweitenkwaffe1 change:reichweitenkwaffe2 change:reichweitenkwaffe3 change:reichweitenkwaffe4 change:nkwschaden1_1 change:nkwschaden2_1 change:nkwschaden3_1 change:nkwschaden4_1 change:nkwschaden1_2 change:nkwschaden2_2 change:nkwschaden3_2 change:nkwschaden4_2 change:ehalszh_nkw1 change:ehalszh_nkw2 change:ehalszh_nkw3 change:ehalszh_nkw4", function() {
-   getAttrs(["NKW_Aktiv", "AT_NKW1", "AT_NKW2", "AT_NKW3", "AT_NKW4", "PA_NKW1", "PA_NKW2", "PA_NKW3", "PA_NKW4", "ReichweiteNKWaffe1", "ReichweiteNKWaffe2", "ReichweiteNKWaffe3", "ReichweiteNKWaffe4", "NKWschaden1_1", "NKWschaden2_1", "NKWschaden3_1", "NKWschaden4_1", "NKWschaden1_2", "NKWschaden2_2", "NKWschaden3_2", "NKWschaden4_2", "EHalsZH_NKW1", "EHalsZH_NKW2", "EHalsZH_NKW3", "EHalsZH_NKW4"], function(values) {
-		if (values.NKW_Aktiv == 1) {
-			setAttrs({
-				AT_Aktiv_Waffe: values.AT_NKW1,
-				PA_Aktiv_Waffe: values.PA_NKW1,
-				NKW_Aktiv_Reichweite: values.ReichweiteNKWaffe1,
-				TP_W_Aktiv_Waffe: values.NKWschaden1_1,
-				TP_Bonus_Aktiv_Waffe: parseInt(values.NKWschaden1_2) + parseInt(values.EHalsZH_NKW1)
-   			});
-		}
-		if (values.NKW_Aktiv == 2) {
-			setAttrs({
-				AT_Aktiv_Waffe: values.AT_NKW2,
-				PA_Aktiv_Waffe: values.PA_NKW2,
-				NKW_Aktiv_Reichweite: values.ReichweiteNKWaffe2,
-				TP_W_Aktiv_Waffe: values.NKWschaden2_1,
-				TP_Bonus_Aktiv_Waffe: parseInt(values.NKWschaden2_2) + parseInt(values.EHalsZH_NKW2)
-   			});
-		}
-		if (values.NKW_Aktiv == 3) {
-			setAttrs({
-				AT_Aktiv_Waffe: values.AT_NKW3,
-				PA_Aktiv_Waffe: values.PA_NKW3,
-				NKW_Aktiv_Reichweite: values.ReichweiteNKWaffe3,
-				TP_W_Aktiv_Waffe: values.NKWschaden3_1,
-				TP_Bonus_Aktiv_Waffe: parseInt(values.NKWschaden3_2) + parseInt(values.EHalsZH_NKW3)
-   			});
-		}
-		if (values.NKW_Aktiv == 4) {
-			setAttrs({
-				AT_Aktiv_Waffe: values.AT_NKW4,
-				PA_Aktiv_Waffe: values.PA_NKW4,
-				NKW_Aktiv_Reichweite: values.ReichweiteNKWaffe4,
-				TP_W_Aktiv_Waffe: values.NKWschaden4_1,
-				TP_Bonus_Aktiv_Waffe: parseInt(values.NKWschaden4_2) + parseInt(values.EHalsZH_NKW4)
-   			});
-		}
-   });
-});
-
-on("change:fkw_aktiv change:fkwfk1 change:fkwfk2 change:fkwfk3 change:fkwfk4 change:fkwschaden1_1 change:fkwschaden2_1 change:fkwschaden3_1 change:fkwschaden4_1 change:fkwschaden1_2 change:fkwschaden2_2 change:fkwschaden3_2 change:fkwschaden4_2 change:fkwreichweite1 change:fkwreichweite2 change:fkwreichweite3 change:fkwreichweite4", function() {
-   getAttrs(["FKW_Aktiv", "FKWFK1", "FKWFK2", "FKWFK3", "FKWFK4", "FKWSchaden1_1", "FKWSchaden2_1", "FKWSchaden3_1", "FKWSchaden4_1", "FKWSchaden1_2", "FKWSchaden2_2", "FKWSchaden3_2", "FKWSchaden4_2", "FKWReichweite1", "FKWReichweite2", "FKWReichweite3", "FKWReichweite4"], function(values) {
-		if (values.FKW_Aktiv == 1) {
-			setAttrs({
-				FK_Aktiv_Waffe: values.FKWFK1,
-				FTP_W_Aktiv_Waffe: values.FKWSchaden1_1,
-				FTP_Bonus_Aktiv_Waffe: values.FKWSchaden1_2,
-				FKWReichweite: values.FKWReichweite1
-   			});
-		}
-		if (values.FKW_Aktiv == 2) {
-			setAttrs({
-				FK_Aktiv_Waffe: values.FKWFK2,
-				FTP_W_Aktiv_Waffe: values.FKWSchaden2_1,
-				FTP_Bonus_Aktiv_Waffe: values.FKWSchaden2_2,
-				FKWReichweite: values.FKWReichweite2
-   			});
-		}
-		if (values.FKW_Aktiv == 3) {
-			setAttrs({
-				FK_Aktiv_Waffe: values.FKWFK3,
-				FTP_W_Aktiv_Waffe: values.FKWSchaden3_1,
-				FTP_Bonus_Aktiv_Waffe: values.FKWSchaden3_2,
-				FKWReichweite: values.FKWReichweite3
-   			});
-		}
-		if (values.FKW_Aktiv == 4) {
-			setAttrs({
-				FK_Aktiv_Waffe: values.FKWFK4,
-				FTP_W_Aktiv_Waffe: values.FKWSchaden4_1,
-				FTP_Bonus_Aktiv_Waffe: values.FKWSchaden4_2,
-				FKWReichweite: values.FKWReichweite4
-   			});
-		}
-   });
-});
-
-on("change:rs_art1 change:sf_belastungsgewoehnung_1 change:sf_belastungsgewoehnung_2", function() {
-   getAttrs(["RS_Art1", "sf_belastungsgewoehnung_1", "sf_belastungsgewoehnung_2"], function(values) {
-		var art = values.RS_Art1;
-		var gewoehnung = parseInt(values.sf_belastungsgewoehnung_1) + parseInt(values.sf_belastungsgewoehnung_2);
-		var modArt = getModifiedArt(art,gewoehnung);
-		var rs = getRS(art);
-		var be = getBE(modArt);
-		var abzuege = getAbzuege(modArt);
-		setAttrs({
-			RS1: rs,
-			BE1: be,
-			RuestungsAbzuege1: abzuege
-		});
-   });
-});
-
-on("change:rs_art2 change:sf_belastungsgewoehnung_1 change:sf_belastungsgewoehnung_2", function() {
-   getAttrs(["RS_Art2", "sf_belastungsgewoehnung_1", "sf_belastungsgewoehnung_2"], function(values) {
-		var art = values.RS_Art2;
-		var gewoehnung = parseInt(values.sf_belastungsgewoehnung_1) + parseInt(values.sf_belastungsgewoehnung_2);
-		var modArt = getModifiedArt(art,gewoehnung);
-		var rs = getRS(art);
-		var be = getBE(modArt);
-		var abzuege = getAbzuege(modArt);
-		setAttrs({
-			RS2: rs,
-			BE2: be,
-			RuestungsAbzuege2: abzuege
-		});
-   });
-});
-
-on("change:rs_art3 change:sf_belastungsgewoehnung_1 change:sf_belastungsgewoehnung_2", function() {
-   getAttrs(["RS_Art3", "sf_belastungsgewoehnung_1", "sf_belastungsgewoehnung_2"], function(values) {
-		var art = values.RS_Art3;
-		var gewoehnung = parseInt(values.sf_belastungsgewoehnung_1) + parseInt(values.sf_belastungsgewoehnung_2);
-		var modArt = getModifiedArt(art,gewoehnung);
-		var rs = getRS(art);
-		var be = getBE(modArt);
-		var abzuege = getAbzuege(modArt);
-		setAttrs({
-			RS3: rs,
-			BE3: be,
-			RuestungsAbzuege3: abzuege
-		});
-   });
-});
-
-on("change:rs_art4 change:sf_belastungsgewoehnung_1 change:sf_belastungsgewoehnung_2", function() {
-   getAttrs(["RS_Art4", "sf_belastungsgewoehnung_1", "sf_belastungsgewoehnung_2"], function(values) {
-		var art = values.RS_Art4;
-		var gewoehnung = parseInt(values.sf_belastungsgewoehnung_1) + parseInt(values.sf_belastungsgewoehnung_2);
-		var modArt = getModifiedArt(art,gewoehnung);
-		var rs = getRS(art);
-		var be = getBE(modArt);
-		var abzuege = getAbzuege(modArt);
-		setAttrs({
-			RS4: rs,
-			BE4: be,
-			RuestungsAbzuege4: abzuege
-		});
-   });
-});
-
-var getRS = function(art) {
-	if (art < 0) {
-		return 0;
-	} else {
-		return art;
-	}
+            break;
+        case 2:
+            getAttrs(["at_fencing_weapon","pa_fencing_weapon"],function(values){
+                result["at"] = parseInt(values.at_fencing_weapon);
+                result["pa"] = parseInt(values.pa_fencing_weapon);
+                callback(result);
+            });
+            break;
+        case 3:
+            getAttrs(["at_baton","pa_baton"],function(values){
+                result["at"] = parseInt(values.at_baton);
+                result["pa"] = parseInt(values.pa_baton);
+                callback(result);
+            });
+            break;
+        case 4:
+            getAttrs(["at_infantry_weapons","pa_infantry_weapons"],function(values){
+                result["at"] = parseInt(values.at_infantry_weapons);
+                result["pa"] = parseInt(values.pa_infantry_weapons);
+                callback(result);
+            });
+            break;
+        case 5:
+            getAttrs(["at_chain_weapons","pa_chain_weapons"],function(values){
+                result["at"] = parseInt(values.at_chain_weapons);
+                result["pa"] = parseInt(values.pa_chain_weapons);
+                callback(result);
+            });
+            break;
+        case 6:
+            getAttrs(["at_lancing","pa_lancing"],function(values){
+                result["at"] = parseInt(values.at_lancing);
+                result["pa"] = parseInt(values.pa_lancing);
+                callback(result);
+            });
+            break;
+        case 7:
+            getAttrs(["at_sabre","pa_sabre"],function(values){
+                result["at"] = parseInt(values.at_sabre);
+                result["pa"] = parseInt(values.pa_sabre);
+                callback(result);
+            });
+            break;
+        case 8:
+            getAttrs(["at_sword","pa_sword"],function(values){
+                result["at"] = parseInt(values.at_sword);
+                result["pa"] = parseInt(values.pa_sword);
+                callback(result);
+            });
+            break;
+        case 9:
+            getAttrs(["at_spear","pa_spear"],function(values){
+                result["at"] = parseInt(values.at_spear);
+                result["pa"] = parseInt(values.pa_spear);
+                callback(result);
+            });
+            break;
+        case 10:
+            getAttrs(["at_staff","pa_staff"],function(values){
+                result["at"] = parseInt(values.at_staff);
+                result["pa"] = parseInt(values.pa_staff);
+                callback(result);
+            });
+            break;
+        case 11:
+            getAttrs(["at_twohanded_baton","pa_twohanded_baton"],function(values){
+                result["at"] = parseInt(values.at_twohanded_baton);
+                result["pa"] = parseInt(values.pa_twohanded_baton);
+                callback(result);
+            });
+            break;
+        case 12:
+            getAttrs(["at_twohanded_swords","pa_twohanded_swords"],function(values){
+                result["at"] = parseInt(values.at_twohanded_swords);
+                result["pa"] = parseInt(values.pa_twohanded_swords);
+                callback(result);
+            });
+            break;
+        default:
+    }
 }
-
-var getBE = function(art) {
-	if (art == 0 || art == 1) {
-		return 0;
-	}
-	if (art == 2 || art == 3) {
-		return 1;
-	}
-	if (art == 4 || art == 5) {
-		return 2;
-	}
-	if (art == 6) {
-		return 3;
-	}
-	return 0;
-}
-
-var getAbzuege = function(art) {
-	if (art == 0 || art == 2 || art == 4 || art == 6) {
-		return 0;
-	}
-	if (art == 1 || art == 3 || art == 5) {
-		return -1;
-	}
-	return 0;
-}
-
-var getModifiedArt = function(art, gewoehnung) {
-	return parseInt(art) - (parseInt(gewoehnung) * 2);
-}
-
-on("change:RuestungAktiv change:RS1 change:RS2 hange:RS3 change:RS4 change:BE1 change:BE2 change:BE3 change:BE4 change:RuestungsAbzuege1 change:RuestungsAbzuege2 change:RuestungsAbzuege3 change:RuestungsAbzuege4 change:RuestungsGewicht1 change:RuestungsGewicht2 change:RuestungsGewicht3 change:RuestungsGewicht4", function() {
-   getAttrs(["RuestungAktiv", "RS1", "RS2", "RS3", "RS4", "BE1", "BE2", "BE3", "BE4", "RuestungsAbzuege1", "RuestungsAbzuege2", "RuestungsAbzuege3", "RuestungsAbzuege4", "RuestungsGewicht1", "RuestungsGewicht2", "RuestungsGewicht3", "RuestungsGewicht4"], function(values) {
-		var aktiv = values.RuestungAktiv;
-		if (aktiv == 1) {
-			setAttrs({
-				Ges_RS: values.RS1,
-				Ges_BE: values.BE1,
-				RuestungsAbzuege: values.RuestungsAbzuege1,
-				Ges_Gewicht: values.RuestungsGewicht1
-   			});
-		}
-		if (aktiv == 2) {
-			setAttrs({
-				Ges_RS: values.RS2,
-				Ges_BE: values.BE2,
-				RuestungsAbzuege: values.RuestungsAbzuege2,
-				Ges_Gewicht: values.RuestungsGewicht2
-   			});
-		}
-		if (aktiv == 3) {
-			setAttrs({
-				Ges_RS: values.RS3,
-				Ges_BE: values.BE3,
-				RuestungsAbzuege: values.RuestungsAbzuege3,
-				Ges_Gewicht: values.RuestungsGewicht3
-   			});
-		}
-		if (aktiv == 4) {
-			setAttrs({
-				Ges_RS: values.RS4,
-				Ges_BE: values.BE4,
-				RuestungsAbzuege: values.RuestungsAbzuege4,
-				Ges_Gewicht: values.RuestungsGewicht4
-   			});
-		}
-   });
-});
-
-
-on("change:schild_aktiv change:schildpamod1 change:schildpamod2 change:schildpamod3 change:schildpamod4 change:schild_ausgeruestet change:schildpa1 change:schildpa2 change:schildpa3 change:schildpa4", function() {
-   getAttrs(["Schild_Aktiv", "SchildPAMod1", "SchildPAMod2", "SchildPAMod3", "SchildPAMod4", "schild_ausgeruestet", "SchildPA1", "SchildPA2", "SchildPA3", "SchildPA4"], function(values) {
-		if (values.schild_ausgeruestet == 1) {
-			var aktiv = values.Schild_Aktiv;
-			if (aktiv == 1) {
-				setAttrs({
-					PA_Schild_Bonus: values.SchildPAMod1,
-					Schild_PA_Aktiv_Ausgeruestet: values.SchildPA1
-   				});
-			}
-			if (aktiv == 2) {
-				setAttrs({
-					PA_Schild_Bonus: values.SchildPAMod2,
-					Schild_PA_Aktiv_Ausgeruestet: values.SchildPA2
-   				});
-			}
-			if (aktiv == 3) {
-				setAttrs({
-					PA_Schild_Bonus: values.SchildPAMod3,
-					Schild_PA_Aktiv_Ausgeruestet: values.SchildPA3
-   				});
-			}
-			if (aktiv == 4) {
-				setAttrs({
-					PA_Schild_Bonus: values.SchildPAMod4,
-					Schild_PA_Aktiv_Ausgeruestet: values.SchildPA4
-   				});
-			}
-		} else {
-			setAttrs({
-				PA_Schild_Bonus: 0,
-				Schild_PA_Aktiv_Ausgeruestet: 0
-			});
-		}
-   });
-});
-
-on("change:parierwaffe_aktiv change:parierwaffepamod1 change:parierwaffepamod2 change:parierwaffepamod3 change:parierwaffepamod4 change:parierwaffe_ausgeruestet change:parierwaffepa1 change:parierwaffepa2 change:parierwaffepa3 change:parierwaffepa4", function() {
-   getAttrs(["Parierwaffe_Aktiv", "ParierwaffePAMod1", "ParierwaffePAMod2", "ParierwaffePAMod3", "ParierwaffePAMod4", "parierwaffe_ausgeruestet", "ParierwaffePA1", "ParierwaffePA2", "ParierwaffePA3", "ParierwaffePA4"], function(values) {
-		if (values.parierwaffe_ausgeruestet == 1) {
-			var aktiv = values.Parierwaffe_Aktiv;
-			if (aktiv == 1) {
-				setAttrs({
-					PA_Parierwaffe_Bonus: values.ParierwaffePAMod1,
-					Parierwaffe_PA_Aktiv_Ausgeruestet: values.ParierwaffePA1
-   				});
-			}
-			if (aktiv == 2) {
-				setAttrs({
-					PA_Parierwaffe_Bonus: values.ParierwaffePAMod2,
-					Parierwaffe_PA_Aktiv_Ausgeruestet: values.ParierwaffePA2
-   				});
-			}
-			if (aktiv == 3) {
-				setAttrs({
-					PA_Parierwaffe_Bonus: values.ParierwaffePAMod3,
-					Parierwaffe_PA_Aktiv_Ausgeruestet: values.ParierwaffePA3
-   				});
-			}
-			if (aktiv == 4) {
-				setAttrs({
-					PA_Parierwaffe_Bonus: values.ParierwaffePAMod4,
-					Parierwaffe_PA_Aktiv_Ausgeruestet: values.ParierwaffePA4
-   				});
-			}
-		} else {
-			setAttrs({
-				PA_Parierwaffe_Bonus: 0,
-				Parierwaffe_PA_Aktiv_Ausgeruestet: 0
-			});
-		}
-   });
-});
-
-on("change:sf_finte_1 change:sf_finte_2 change:sf_finte_3", function() {
-	getAttrs(["sf_finte_1", "sf_finte_2", "sf_finte_3"], function(values) {
-		if (values.sf_finte_3 == "1") {
-			setAttrs({
-				sf_finte: 1,
-				manoever_finte_1: 0,
-				manoever_finte_2: 0,
-				manoever_finte_3: 1
-			});
-		} else if (values.sf_finte_2 == "1") {
-			setAttrs({
-				sf_finte: 1,
-				manoever_finte_1: 0,
-				manoever_finte_2: 1,
-				manoever_finte_3: 0
-			});
-		} else if (values.sf_finte_1 == "1") {
-			setAttrs({
-				sf_finte: 1,
-				manoever_finte_1: 1,
-				manoever_finte_2: 0,
-				manoever_finte_3: 0
-			});
-		} else {
-			setAttrs({
-				sf_finte: 0,
-				manoever_finte_1: 0,
-				manoever_finte_2: 0,
-				manoever_finte_3: 0
-			});
-		}
-	});
-});
-
-on("change:sf_praeziser_stich_1 change:sf_praeziser_stich_2 change:sf_praeziser_stich_3", function() {
-	getAttrs(["sf_praeziser_stich_1", "sf_praeziser_stich_2", "sf_praeziser_stich_3"], function(values) {
-		if (values.sf_praeziser_stich_3 == "1") {
-			setAttrs({
-				sf_praeziser_stich: 1,
-				manoever_praeziser_stich_1: 0,
-				manoever_praeziser_stich_2: 0,
-				manoever_praeziser_stich_3: 1
-			});
-		} else if (values.sf_praeziser_stich_2 == "1") {
-			setAttrs({
-				sf_praeziser_stich: 1,
-				manoever_praeziser_stich_1: 0,
-				manoever_praeziser_stich_2: 1,
-				manoever_praeziser_stich_3: 0
-			});
-		} else if (values.sf_praeziser_stich_1 == "1") {
-			setAttrs({
-				sf_praeziser_stich: 1,
-				manoever_praeziser_stich_1: 1,
-				manoever_praeziser_stich_2: 0,
-				manoever_praeziser_stich_3: 0
-			});
-		} else {
-			setAttrs({
-				sf_praeziser_stich: 0,
-				manoever_praeziser_stich_1: 0,
-				manoever_praeziser_stich_2: 0,
-				manoever_praeziser_stich_3: 0
-			});
-		}
-	});
-});
-
-on("change:sf_wuchtschlag_1 change:sf_wuchtschlag_2 change:sf_wuchtschlag_3", function() {
-	getAttrs(["sf_wuchtschlag_1", "sf_wuchtschlag_2", "sf_wuchtschlag_3"], function(values) {
-		if (values.sf_wuchtschlag_3 == "1") {
-			setAttrs({
-				sf_wuchtschlag: 1,
-				manoever_wuchtschlag_1: 0,
-				manoever_wuchtschlag_2: 0,
-				manoever_wuchtschlag_3: 1
-			});
-		} else if (values.sf_wuchtschlag_2 == "1") {
-			setAttrs({
-				sf_wuchtschlag: 1,
-				manoever_wuchtschlag_1: 0,
-				manoever_wuchtschlag_2: 1,
-				manoever_wuchtschlag_3: 0
-			});
-		} else if (values.sf_wuchtschlag_1 == "1") {
-			setAttrs({
-				sf_wuchtschlag: 1,
-				manoever_wuchtschlag_1: 1,
-				manoever_wuchtschlag_2: 0,
-				manoever_wuchtschlag_3: 0
-			});
-		} else {
-			setAttrs({
-				sf_wuchtschlag: 0,
-				manoever_wuchtschlag_1: 0,
-				manoever_wuchtschlag_2: 0,
-				manoever_wuchtschlag_3: 0
-			});
-		}
-	});
-});
-
-on("change:sf_rundumschlag_1 change:sf_rundumschlag_2", function() {
-	getAttrs(["sf_rundumschlag_1", "sf_rundumschlag_2"], function(values) {
-		if (values.sf_rundumschlag_2 == "1") {
-			setAttrs({
-				sf_rundumschlag: 1,
-				manoever_rundumschlag_1: 0,
-				manoever_rundumschlag_2: 1
-			});
-		} else if (values.sf_rundumschlag_1 == "1") {
-			setAttrs({
-				sf_rundumschlag: 1,
-				manoever_rundumschlag_1: 1,
-				manoever_rundumschlag_2: 0
-			});
-		} else {
-			setAttrs({
-				sf_rundumschlag: 0,
-				manoever_rundumschlag_1: 0,
-				manoever_rundumschlag_2: 0
-			});
-		}
-	});
-});
-
-on("sheet:opened change:ff_wert", function() {
-	getAttrs(["FF_Wert"], function(values) {
-		setAttrs({
-			FKW_FK_Bonus_Leiteigenschaft: Math.floor(((values.FF_Wert - 8)/3))
-		});
-	});
-});
-
-on("change:sk_spezies change:mu_wert change:kl_wert change:in_wert change:vorteil_hohe_seelenkraft change:nachteil_niedrige_seelenkraft change:gegner_sheet", function() {
-	getAttrs(["SK_Spezies", "MU_Wert", "KL_Wert", "IN_Wert", "vorteil_hohe_seelenkraft", "nachteil_niedrige_seelenkraft", "gegner_sheet"], function(values) {
-		if (parseInt(values.gegner_sheet) != 1) {
-			var sk_spezies = parseInt(values.SK_Spezies);
-			var MU_Wert = parseInt(values.MU_Wert);
-			var KL_Wert = parseInt(values.KL_Wert);
-			var IN_Wert = parseInt(values.IN_Wert);
-			var Hohe_SK = parseInt(values.vorteil_hohe_seelenkraft);
-			var Niedrige_SK = parseInt(values.nachteil_niedrige_seelenkraft);
-			setAttrs({
-				SK_Grundwert: sk_spezies + Math.round((MU_Wert + KL_Wert + IN_Wert) / 6) + Hohe_SK - Niedrige_SK
-			});
-		}
-	});
-});
-
-on("change:zk_spezies change:ko_wert change:kk_wert change:vorteil_hohe_zaehigkeit change:nachteil_niedrige_zaehigkeit change:gegner_sheet", function() {
-	getAttrs(["ZK_Spezies", "KO_Wert", "KK_Wert", "vorteil_hohe_zaehigkeit", "nachteil_niedrige_zaehigkeit", "gegner_sheet"], function(values) {
-		if (parseInt(values.gegner_sheet) != 1) {
-			var zk_spezies = parseInt(values.ZK_Spezies);
-			var KO_Wert = parseInt(values.KO_Wert);
-			var KK_Wert = parseInt(values.KK_Wert);
-			var Hohe_ZK = parseInt(values.vorteil_hohe_zaehigkeit);
-			var Niedrige_ZK = parseInt(values.nachteil_niedrige_zaehigkeit);
-			setAttrs({
-				ZK_Grundwert: zk_spezies + Math.round((KO_Wert + KO_Wert + KK_Wert) / 6) + Hohe_ZK - Niedrige_ZK
-			});
-		}
-	});
-});
-
-on("change:ge_wert change:optpa_gw change:sf_verb_ausweichen_1 change:sf_verb_ausweichen_2 change:sf_verb_ausweichen_3 change:ges_be change:gegner_sheet", function() {
-	getAttrs(["GE_Wert", "optPA_GW", "sf_verb_ausweichen_1", "sf_verb_ausweichen_2", "sf_verb_ausweichen_3", "Ges_BE", "gegner_sheet"], function(values) {
-		if (parseInt(values.gegner_sheet) != 1) {
-			var GE_Wert = parseInt(values.GE_Wert);
-			var optPA = parseInt(values.optPA_GW);
-			var sf_verb_ausweichen = parseInt(values.sf_verb_ausweichen_1) + parseInt(values.sf_verb_ausweichen_2) + parseInt(values.sf_verb_ausweichen_3);
-			var Ges_BE = parseInt(values.Ges_BE);
-			setAttrs({
-				Ausweichen_Wert: Math.round(GE_Wert / 2) + (optPA / 2) + sf_verb_ausweichen - Ges_BE
-			});
-		}
-	});
-});
-
-on("change:mu_wert change:ge_wert change:sf_kampfreflexe_1 change:sf_kampfreflexe_2 change:sf_kampfreflexe_3 change:ges_be change:ruestungsabzuege change:gegner_sheet", function() {
-	getAttrs(["MU_Wert", "GE_Wert", "sf_kampfreflexe_1", "sf_kampfreflexe_2", "sf_kampfreflexe_3", "gegner_sheet", "Ges_BE", "RuestungsAbzuege"], function(values) {
-		if (parseInt(values.gegner_sheet) != 1) {
-			var MU_Wert = parseInt(values.MU_Wert);
-			var GE_Wert = parseInt(values.GE_Wert);
-			var sf_kampfreflexe = parseInt(values.sf_kampfreflexe_1) + parseInt(values.sf_kampfreflexe_2) + parseInt(values.sf_kampfreflexe_3);
-			var Ges_BE = parseInt(values.Ges_BE);
-			var Abzuege = parseInt(values.RuestungsAbzuege);
-			setAttrs({
-				INI_Wert: Math.round((MU_Wert + GE_Wert) / 2) + sf_kampfreflexe - Ges_BE + Abzuege
-			});
-		}
-	});
-});
-
-on("change:gs_spezies change:vorteil_flink change:nachteil_behaebig change:ges_be change:ruestungsabzuege change:gegner_sheet", function() {
-	getAttrs(["GS_Spezies", "vorteil_flink", "nachteil_behaebig", "Ges_BE", "RuestungsAbzuege", "gegner_sheet"], function(values) {
-		if (parseInt(values.gegner_sheet) != 1) {
-			var GS_Spezies = parseInt(values.GS_Spezies);
-			var flink = parseInt(values.vorteil_flink);
-			var behaebig = parseInt(values.nachteil_behaebig);
-			var Ges_BE = parseInt(values.Ges_BE);
-			var Abzuege = parseInt(values.RuestungsAbzuege);
-			setAttrs({
-				GS_Wert: GS_Spezies + flink - behaebig - Ges_BE + Abzuege
-			});
-		}
-	});
-});
-
-on("sheet:opened", function() {
-	getAttrs(["Spezies", "Tradition", "sf_belastungsgewoehnung_stufe", "sf_finte_stufe", "sf_wuchtschlag_stufe", "sf_praeziser_schuss_stufe", "sf_praeziser_stich_stufe", "sf_rundumschlag_stufe", "version"], function(values) {
-		if (values.version != "0.9") {
-			setAttrs({
-				version: "0.9"
-			});
-			if (values.Spezies == 3) {
-				setAttrs({
-					Spezies: "Mensch"
-				});
-			}
-			if (values.Spezies == 5) {
-				setAttrs({
-					Spezies: "Elf"
-				});
-			}
-			if (values.Spezies == 7) {
-				setAttrs({
-					Spezies: "Halbelf"
-				});
-			}
-			if (values.Spezies == 11) {
-				setAttrs({
-					Spezies: "Zwerg"
-				});
-			}
-			if (values.Tradition == 3) {
-				setAttrs({
-					Tradition: "Gildenmagier"
-				});
-			}
-			if (values.Tradition == 5) {
-				setAttrs({
-					Tradition: "Hexe"
-				});
-			}
-			if (values.Tradition == 6) {
-				setAttrs({
-					Tradition: "Elf"
-				});
-			}
-			if (values.Tradition == 11) {
-				setAttrs({
-					Tradition: "Goblinzauberinnen"
-				});
-			}
-			if (values.Tradition == 13) {
-				setAttrs({
-					Tradition: "Zibilja"
-				});
-			}
-			if (parseInt(values.sf_belastungsgewoehnung_stufe) >= 1) {
-				setAttrs({
-					sf_belastungsgewoehnung_1: 1
-				});
-			}
-			if (parseInt(values.sf_belastungsgewoehnung_stufe) >= 2) {
-				setAttrs({
-					sf_belastungsgewoehnung_2: 1
-				});
-			}
-			if (parseInt(values.sf_finte_stufe) >= 1) {
-				setAttrs({
-					sf_finte_1: 1
-				});
-			}
-			if (parseInt(values.sf_finte_stufe) >= 2) {
-				setAttrs({
-					sf_finte_2: 1
-				});
-			}
-			if (parseInt(values.sf_finte_stufe) == 3) {
-				setAttrs({
-					sf_finte_3: 1
-				});
-			}
-			if (parseInt(values.sf_wuchtschlag_stufe) >= 1) {
-				setAttrs({
-					sf_wuchtschlag_1: 1
-				});
-			}
-			if (parseInt(values.sf_wuchtschlag_stufe) >= 2) {
-				setAttrs({
-					sf_wuchtschlag_2: 1
-				});
-			}
-			if (parseInt(values.sf_wuchtschlag_stufe) == 3) {
-				setAttrs({
-					sf_wuchtschlag_3: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_schuss_stufe) >= 1) {
-				setAttrs({
-					sf_praeziser_schuss_1: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_schuss_stufe) >= 2) {
-				setAttrs({
-					sf_praeziser_schuss_2: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_schuss_stufe) == 3) {
-				setAttrs({
-					sf_praeziser_schuss_3: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_stich_stufe) >= 1) {
-				setAttrs({
-					sf_praeziser_stich_1: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_stich_stufe) >= 2) {
-				setAttrs({
-					sf_praeziser_stich_2: 1
-				});
-			}
-			if (parseInt(values.sf_praeziser_stich_stufe) == 3) {
-				setAttrs({
-					sf_praeziser_stich_3: 1
-				});
-			}
-			if (parseInt(values.sf_rundumschlag_stufe) >= 1) {
-				setAttrs({
-					sf_rundumschlag_1: 1
-				});
-			}
-			if (parseInt(values.sf_rundumschlag_stufe) == 2) {
-				setAttrs({
-					sf_rundumschlag_2: 1
-				});
-			}
-		}
-	});
-});
-
+/*
+var getRangedWeaponTalentValues = function(number) {
+    switch(talent.ranged_weapon_3_talent){
+        case 0:
+            getAttrs(["fw_crossbow", "wounds"], function(values) {
+                setAttrs({
+                    ranged_weapon_3_fk: parseInt(values.fw_crossbow) - (2*parseInt(values.wounds))
+                });
+            });
+            break;
+        case 1:
+            getAttrs(["fw_bow", "wounds"], function(values) {
+                setAttrs({
+                    ranged_weapon_3_fk: parseInt(values.fw_bow) - (2*parseInt(values.wounds))
+                });
+            });
+            break;
+        case 2:
+            getAttrs(["fw_throwing-axe", "wounds"], function(values) {
+                setAttrs({
+                    ranged_weapon_3_fk: parseInt(values.fw_throwing-axe) - (2*parseInt(values.wounds))
+                });
+            });
+            break;
+        case 3:
+            getAttrs(["fw_throwing-knife", "wounds"], function(values) {
+                setAttrs({
+                    ranged_weapon_3_fk: parseInt(values.fw_throwing-knife) - (2*parseInt(values.wounds))
+                });
+            });
+            break;
+        case 4:
+            getAttrs(["fw_throwing-spear", "wounsd"], function(values) {
+                setAttrs({
+                    ranged_weapon_3_fk: parseInt(values.fw_throwing-spear) - (2*parseInt(values.wounds))
+                });
+            });
+            break;
+        default:
+}*/
 </script>
