@@ -2307,7 +2307,7 @@
             <span class="sheet-navigation" data-i18n="character_fighting-ranged_desc">FERNKAMPF</span>
             <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 4" value="4">
             <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">KAMPFTECHNIK</span>
-            <!--
+            <!-- TODO
             <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-abilities" name="attr_fighting_pagenumber" title="PAGE 5" value="5">
             <span class="sheet-navigation" data-i18n="character_fighting-abilities_desc">KAMPF-SONDERFERTIGKEITEN</span>
             -->
@@ -2378,10 +2378,12 @@
                             <input type="text" title="TP" name="attr_melee_weapon_1_tp">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="AT" name="attr_melee_weapon_1_at">
+                            <input type="number" title="AT" name="attr_melee_weapon_1_at_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_1_at">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="PA" name="attr_melee_weapon_1_pa">
+                            <input type="number" title="PA" name="attr_melee_weapon_1_pa_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_1_pa">
                         </div>
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="1">
@@ -2421,10 +2423,12 @@
                             <input type="text" title="TP" name="attr_melee_weapon_2_tp">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="AT" name="attr_melee_weapon_2_at">
+                            <input type="number" title="AT" name="attr_melee_weapon_2_at_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_2_at">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="PA" name="attr_melee_weapon_2_pa">
+                            <input type="number" title="PA" name="attr_melee_weapon_2_pa_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_2_apa">
                         </div>
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="2">
@@ -2464,10 +2468,12 @@
                             <input type="text" title="TP" name="attr_melee_weapon_3_tp">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="AT" name="attr_melee_weapon_3_at">
+                            <input type="number" title="AT" name="attr_melee_weapon_3_at_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_3_at">
                         </div>
                         <div class="sheet-cell">
-                            <input type="number" title="PA" name="attr_melee_weapon_3_pa">
+                            <input type="number" title="PA" name="attr_melee_weapon_3_pa_mod">
+                            <input class="sheet-hidden" type="number" title="AT" name="attr_melee_weapon_3_pa">
                         </div>
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_melee_weapon" value="3">
@@ -2482,33 +2488,33 @@
                 <!--weapon 1 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_weapon" value="1">
                 <div class="sheet-navigation sheet-melee-weapon-1">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_at}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_1_pa}}}" >PA</button>
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-2" name="attr_active_melee_weapon" value="2">
                 <div class="sheet-navigation sheet-melee-weapon-2">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_at}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_pa}}}" >PA</button>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-3" name="attr_active_melee_weapon" value="3">
                 <div class="sheet-navigation sheet-melee-weapon-3">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_at}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_pa}}}" >PA</button>
                 </div>
                 <!--/weapon 3 roll-->
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
@@ -2587,6 +2593,7 @@
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="1">
                         </div>
+                        <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_1_fk">
                     </div>
                     <!--/weapon 1-->
 
@@ -2627,6 +2634,7 @@
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="2">
                         </div>
+                        <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_2_fk">
                     </div>
                     <!--/weapon 2-->
 
@@ -2667,6 +2675,7 @@
                         <div class="sheet-cell">
                             <input type="radio" title="AKTIV" name="attr_active_ranged_weapon" value="3">
                         </div>
+                        <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_3_fk">
                     </div>
                     <!--/weapon 3-->
                 </div>
@@ -2677,31 +2686,30 @@
                 <!--weapon 1 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-1" name="attr_active_ranged_weapon" value="1">
                 <div class="sheet-navigation sheet-ranged-weapon-1">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_1_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_1_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_1_fk}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{weapon_1_tp}]]+?{Range TP+| @{attr_ranged_weapon_1_ranges_1}, @{attr_ranged_weapon_1_tp+_1} | @{attr_ranged_weapon_1_ranges_2}, @{attr_ranged_weapon_1_tp+_2} | @{attr_ranged_weapon_1_ranges_3}, @{attr_ranged_weapon_1_tp+_3} | @{attr_ranged_weapon_1_ranges_4}, @{attr_ranged_weapon_1_tp+_4} | @{attr_ranged_weapon_1_ranges_5}, @{attr_ranged_weapon_1_tp+_5}} }}" >TP</button>
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-2" name="attr_active_ranged_weapon" value="2">
                 <div class="sheet-navigation sheet-ranged-weapon-2">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_2_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_2_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_2_fk}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}]]+?{Range TP+| @{attr_ranged_weapon_2_ranges_1}, @{attr_ranged_weapon_2_tp+_1} | @{attr_ranged_weapon_2_ranges_2}, @{attr_ranged_weapon_2_tp+_2} | @{attr_ranged_weapon_2_ranges_3}, @{attr_ranged_weapon_2_tp+_3} | @{attr_ranged_weapon_2_ranges_4}, @{attr_ranged_weapon_2_tp+_4} | @{attr_ranged_weapon_2_ranges_5}, @{attr_ranged_weapon_2_tp+_5}} }}" >TP</button>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-3" name="attr_active_ranged_weapon" value="3">
                 <div class="sheet-navigation sheet-ranged-weapon-3">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_at}}}" >AT</button>
-                    <button type="roll" value="&{template:atpa} {{name=@{character_name} }} {{damage=[[@{weapon_3_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{weapon_3_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_3_fk}}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}]]+?{Range TP+| @{attr_ranged_weapon_3_ranges_1}, @{attr_ranged_weapon_3_tp+_1} | @{attr_ranged_weapon_3_ranges_2}, @{attr_ranged_weapon_3_tp+_2} | @{attr_ranged_weapon_3_ranges_3}, @{attr_ranged_weapon_3_tp+_3} | @{attr_ranged_weapon_3_ranges_4}, @{attr_ranged_weapon_3_tp+_4} | @{attr_ranged_weapon_3_ranges_5}, @{attr_ranged_weapon_3_tp+_5}} }}" >TP</button>
                 </div>
                 <!--/weapon 3 roll-->
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{name=@{character_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
@@ -3189,6 +3197,7 @@
             </div>
             <!--/fighting abilities-->
         </div>
+        <hr>
         <div class="sheet-full">
             <!--TODO status/wunden-->
         </div>
@@ -3243,15 +3252,23 @@
                 {{#dodge}}
                 <span data-i18n="template_dodge">Ausweichen</span>
                 {{/dodge}}
+                {{#fk}}
+                <span data-i18n="template_ranged">Fernkampf</span>
+                {{/fk}}
             </div>
         </div>
+        {{#weapon}}
         <div class="sheet-row">
             <div class="sheet-cell sheet-template-subhead">
-                <span>{{name}}</span>
+                <span>{{weapon}}</span>
             </div>
         </div>
+        {{/weapon}}
         <div class="sheet-row sheet-template-result">
             <div class="sheet-cell">
+                {{#fk}}
+                <span data-i18n="template_ranged">FK Wurf: </span>
+                {{/fk}}
                 {{#at}}
                 <span data-i18n="template_at_roll">AT Wurf: </span>
                 {{/at}}
@@ -3309,11 +3326,13 @@
                 <span data-i18n="template_dmg">Schaden</span>
             </div>
         </div>
+        {{#type}}
         <div class="sheet-row">
             <div class="sheet-cell sheet-template-subhead">
-                <span>{{name}}</span>
+                <span>{{type}}</span>
             </div>
         </div>
+        {{/type}}
         <div class="sheet-row sheet-template-result">
             <div class="sheet-cell">
                 <span data-i18n="template_tp_roll">TP Verlust:</span><span>{{damage}}</span>
@@ -3327,11 +3346,6 @@
         <div class="sheet-row sheet-template-head">
             <div class="sheet-cell">
                 <span>{{talent}}</span><span data-i18n="template_test"> Probe</span>
-            </div>
-        </div>
-        <div class="sheet-row">
-            <div class="sheet-cell sheet-template-subhead">
-                <span>{{name}}</span>
             </div>
         </div>
         {{#rollGreater() roll -1}}
