@@ -14,28 +14,28 @@
         </div>
         <div class="sheet-row">
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Mut}} {{name=@{character_name} }} {{roll=[[@{mu}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Mut}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{mu}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Klugheit}} {{name=@{character_name} }} {{roll=[[@{kl}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Klugheit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{kl}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Intuition}} {{name=@{character_name} }} {{roll=[[@{in}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Intuition}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{in}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Charisma}} {{name=@{character_name} }} {{roll=[[@{ch}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Charisma}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ch}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Fingerfertigkeit}} {{name=@{character_name} }} {{roll=[[@{ff}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Fingerfertigkeit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ff}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Gewandheit}} {{name=@{character_name} }} {{roll=[[@{ge}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Gewandheit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ge}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Konstitution}} {{name=@{character_name} }} {{roll=[[@{ko}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Konstitution}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ko}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{name=@{character_name} }} {{roll=[[@{kk}+?{Erleichtert(+) / Erschwert(-)|0}-1d20cs1cf20]]}}" ></button>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{kk}+?{Erleichtert(+) / Erschwert(-)|0}]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
         </div>
     </div>
@@ -430,7 +430,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -453,7 +453,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -476,7 +476,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -499,7 +499,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -522,7 +522,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -545,12 +545,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Reiten}} {{name=@{character_name} }} {{roll=[[@{fw_riding} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{gr}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Reiten}} {{name=@{character_name} }} {{roll=[[@{fw_riding} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-sneaking">
@@ -568,7 +568,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -591,7 +591,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -614,7 +614,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -637,7 +637,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -660,7 +660,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -683,7 +683,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -706,7 +706,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -729,7 +729,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -752,7 +752,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -775,7 +775,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -819,7 +819,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -842,7 +842,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -865,7 +865,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -888,7 +888,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -911,7 +911,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -934,7 +934,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -957,7 +957,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -980,7 +980,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1024,7 +1024,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1047,7 +1047,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1070,7 +1070,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1093,7 +1093,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1116,7 +1116,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1139,7 +1139,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1162,7 +1162,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1253,7 +1253,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1276,7 +1276,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1299,7 +1299,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1322,7 +1322,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1345,7 +1345,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1368,7 +1368,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1391,7 +1391,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1414,7 +1414,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1437,7 +1437,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1460,7 +1460,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1483,7 +1483,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1506,7 +1506,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1529,7 +1529,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1552,7 +1552,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1575,7 +1575,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1598,7 +1598,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1621,7 +1621,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1687,7 +1687,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1710,7 +1710,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1733,7 +1733,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1756,7 +1756,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1779,7 +1779,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1802,7 +1802,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1825,7 +1825,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1848,7 +1848,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1871,7 +1871,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1917,7 +1917,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1940,7 +1940,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1963,7 +1963,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -1986,7 +1986,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2129,7 +2129,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Malen/Zeichnen}} {{name=@{character_name} }} {{roll=[[@{fw_drawning} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Malen/Zeichnen}} {{name=@{character_name} }} {{roll=[[@{fw_drawing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-music-making">
@@ -2147,7 +2147,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2170,7 +2170,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2193,7 +2193,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2216,7 +2216,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2239,7 +2239,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2262,7 +2262,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2285,7 +2285,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
-                                
+
                                 <!--TODO info popup-->
                             </div>
                             <div class="sheet-cell">
@@ -2353,19 +2353,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_1_talent">
-                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
-                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
-                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
-                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
-                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
-                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
-                                <option value="9" data-i18n="character_spear_desc">Speere</option>
-                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
+                                <option value="bastard_sword" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
+                                <option value="dagger" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="fencing_weapon" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
+                                <option value="baton" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="infantry_weapons" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="chain_weapons" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
+                                <option value="lancing" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="sabre" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="sword" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="spear" data-i18n="character_spear_desc">Speere</option>
+                                <option value="staff" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="twohanded_baton" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="twohanded_swords" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2396,19 +2396,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_2_talent">
-                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
-                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
-                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
-                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
-                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
-                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
-                                <option value="9" data-i18n="character_spear_desc">Speere</option>
-                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
+                                <option value="bastard_sword" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
+                                <option value="dagger" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="fencing_weapon" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
+                                <option value="baton" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="infantry_weapons" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="chain_weapons" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
+                                <option value="lancing" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="sabre" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="sword" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="spear" data-i18n="character_spear_desc">Speere</option>
+                                <option value="staff" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="twohanded_baton" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="twohanded_swords" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2440,19 +2440,19 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_melee_weapon_3_talent">
-                                <option value="0" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
-                                <option value="1" data-i18n="character_dagger_desc">Dolche</option>
-                                <option value="2" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
-                                <option value="3" data-i18n="character_baton_desc">Hiebwaffen</option>
-                                <option value="4" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
-                                <option value="5" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
-                                <option value="6" data-i18n="character_lancing_desc">Lanzenreiten</option>
-                                <option value="7" data-i18n="character_sabre_desc">Säbel</option>
-                                <option value="8" data-i18n="character_sword_desc">Schwerter</option>
-                                <option value="9" data-i18n="character_spear_desc">Speere</option>
-                                <option value="10" data-i18n="character_staff_desc">Stäbe</option>
-                                <option value="11" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
-                                <option value="12" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
+                                <option value="bastard_sword" data-i18n="character_bastard_sword_desc">Anderthalbhänder</option>
+                                <option value="dagger" data-i18n="character_dagger_desc">Dolche</option>
+                                <option value="fencing_weapon" data-i18n="character_fencing_weapon_desc">Fechtwaffen</option>
+                                <option value="baton" data-i18n="character_baton_desc">Hiebwaffen</option>
+                                <option value="infantry_weapons" data-i18n="character_infantry_weapons_desc">Infanteriewaffen</option>
+                                <option value="chain_weapons" data-i18n="character_chain_weapons_desc">Kettenwaffen</option>
+                                <option value="lancing" data-i18n="character_lancing_desc">Lanzenreiten</option>
+                                <option value="sabre" data-i18n="character_sabre_desc">Säbel</option>
+                                <option value="sword" data-i18n="character_sword_desc">Schwerter</option>
+                                <option value="spear" data-i18n="character_spear_desc">Speere</option>
+                                <option value="staff" data-i18n="character_staff_desc">Stäbe</option>
+                                <option value="twohanded_baton" data-i18n="character_twohanded_baton_desc">Zweihand-Hiebwaffen</option>
+                                <option value="twohanded_swords" data-i18n="character_twohanded_swords_desc">Zweihandschwerter</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2480,43 +2480,48 @@
 
                 <!--weapon rolls-->
 
+                <!--TODO remove debug
                 <input class="" type="number" title="AT" name="attr_melee_weapon_1_at" readonly>
                 <input class="" type="number" title="PA" name="attr_melee_weapon_1_pa" readonly>
                 <input class="" type="number" title="AT" name="attr_melee_weapon_2_at" readonly>
                 <input class="" type="number" title="PA" name="attr_melee_weapon_2_pa" readonly>
                 <input class="" type="number" title="AT" name="attr_melee_weapon_3_at" readonly>
                 <input class="" type="number" title="PA" name="attr_melee_weapon_3_pa" readonly>
-
+                <br>
+                <input class="" type="number" title="PA" name="attr_basis_at" readonly>
+                <input class="" type="number" title="PA" name="attr_basis_pa" readonly>
+                <input class="" type="number" title="PA" name="attr_basis_fk" readonly>
+                -->
                 <!--weapon 1 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_weapon" value="1">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_rolls" value="1">
                 <div class="sheet-navigation sheet-melee-weapon-1">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{meleeWeapon1name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{meleeWeapon1at}}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{meleeWeapon1tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{meleeWeapon1name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{meleeWeapon1pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_1_at}]]}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_1_pa}]]}}" >PA</button>
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-2" name="attr_active_melee_weapon" value="2">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-2" name="attr_active_melee_rolls" value="2">
                 <div class="sheet-navigation sheet-melee-weapon-2">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_2_at}]]}}" >AT</button>
                     <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_2_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_2_pa}]]}}" >PA</button>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-3" name="attr_active_melee_weapon" value="3">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-3" name="attr_active_melee_rolls" value="3">
                 <div class="sheet-navigation sheet-melee-weapon-3">
-                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_at}}}" >AT</button>
+                    <button type="roll" value="&{template:atpa} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_3_at}]]}}" >AT</button>
                     <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{melee_weapon_3_pa}}}" >PA</button>
+                    <button type="roll" value="&{template:atpa} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_3_pa}]]}}" >PA</button>
                 </div>
                 <!--/weapon 3 roll-->
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge_max}]]}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
@@ -2565,11 +2570,11 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_ranged_weapon_1_talent">
-                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
-                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
-                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
-                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
-                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                                <option value="crossbow" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="bow" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="throwing_axe" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="throwing_knife" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="throwing_spear" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2605,11 +2610,11 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_ranged_weapon_2_talent">
-                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
-                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
-                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
-                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
-                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                                <option value="crossbow" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="bow" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="throwing_axe" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="throwing_knife" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="throwing_spear" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2645,11 +2650,11 @@
                         </div>
                         <div class="sheet-cell">
                             <select name="attr_ranged_weapon_3_talent">
-                                <option value="0" data-i18n="character_crossbow_desc">Armbrust</option>
-                                <option value="1" data-i18n="character_bow_desc">Bogen</option>
-                                <option value="2" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
-                                <option value="3" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
-                                <option value="4" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
+                                <option value="crossbow" data-i18n="character_crossbow_desc">Armbrust</option>
+                                <option value="bow" data-i18n="character_bow_desc">Bogen</option>
+                                <option value="throwing_axe" data-i18n="character_throwing-axe_desc">Wurfbeile</option>
+                                <option value="throwing_knife" data-i18n="character_throwing-knife_desc">Wurfmesser</option>
+                                <option value="throwing_spear" data-i18n="character_throwing-spear_desc">Wurfspeer</option>
                             </select>
                         </div>
                         <div class="sheet-cell">
@@ -2678,54 +2683,56 @@
                     </div>
                     <!--/weapon 3-->
 
-                    <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_1_fk">
-                    <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_2_fk">
-                    <input type="number" title="FK" class="sheet-hidden" name="attr_ranged_weapon_3_fk">
+                    <!--TODO remove debug
+                    <input type="number" title="FK" name="attr_ranged_weapon_1_fk" readonly>
+                    <input type="number" title="FK" name="attr_ranged_weapon_2_fk" readonly>
+                    <input type="number" title="FK" name="attr_ranged_weapon_3_fk" readonly>
+                    -->
                 </div>
                 <!--/weapon information-->
 
                 <!--weapon rolls-->
 
                 <!--weapon 1 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-1" name="attr_active_ranged_weapon" value="1">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-1" name="attr_active_ranged_rolls" value="1">
                 <div class="sheet-navigation sheet-ranged-weapon-1">
-                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_1_fk}}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{weapon_1_tp}]]+?{Range TP+| @{attr_ranged_weapon_1_ranges_1}, @{attr_ranged_weapon_1_tp+_1} | @{attr_ranged_weapon_1_ranges_2}, @{attr_ranged_weapon_1_tp+_2} | @{attr_ranged_weapon_1_ranges_3}, @{attr_ranged_weapon_1_tp+_3} | @{attr_ranged_weapon_1_ranges_4}, @{attr_ranged_weapon_1_tp+_4} | @{attr_ranged_weapon_1_ranges_5}, @{attr_ranged_weapon_1_tp+_5}} }}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_1_fk}]]}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_1_tp}+?{Range TP+| @{ranged_weapon_1_ranges_1}, @{ranged_weapon_1_tp+_1} | @{ranged_weapon_1_ranges_2}, @{ranged_weapon_1_tp+_2} | @{ranged_weapon_1_ranges_3}, @{ranged_weapon_1_tp+_3} | @{ranged_weapon_1_ranges_4}, @{ranged_weapon_1_tp+_4} | @{ranged_weapon_1_ranges_5}, @{ranged_weapon_1_tp+_5}}]] }}" >TP</button>
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-2" name="attr_active_ranged_weapon" value="2">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-2" name="attr_active_ranged_rolls" value="2">
                 <div class="sheet-navigation sheet-ranged-weapon-2">
-                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_2_fk}}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}]]+?{Range TP+| @{attr_ranged_weapon_2_ranges_1}, @{attr_ranged_weapon_2_tp+_1} | @{attr_ranged_weapon_2_ranges_2}, @{attr_ranged_weapon_2_tp+_2} | @{attr_ranged_weapon_2_ranges_3}, @{attr_ranged_weapon_2_tp+_3} | @{attr_ranged_weapon_2_ranges_4}, @{attr_ranged_weapon_2_tp+_4} | @{attr_ranged_weapon_2_ranges_5}, @{attr_ranged_weapon_2_tp+_5}} }}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_2_fk}]]}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}+?{Range TP+| @{ranged_weapon_2_ranges_1}, @{ranged_weapon_2_tp+_1} | @{ranged_weapon_2_ranges_2}, @{ranged_weapon_2_tp+_2} | @{ranged_weapon_2_ranges_3}, @{ranged_weapon_2_tp+_3} | @{ranged_weapon_2_ranges_4}, @{ranged_weapon_2_tp+_4} | @{ranged_weapon_2_ranges_5}, @{ranged_weapon_2_tp+_5}}]] }}" >TP</button>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
-                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-3" name="attr_active_ranged_weapon" value="3">
+                <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-3" name="attr_active_ranged_rolls" value="3">
                 <div class="sheet-navigation sheet-ranged-weapon-3">
-                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{ranged_weapon_3_fk}}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}]]+?{Range TP+| @{attr_ranged_weapon_3_ranges_1}, @{attr_ranged_weapon_3_tp+_1} | @{attr_ranged_weapon_3_ranges_2}, @{attr_ranged_weapon_3_tp+_2} | @{attr_ranged_weapon_3_ranges_3}, @{attr_ranged_weapon_3_tp+_3} | @{attr_ranged_weapon_3_ranges_4}, @{attr_ranged_weapon_3_tp+_4} | @{attr_ranged_weapon_3_ranges_5}, @{attr_ranged_weapon_3_tp+_5}} }}" >TP</button>
+                    <button type="roll" value="&{template:atpa} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_3_fk}]]}}" >AT</button>
+                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}+?{Range TP+| @{ranged_weapon_3_ranges_1}, @{ranged_weapon_3_tp+_1} | @{ranged_weapon_3_ranges_2}, @{ranged_weapon_3_tp+_2} | @{ranged_weapon_3_ranges_3}, @{ranged_weapon_3_tp+_3} | @{ranged_weapon_3_ranges_4}, @{ranged_weapon_3_tp+_4} | @{ranged_weapon_3_ranges_5}, @{ranged_weapon_3_tp+_5}}]] }}" >TP</button>
                 </div>
                 <!--/weapon 3 roll-->
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20]] - (?{Erleichtert(+) / Erschwert(-)|0})}} {{mod=?{Erleichtert(+) / Erschwert(-)|0}}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=@{character_dodge_max}}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
                 <!--/weapon rolls-->
 
-                <!--active melee abilities-->
+                <!--active ranged abilities-->
                 <!--TODO show active abilities-->
-                <!--/active melee abilities-->
+                <!--/active ranged abilities-->
             </div>
             <!--/ranged-->
 
             <input class="sheet-hidden" type="number" title="WOUND-MOD" name="attr_wound_mod">
-            
+
             <!--fighting-talents-->
             <div class="sheet-navigation sheet-fighting-talents">
                 <div class="sheet-table sheet-padded">
@@ -3341,217 +3348,177 @@
 </div>
 
 <rolltemplate class="sheet-rolltemplate-attribute">
-    <div class="sheet-table">
-        <div class="sheet-row sheet-template-head">
-            <div class="sheet-cell">
-                <span>{{eigenschaft}}</span><span data-i18n="template_test"> Probe</span>
-            </div>
-        </div>
-        <div class="sheet-row sheet-template-subhead">
-            <div class="sheet-cell">
-                <span>{{name}}</span>
-            </div>
-        </div>
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span>Probe:</span>{{roll}}
-            </div>
-        </div>
+    <div class="sheet-template-head">
+        <span>{{eigenschaft}}</span><span data-i18n="template_test"> Probe</span>
     </div>
+    <div class="sheet-template-result sheet-template-roll">
+        <span data-i18n="template_roll">Wurf:</span>{{roll}}
+    </div>
+    {{#rollGreater() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-pos">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollGreater() mod 0}}
+    {{#rollLess() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-neg">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollLess() mod 0}}
+    {{#rollGreater() roll value}}
+    <div class="sheet-template-result sheet-template-fail">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
+    </div>
+    {{/rollGreater() roll value}}
+    {{#rollTotal() roll value}}
+    <div class="sheet-template-result sheet-template-success">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+    </div>
+    {{/rollTotal() roll value}}
+    {{#rollLess() roll value}}
+    <div class="sheet-template-result sheet-template-success">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+    </div>
+    {{/rollLess() roll value}}
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-atpa">
-    <div class="sheet-table">
-        <div class="sheet-row sheet-template-head">
-            <div class="sheet-cell">
-                {{#at}}
-                <span data-i18n="template_attack">Angriff</span>
-                {{/at}}
-                {{#pa}}
-                <span data-i18n="template_parry">Parieren</span>
-                {{/pa}}
-                {{#dodge}}
-                <span data-i18n="template_dodge">Ausweichen</span>
-                {{/dodge}}
-                {{#fk}}
-                <span data-i18n="template_ranged">Fernkampf</span>
-                {{/fk}}
-            </div>
-        </div>
-        {{#weapon}}
-        <div class="sheet-row">
-            <div class="sheet-cell sheet-template-subhead">
-                <span>{{weapon}}</span>
-            </div>
-        </div>
-        {{/weapon}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                {{#fk}}
-                <span data-i18n="template_ranged">FK Wurf: </span>
-                {{/fk}}
-                {{#at}}
-                <span data-i18n="template_at_roll">AT Wurf: </span>
-                {{/at}}
-                {{#pa}}
-                <span data-i18n="template_pa_roll">PA Wurf: </span>
-                {{/pa}}
-                {{#dodge}}
-                <span data-i18n="template_dodge_roll">Ausweichen Wurf: </span>
-                {{/dodge}}
-                <span>{{roll}}</span>
-            </div>
-        </div>
-        {{#rollGreater() mod 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-            </div>
-        </div>
-        {{/rollGreater() mod 0}}
-        {{#rollLess() mod 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-            </div>
-        </div>
-        {{/rollLess() mod 0}}
-        {{#rollGreater() roll value}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
-            </div>
-        </div>
-        {{/rollGreater() roll value}}
-        {{#rollTotal() roll value}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
-            </div>
-        </div>
-        {{/rollTotal() roll value}}
-        {{#rollLess() roll value}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
-            </div>
-        </div>
-        {{/rollLess() roll value}}
+    <div class="sheet-template-head">
+        {{#at}}
+        <span data-i18n="template_attack">Angriff</span>
+        {{/at}}
+        {{#pa}}
+        <span data-i18n="template_parry">Parieren</span>
+        {{/pa}}
+        {{#dodge}}
+        <span data-i18n="template_dodge">Ausweichen</span>
+        {{/dodge}}
+        {{#fk}}
+        <span data-i18n="template_ranged">Fernkampf</span>
+        {{/fk}}
     </div>
+    {{#weapon}}
+    <div class="sheet-template-subhead">
+        <span>{{weapon}}</span>
+    </div>
+    {{/weapon}}
+    <div class="sheet-template-result sheet-template-roll">
+        {{#fk}}
+        <span data-i18n="template_ranged">FK Wurf: </span>
+        {{/fk}}
+        {{#at}}
+        <span data-i18n="template_at_roll">AT Wurf: </span>
+        {{/at}}
+        {{#pa}}
+        <span data-i18n="template_pa_roll">PA Wurf: </span>
+        {{/pa}}
+        {{#dodge}}
+        <span data-i18n="template_dodge_roll">Ausweichen Wurf: </span>
+        {{/dodge}}
+        <span>{{roll}}</span>
+    </div>
+    {{#rollGreater() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-pos">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollGreater() mod 0}}
+    {{#rollLess() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-neg">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollLess() mod 0}}
+    {{#rollGreater() roll value}}
+    <div class="sheet-template-result sheet-template-fail">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
+    </div>
+    {{/rollGreater() roll value}}
+    {{#rollTotal() roll value}}
+    <div class="sheet-template-result sheet-template-success">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+    </div>
+    {{/rollTotal() roll value}}
+    {{#rollLess() roll value}}
+    <div class="sheet-template-result sheet-template-success">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+    </div>
+    {{/rollLess() roll value}}
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-tp">
-    <div class="sheet-table">
-        <div class="sheet-row sheet-template-head">
-            <div class="sheet-cell">
-                <span data-i18n="template_dmg">Schaden</span>
-            </div>
-        </div>
-        {{#type}}
-        <div class="sheet-row">
-            <div class="sheet-cell sheet-template-subhead">
-                <span>{{type}}</span>
-            </div>
-        </div>
-        {{/type}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_tp_roll">TP Verlust:</span><span>{{damage}}</span>
-            </div>
-        </div>
+    <div class="sheet-template-head">
+        <span data-i18n="template_dmg">Schaden</span>
+    </div>
+    {{#type}}
+    <div class="sheet-template-subhead">
+        <span>{{type}}</span>
+    </div>
+    {{/type}}
+    <div class="sheet-template-result sheet-template-roll">
+        <span data-i18n="template_tp_roll">TP Verlust:</span><span>{{damage}}</span>
     </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-talent">
-    <div class="sheet-table">
-        <div class="sheet-row sheet-template-head">
-            <div class="sheet-cell">
-                <span>{{talent}}</span><span data-i18n="template_test"> Probe</span>
-            </div>
-        </div>
-        {{#rollGreater() roll -1}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
-            </div>
-        </div>
-        {{/rollGreater() roll -1}}
-        {{#rollLess() roll 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
-            </div>
-        </div>
-        {{/rollLess() roll 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_fp">FP: </span><span>{{roll}}</span>
-            </div>
-        </div>
-        {{#rollBetween() roll 0 3}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>1</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 0 3}}
-        {{#rollBetween() roll 4 6}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>2</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 4 6}}
-        {{#rollBetween() roll 7 9}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>3</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 7 9}}
-        {{#rollBetween() roll 10 12}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>4</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 10 12}}
-        {{#rollBetween() roll 13 15}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>5</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 13 15}}
-        {{#rollBetween() roll 16 18}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>6</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 16 18}}
-        {{#rollBetween() roll 19 21}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_qs">QS: </span><span>7</span>
-            </div>
-        </div>
-        {{/rollBetween() roll 19 21}}
-        {{#rollGreater() mod 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-            </div>
-        </div>
-        {{/rollGreater() mod 0}}
-        {{#rollLess() mod 0}}
-        <div class="sheet-row sheet-template-result">
-            <div class="sheet-cell">
-                <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-            </div>
-        </div>
-        {{/rollLess() mod 0}}
+    <div class="sheet-template-head">
+        <span>{{talent}}</span><span data-i18n="template_test"> Probe</span>
     </div>
+    {{#rollGreater() roll -1}}
+    <div class="sheet-template-result sheet-template-success">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
+    </div>
+    {{/rollGreater() roll -1}}
+    {{#rollLess() roll 0}}
+    <div class="sheet-template-result sheet-template-fail">
+        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
+    </div>
+    {{/rollLess() roll 0}}
+    <div class="sheet-template-result sheet-template-roll">
+        <span data-i18n="template_fp">FP: </span><span>{{roll}}</span>
+    </div>
+    {{#rollBetween() roll 0 3}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>1</span>
+    </div>
+    {{/rollBetween() roll 0 3}}
+    {{#rollBetween() roll 4 6}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>2</span>
+    </div>
+    {{/rollBetween() roll 4 6}}
+    {{#rollBetween() roll 7 9}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>3</span>
+    </div>
+    {{/rollBetween() roll 7 9}}
+    {{#rollBetween() roll 10 12}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>4</span>
+    </div>
+    {{/rollBetween() roll 10 12}}
+    {{#rollBetween() roll 13 15}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>5</span>
+    </div>
+    {{/rollBetween() roll 13 15}}
+    {{#rollBetween() roll 16 18}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>6</span>
+    </div>
+    {{/rollBetween() roll 16 18}}
+    {{#rollBetween() roll 19 21}}
+    <div class="sheet-template-result">
+        <span data-i18n="template_qs">QS: </span><span>7</span>
+    </div>
+    {{/rollBetween() roll 19 21}}
+    {{#rollGreater() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-pos">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollGreater() mod 0}}
+    {{#rollLess() mod 0}}
+    <div class="sheet-template-result sheet-template-mod-neg">
+        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
+    </div>
+    {{/rollLess() mod 0}}
 </rolltemplate>
 
 <script type="text/worker">
@@ -3604,167 +3571,318 @@ on("change:character_gs_basis change:character_gs_mod",function(){
     });
 });
 
-//---attributes---//
+on("change:mu change:ge change:kk", function(){
+    var at_base = 0;
+    getAttrs(["MU","GE","KK"],function(values){
 
-on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapon_1_talent change:wounds",function(){
-    var weapon1at = 0;
-    var weapon1pa = 0;
-    getAttrs(["melee_weapon_1_at_mod", "melee_weapon_1_pa_mod", "melee_weapon_1_talent", "wounds"],function(values) {
-        getMeleeWeaponTalentValues(parseInt(values.melee_weapon_1_talent),function(talent) {
-            weapon1at += parseInt(values.melee_weapon_1_at_mod);
-            weapon1at += talent["at"];
-            weapon1at -= 2*parseInt(values.wounds);
-            weapon1pa += parseInt(values.melee_weapon_1_pa_mod);
-            weapon1pa += talent["pa"];
-            weapon1pa -= 2*parseInt(values.wounds);
+        at_base = Math.round((parseInt(values.MU) + parseInt(values.GE) + parseInt(values.KK)) / 5);
+
+        setAttrs({
+            basis_at: at_base
+        });
+    });
+});
+
+on("change:in change:ge change:kk",function(){
+    var pa_base = 0;
+    getAttrs(["IN","GE","KK"], function(values){
+
+        pa_base = Math.round((parseInt(values.IN) + parseInt(values.GE) + parseInt(values.KK))/5);
+
+        setAttrs({
+            basis_pa: pa_base
+        });
+    });
+});
+
+on("change:in change:ff change:kk",function() {
+    var fk_base = 0;
+    getAttrs(["IN","FF","KK"],function(values){
+
+        fk_base = Math.round((parseInt(values.IN) + parseInt(values.FF) + parseInt(values.KK))/5);
+
+        setAttrs({
+            basis_fk: fk_base
+        });
+    });
+});
+
+//---weapons---//
+
+on("change:active_melee_weapon",function(){
+    getAttrs(["active_melee_weapon"],function(val){
+        setAttrs({
+            active_melee_rolls: parseInt(val.active_melee_weapon)
+        });
+    });
+});
+
+on("change:active_ranged_weapon",function(){
+    getAttrs(["active_ranged_weapon"],function(val){
+        setAttrs({
+            active_ranged_rolls: parseInt(val.active_ranged_weapon)
+        });
+    });
+});
+
+var meleeTriggers = " change:basis_at change:basis_pa change:wounds";
+meleeTriggers +=    " change:at_bastard_sword change:pa_bastard_sword";
+meleeTriggers +=    " change:at_dagger change:pa_dagger";
+meleeTriggers +=    " change:at_fencing_weapons change:pa_fencing_weapons";
+meleeTriggers +=    " change:at_baton change:pa_baton";
+meleeTriggers +=    " change:at_infantry_weapons change:pa_infantry_weapons";
+meleeTriggers +=    " change:at_chain_weapons change:pa_chain_weapons";
+meleeTriggers +=    " change:at_lancing change:pa_lancing";
+meleeTriggers +=    " change:at_sabre change:pa_sabre";
+meleeTriggers +=    " change:at_sword change:pa_sword";
+meleeTriggers +=    " change:at_spear change:pa_spear";
+meleeTriggers +=    " change:at_staff change:pa_staff";
+meleeTriggers +=    " change:at_twohanded_baton change:pa_twohanded_baton";
+meleeTriggers +=    " change:at_twohanded_swords change:pa_twohanded_swords";
+
+on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapon_1_talent" + meleeTriggers,function(){
+    var weapon_at = 0;
+    var weapon_pa = 0;
+    getAttrs(["melee_weapon_1_at_mod", "melee_weapon_1_pa_mod", "melee_weapon_1_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+        getWeaponTalentValues(values.melee_weapon_1_talent,function(talent) {
+            weapon_at += parseInt(values.melee_weapon_1_at_mod);
+            weapon_at += parseInt(values.basis_at);
+            weapon_at += talent.at;
+            weapon_at -= 2*parseInt(values.wounds);
+            weapon_pa += parseInt(values.melee_weapon_1_pa_mod);
+            weapon_pa += parseInt(values.basis_pa);
+            weapon_pa += talent.pa;
+            weapon_pa -= 2*parseInt(values.wounds);
 
             setAttrs({
-                melee_weapon_1_at: weapon1at,
-                melee_weapon_1_pa: weapon1pa
+                melee_weapon_1_at: weapon_at,
+                melee_weapon_1_pa: weapon_pa
             });
         });
     });
-
 });
 
-var getMeleeWeaponTalentValues = function(number,callback) {
+on("change:melee_weapon_2_at_mod change:melee_weapon_2_pa_mod change:melee_weapon_2_talent" + meleeTriggers,function(){
+    var weapon_at = 0;
+    var weapon_pa = 0;
+    getAttrs(["melee_weapon_2_at_mod", "melee_weapon_2_pa_mod", "melee_weapon_2_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+        getWeaponTalentValues(values.melee_weapon_2_talent,function(talent) {
+            weapon_at += parseInt(values.melee_weapon_2_at_mod);
+            weapon_at += parseInt(values.basis_at);
+            weapon_at += talent.at;
+            weapon_at -= 2*parseInt(values.wounds);
+            weapon_pa += parseInt(values.melee_weapon_2_pa_mod);
+            weapon_pa += parseInt(values.basis_pa);
+            weapon_pa += talent.pa;
+            weapon_pa -= 2*parseInt(values.wounds);
+
+            setAttrs({
+                melee_weapon_2_at: weapon_at,
+                melee_weapon_2_pa: weapon_pa
+            });
+        });
+    });
+});
+
+on("change:melee_weapon_3_at_mod change:melee_weapon_3_pa_mod change:melee_weapon_3_talent" + meleeTriggers,function(){
+    var weapon_at = 0;
+    var weapon_pa = 0;
+    getAttrs(["melee_weapon_3_at_mod", "melee_weapon_3_pa_mod", "melee_weapon_3_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+        getWeaponTalentValues(values.melee_weapon_3_talent,function(talent) {
+            weapon_at += parseInt(values.melee_weapon_3_at_mod);
+            weapon_at += parseInt(values.basis_at);
+            weapon_at += talent.at;
+            weapon_at -= 2*parseInt(values.wounds);
+            weapon_pa += parseInt(values.melee_weapon_3_pa_mod);
+            weapon_pa += parseInt(values.basis_pa);
+            weapon_pa += talent.pa;
+            weapon_pa -= 2*parseInt(values.wounds);
+
+            setAttrs({
+                melee_weapon_3_at: weapon_at,
+                melee_weapon_3_pa: weapon_pa
+            });
+        });
+    });
+});
+
+//---ranged weapons---//
+
+var rangedTriggers = " change:basis_fk change:wounds change:fw_crossbow change:fw_bow change:fw_throwing_axe change:fw_throwing_knife change:fw_throwing_spear";
+
+on("change:ranged_weapon_1_talent" + rangedTriggers,function(){
+    var weapon_fk = 0;
+    getAttrs(["ranged_weapon_1_talent", "basis_fk", "wounds"],function(values) {
+        getWeaponTalentValues(values.ranged_weapon_1_talent,function(talent){
+            weapon_fk += parseInt(values.basis_fk);
+            weapon_fk += talent.fw;
+            weapon_fk -= 2*parseInt(values.wounds);
+            
+            setAttrs({
+                ranged_weapon_1_fk: weapon_fk
+            });
+        });
+    });
+});
+
+on("change:ranged_weapon_2_talent" + rangedTriggers,function(){
+    var weapon_fk = 0;
+    getAttrs(["ranged_weapon_2_talent", "basis_fk", "wounds"],function(values) {
+        getWeaponTalentValues(values.ranged_weapon_2_talent,function(talent){
+            weapon_fk += parseInt(values.basis_fk);
+            weapon_fk += talent.fw;
+            weapon_fk -= 2*parseInt(values.wounds);
+            
+            setAttrs({
+                ranged_weapon_2_fk: weapon_fk
+            });
+        });
+    });
+});
+
+on("change:ranged_weapon_3_talent" + rangedTriggers,function(){
+    var weapon_fk = 0;
+    getAttrs(["ranged_weapon_3_talent", "basis_fk", "wounds"],function(values) {
+        getWeaponTalentValues(values.ranged_weapon_3_talent,function(talent){
+            weapon_fk += parseInt(values.basis_fk);
+            weapon_fk += talent.fw;
+            weapon_fk -= 2*parseInt(values.wounds);
+
+            setAttrs({
+                ranged_weapon_3_fk: weapon_fk
+            });
+        });
+    });
+});
+
+var getWeaponTalentValues = function(talentname,callback) {
     var result = {
         at: 0,
-        pa: 0
+        pa: 0,
+        fw: 0
     };
-    switch(number){
-        case 0:
+    switch(talentname){
+        case 'bastard_sword':
             getAttrs(["at_bastard_sword","pa_bastard_sword"],function(values){
                 result.at = parseInt(values.at_bastard_sword);
                 result.pa = parseInt(values.pa_bastard_sword);
                 callback(result);
             });
             break;
-        case 1:
+        case 'dagger':
             getAttrs(["at_dagger","pa_dagger"],function(values){
                 result["at"] = parseInt(values.at_dagger);
                 result["pa"] = parseInt(values.pa_dagger);
                 callback(result);
             });
             break;
-        case 2:
+        case 'fencing_weapon':
             getAttrs(["at_fencing_weapon","pa_fencing_weapon"],function(values){
                 result["at"] = parseInt(values.at_fencing_weapon);
                 result["pa"] = parseInt(values.pa_fencing_weapon);
                 callback(result);
             });
             break;
-        case 3:
+        case 'baton':
             getAttrs(["at_baton","pa_baton"],function(values){
                 result["at"] = parseInt(values.at_baton);
                 result["pa"] = parseInt(values.pa_baton);
                 callback(result);
             });
             break;
-        case 4:
+        case 'infantry_weapons':
             getAttrs(["at_infantry_weapons","pa_infantry_weapons"],function(values){
                 result["at"] = parseInt(values.at_infantry_weapons);
                 result["pa"] = parseInt(values.pa_infantry_weapons);
                 callback(result);
             });
             break;
-        case 5:
+        case 'chain_weapons':
             getAttrs(["at_chain_weapons","pa_chain_weapons"],function(values){
                 result["at"] = parseInt(values.at_chain_weapons);
                 result["pa"] = parseInt(values.pa_chain_weapons);
                 callback(result);
             });
             break;
-        case 6:
+        case 'lancing':
             getAttrs(["at_lancing","pa_lancing"],function(values){
                 result["at"] = parseInt(values.at_lancing);
                 result["pa"] = parseInt(values.pa_lancing);
                 callback(result);
             });
             break;
-        case 7:
+        case 'sabre':
             getAttrs(["at_sabre","pa_sabre"],function(values){
                 result["at"] = parseInt(values.at_sabre);
                 result["pa"] = parseInt(values.pa_sabre);
                 callback(result);
             });
             break;
-        case 8:
+        case 'swords':
             getAttrs(["at_sword","pa_sword"],function(values){
                 result["at"] = parseInt(values.at_sword);
                 result["pa"] = parseInt(values.pa_sword);
                 callback(result);
             });
             break;
-        case 9:
+        case 'spear':
             getAttrs(["at_spear","pa_spear"],function(values){
                 result["at"] = parseInt(values.at_spear);
                 result["pa"] = parseInt(values.pa_spear);
                 callback(result);
             });
             break;
-        case 10:
+        case 'staff':
             getAttrs(["at_staff","pa_staff"],function(values){
                 result["at"] = parseInt(values.at_staff);
                 result["pa"] = parseInt(values.pa_staff);
                 callback(result);
             });
             break;
-        case 11:
+        case 'twohanded_baton':
             getAttrs(["at_twohanded_baton","pa_twohanded_baton"],function(values){
                 result["at"] = parseInt(values.at_twohanded_baton);
                 result["pa"] = parseInt(values.pa_twohanded_baton);
                 callback(result);
             });
             break;
-        case 12:
+        case 'twohanded_swords':
             getAttrs(["at_twohanded_swords","pa_twohanded_swords"],function(values){
                 result["at"] = parseInt(values.at_twohanded_swords);
                 result["pa"] = parseInt(values.pa_twohanded_swords);
                 callback(result);
             });
             break;
+        case 'crossbow':
+            getAttrs(["fw_crossbow"], function(values) {
+                result["fw"] = parseInt(values.fw_crossbow);
+                callback(result);
+            });
+            break;
+        case 'bow':
+            getAttrs(["fw_bow"], function(values) {
+                result["fw"] = parseInt(values.fw_bow);
+                 callback(result);
+            });
+            break;
+        case 'throwing_axe':
+            getAttrs(["fw_throwing_axe"], function(values) {
+                result["fw"] = parseInt(values.fw_throwing_axe);
+                callback(result);
+            });
+            break;
+        case 'throwing_knife':
+            getAttrs(["fw_throwing_knife"], function(values) {
+                result["fw"] = parseInt(values.fw_throwing_knife);
+                callback(result);
+            });
+            break;
+        case 'throwing_spear':
+            getAttrs(["fw_throwing_spear"], function(values) {
+                result["fw"] = parseInt(values.fw_throwing_spear);
+            });
+            break;
         default:
     }
 }
-/*
-var getRangedWeaponTalentValues = function(number) {
-    switch(talent.ranged_weapon_3_talent){
-        case 0:
-            getAttrs(["fw_crossbow", "wounds"], function(values) {
-                setAttrs({
-                    ranged_weapon_3_fk: parseInt(values.fw_crossbow) - (2*parseInt(values.wounds))
-                });
-            });
-            break;
-        case 1:
-            getAttrs(["fw_bow", "wounds"], function(values) {
-                setAttrs({
-                    ranged_weapon_3_fk: parseInt(values.fw_bow) - (2*parseInt(values.wounds))
-                });
-            });
-            break;
-        case 2:
-            getAttrs(["fw_throwing-axe", "wounds"], function(values) {
-                setAttrs({
-                    ranged_weapon_3_fk: parseInt(values.fw_throwing-axe) - (2*parseInt(values.wounds))
-                });
-            });
-            break;
-        case 3:
-            getAttrs(["fw_throwing-knife", "wounds"], function(values) {
-                setAttrs({
-                    ranged_weapon_3_fk: parseInt(values.fw_throwing-knife) - (2*parseInt(values.wounds))
-                });
-            });
-            break;
-        case 4:
-            getAttrs(["fw_throwing-spear", "wounsd"], function(values) {
-                setAttrs({
-                    ranged_weapon_3_fk: parseInt(values.fw_throwing-spear) - (2*parseInt(values.wounds))
-                });
-            });
-            break;
-        default:
-}*/
 </script>

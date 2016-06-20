@@ -258,6 +258,7 @@
   "character_fighting_talents_desc": "KAMPFTECHNIK",
 
   "template_test": " Probe",
+  "template_roll": "Wurf",
   "template_attack": "'Angriff",
   "template_at_roll": "AT Wurf: ",
   "template_pa_roll": "PA Wurf: ",

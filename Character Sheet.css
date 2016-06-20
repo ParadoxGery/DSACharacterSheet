@@ -176,3 +176,142 @@ input[type="number"]:disabled {
 input[type="number"] {
     max-width: 40px !important;
 }
+
+
+/*template markup*/
+.sheet-rolltemplate-tp {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px 5px #030303;
+    box-shadow: 1px 1px 5px 5px #030303;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 10px 0;
+}
+.sheet-rolltemplate-atpa {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px 5px #030303;
+    box-shadow: 1px 1px 5px 5px #030303;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 10px 0;
+}
+.sheet-rolltemplate-talent {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px 5px #030303;
+    box-shadow: 1px 1px 5px 5px #030303;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 10px 0;
+}
+.sheet-rolltemplate-attribute {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px 5px #030303;
+    box-shadow: 1px 1px 5px 5px #030303;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 10px 0;
+}
+
+/*template head*/
+.sheet-rolltemplate-tp .sheet-template-head {
+    background-color: black;
+    font-size: 150%;
+    height: 150%;
+}
+.sheet-rolltemplate-atpa .sheet-template-head {
+    background-color: black;
+    font-size: 150%;
+    height: 150%;
+}
+.sheet-rolltemplate-talent .sheet-template-head {
+    background-color: black;
+    font-size: 150%;
+    height: 150%;
+}
+.sheet-rolltemplate-attribute .sheet-template-head {
+    background-color: black;
+    font-size: 150%;
+    height: 150%;
+}
+
+/*template roll*/
+.sheet-rolltemplate-tp .sheet-template-roll {
+    height:150%;
+}
+.sheet-rolltemplate-atpa .sheet-template-roll {
+    height:150%;
+}
+.sheet-rolltemplate-talent .sheet-template-roll {
+    height:150%;
+}
+.sheet-rolltemplate-attribute .sheet-template-roll {
+    height:150%;
+}
+
+/*template inline roll*/
+.sheet-rolltemplate-tp > .sheet-template-result span.inlinerollresult.showtip.tipsy-n{
+    color: black;
+    text-shadow: none;
+}
+.sheet-rolltemplate-atpa > .sheet-template-result span.inlinerollresult.showtip.tipsy-n{
+    color: black;
+    text-shadow: none;
+}
+.sheet-rolltemplate-talent > .sheet-template-result span.inlinerollresult.showtip.tipsy-n{
+    color: black;
+    text-shadow: none;
+}
+.sheet-rolltemplate-attribute > .sheet-template-result span.inlinerollresult.showtip.tipsy-n{
+    color: black;
+    text-shadow: none;
+}
+
+/*template success*/
+.sheet-rolltemplate-tp .sheet-template-success {
+    color: green;
+}
+.sheet-rolltemplate-atpa .sheet-template-success {
+    color: green;
+}
+.sheet-rolltemplate-talent .sheet-template-success {
+    color: green;
+}
+.sheet-rolltemplate-attribute .sheet-template-success {
+    color: green;
+}
+
+/*template fail*/
+.sheet-rolltemplate-tp .sheet-template-fail {
+    color: red;
+}
+.sheet-rolltemplate-atpa .sheet-template-fail {
+    color: red;
+}
+.sheet-rolltemplate-talent .sheet-template-fail {
+    color: red;
+}
+.sheet-rolltemplate-attribute .sheet-template-fail {
+    color: red;
+}
+
+/*template styling*/
+.sheet-rolltemplate-tp > div {
+    padding: 5px;
+}
+.sheet-rolltemplate-atpa > div {
+    padding: 5px;
+}
+.sheet-rolltemplate-talent > div {
+    padding: 5px;
+}
+.sheet-rolltemplate-attribute > div {
+    padding: 5px;
+}
