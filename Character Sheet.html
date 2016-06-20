@@ -2490,8 +2490,8 @@
                 <br>
                 <input class="" type="number" title="PA" name="attr_basis_at" readonly>
                 <input class="" type="number" title="PA" name="attr_basis_pa" readonly>
-                <input class="" type="number" title="PA" name="attr_basis_fk" readonly>
                 -->
+
                 <!--weapon 1 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-1" name="attr_active_melee_rolls" value="1">
                 <div class="sheet-navigation sheet-melee-weapon-1">
@@ -2521,7 +2521,7 @@
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge_max}]]}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge}]]}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
@@ -2683,11 +2683,13 @@
                     </div>
                     <!--/weapon 3-->
 
-                    <!--TODO remove debug
+                    <!--TODO remove debug-->
                     <input type="number" title="FK" name="attr_ranged_weapon_1_fk" readonly>
                     <input type="number" title="FK" name="attr_ranged_weapon_2_fk" readonly>
                     <input type="number" title="FK" name="attr_ranged_weapon_3_fk" readonly>
-                    -->
+                    <br>
+                    <input class="" type="number" title="PA" name="attr_basis_fk" readonly>
+
                 </div>
                 <!--/weapon information-->
 
@@ -2719,7 +2721,7 @@
 
                 <!--dodge roll-->
                 <div>
-                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=@{character_dodge_max}}}">Ausweichen</button>
+                    <button type="roll" value="&{template:atpa} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge}]]}}">Ausweichen</button>
                 </div>
                 <!--/dodge roll-->
 
@@ -3097,15 +3099,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_throwing-axe">
+                            <input type="number" title="FW" name="attr_fw_throwing_axe">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_throwing-axe">
+                            <input type="number" title="AT" name="attr_at_throwing_axe">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_throwing-axe">
+                            <input type="number" title="PA" name="attr_pa_throwing_axe">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-throwing-knife">
@@ -3119,15 +3121,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_throwing-knife">
+                            <input type="number" title="FW" name="attr_fw_throwing_knife">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_throwing-knife">
+                            <input type="number" title="AT" name="attr_at_throwing_knife">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_throwing-knife">
+                            <input type="number" title="PA" name="attr_pa_throwing_knife">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-throwing-spear">
@@ -3141,15 +3143,15 @@
                         </div>
                         <div class="sheet-cell">
                             <!--FW-->
-                            <input type="number" title="FW" name="attr_fw_throwing-spear">
+                            <input type="number" title="FW" name="attr_fw_throwing_spear">
                         </div>
                         <div class="sheet-cell">
                             <!--AT-->
-                            <input type="number" title="AT" name="attr_at_throwing-spear">
+                            <input type="number" title="AT" name="attr_at_throwing_spear">
                         </div>
                         <div class="sheet-cell">
                             <!--PA-->
-                            <input type="number" title="PA" name="attr_pa_throwing-spear">
+                            <input type="number" title="PA" name="attr_pa_throwing_spear">
                         </div>
                     </div>
                     <div class="sheet-row sheet-fighting-talent-twohanded_baton">
@@ -3258,7 +3260,7 @@
                             </div>
                             <div class="sheet-cell sheet-160pxcell">
                                 <label>
-                                    <span data-i18n="character_wound_trated">BEHANDELT</span>
+                                    <span data-i18n="character_wound_treated">BEHANDELT</span>
                                     <input type="checkbox" name="attr_treated" />
                                 </label>
 
@@ -3474,41 +3476,29 @@
     <div class="sheet-template-result sheet-template-roll">
         <span data-i18n="template_fp">FP: </span><span>{{roll}}</span>
     </div>
-    {{#rollBetween() roll 0 3}}
     <div class="sheet-template-result">
+    {{#rollBetween() roll 0 3}}
         <span data-i18n="template_qs">QS: </span><span>1</span>
-    </div>
     {{/rollBetween() roll 0 3}}
     {{#rollBetween() roll 4 6}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>2</span>
-    </div>
     {{/rollBetween() roll 4 6}}
     {{#rollBetween() roll 7 9}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>3</span>
-    </div>
     {{/rollBetween() roll 7 9}}
     {{#rollBetween() roll 10 12}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>4</span>
-    </div>
     {{/rollBetween() roll 10 12}}
     {{#rollBetween() roll 13 15}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>5</span>
-    </div>
     {{/rollBetween() roll 13 15}}
     {{#rollBetween() roll 16 18}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>6</span>
-    </div>
     {{/rollBetween() roll 16 18}}
     {{#rollBetween() roll 19 21}}
-    <div class="sheet-template-result">
         <span data-i18n="template_qs">QS: </span><span>7</span>
-    </div>
     {{/rollBetween() roll 19 21}}
+    </div>
     {{#rollGreater() mod 0}}
     <div class="sheet-template-result sheet-template-mod-pos">
         <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
@@ -3550,7 +3540,8 @@ on("change:character_mr_basis change:character_mr_mod",function(){
 on("change:character_dodge_basis change:character_dodge_mod",function(){
     getAttrs(["character_dodge_basis","character_dodge_mod"], function(values) {
         setAttrs({
-            character_dodge_max: parseInt(values.character_dodge_basis) + parseInt(values.character_dodge_mod)
+            character_dodge_max: parseInt(values.character_dodge_basis) + parseInt(values.character_dodge_mod),
+            character_dodge: parseInt(values.character_dodge_basis) + parseInt(values.character_dodge_mod)
         });
     });
 });
@@ -3558,6 +3549,7 @@ on("change:character_dodge_basis change:character_dodge_mod",function(){
 on("change:character_ini_basis change:character_ini_mod",function(){
     getAttrs(["character_ini_basis","character_ini_mod"], function(values) {
         setAttrs({
+            character_ini: parseInt(values.character_ini_basis) + parseInt(values.character_ini_mod),
             character_ini_max: parseInt(values.character_ini_basis) + parseInt(values.character_ini_mod)
         });
     });
