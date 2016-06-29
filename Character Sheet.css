@@ -70,6 +70,45 @@ div.sheet-spacer,
     margin: 0 auto;
 }
 
+/*talent activation*/
+input[type="checkbox"][name="attr_twohanded_swords_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-twohanded_swords,
+input[type="checkbox"][name="attr_twohanded_baton_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-twohanded_baton,
+input[type="checkbox"][name="attr_throwing_spear_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-throwing-spear,
+input[type="checkbox"][name="attr_throwing_axe_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-throwing-axe,
+input[type="checkbox"][name="attr_staff_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-staff,
+input[type="checkbox"][name="attr_spear_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-spear,
+input[type="checkbox"][name="attr_sword_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-sword,
+input[type="checkbox"][name="attr_lancing_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-lancing,
+input[type="checkbox"][name="attr_infantry_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-infantry_weapons,
+input[type="checkbox"][name="attr_chain_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-chain_weapons,
+input[type="checkbox"][name="attr_fencing_weapon_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-fencing_weapon,
+input[type="checkbox"][name="attr_bow_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-bow,
+input[type="checkbox"][name="attr_crossbow_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-crossbow,
+input[type="checkbox"][name="attr_bastard_sword_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-bastard_sword {
+    display: table-row !important;
+}
+input[type="checkbox"][name="attr_twohanded_swords_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="twohanded_swords"].sheet-activate,
+input[type="checkbox"][name="attr_twohanded_baton_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="twohanded_baton"].sheet-activate,
+input[type="checkbox"][name="attr_throwing_spear_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="throwing_spear"].sheet-activate,
+input[type="checkbox"][name="attr_throwing_axe_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="throwing_axe"].sheet-activate,
+input[type="checkbox"][name="attr_staff_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="staff"].sheet-activate,
+input[type="checkbox"][name="attr_spear_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="spear"].sheet-activate,
+input[type="checkbox"][name="attr_sword_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="sword"].sheet-activate,
+input[type="checkbox"][name="attr_lancing_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="lancing"].sheet-activate,
+input[type="checkbox"][name="attr_infantry_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="infantry_weapons"].sheet-activate,
+input[type="checkbox"][name="attr_chain_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="chain_weapons"].sheet-activate,
+input[type="checkbox"][name="attr_fencing_weapon_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="fencing_weapon"].sheet-activate,
+input[type="checkbox"][name="attr_bow_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="bow"].sheet-activate,
+input[type="checkbox"][name="attr_crossbow_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="crossbow"].sheet-activate,
+input[type="checkbox"][name="attr_bastard_sword_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="bastard_sword"].sheet-activate {
+    display: inherit !important;
+}
+
+.sheet-fighting select > option.sheet-activate,
+.sheet-fighting .sheet-fighting-talents .sheet-activate {
+    display: none !important;
+}
+
 /*attribute css*/
 .sheet-table.sheet-attribute-table {
     width: 400px;
@@ -125,6 +164,7 @@ input.sheet-hidden-input {
     height: 13px;
     margin-bottom: 10px;
 }
+input.sheet-navigation.sheet-config:checked ~ div.sheet-navigation.sheet-config,
 input.sheet-navigation.sheet-fighting-ranged:checked ~ div.sheet-navigation.sheet-fighting-ranged,
 input.sheet-navigation.sheet-fighting-melee:checked ~ div.sheet-navigation.sheet-fighting-melee,
 input.sheet-navigation.sheet-fighting-talents:checked ~ div.sheet-navigation.sheet-fighting-talents,
