@@ -71,6 +71,13 @@ div.sheet-spacer,
 }
 
 /*talent activation*/
+input[type="checkbox"][name="attr_twohanded_flails_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-twohanded_flails,
+input[type="checkbox"][name="attr_sling_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-sling,
+input[type="checkbox"][name="attr_discus_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-discus,
+input[type="checkbox"][name="attr_whip_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-whip,
+input[type="checkbox"][name="attr_chain_staff_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-chain_staff,
+input[type="checkbox"][name="attr_blowgun_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-blowgun,
+input[type="checkbox"][name="attr_siege_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-siege_weapons,
 input[type="checkbox"][name="attr_twohanded_swords_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-twohanded_swords,
 input[type="checkbox"][name="attr_twohanded_baton_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-twohanded_baton,
 input[type="checkbox"][name="attr_throwing_spear_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-throwing-spear,
@@ -87,6 +94,13 @@ input[type="checkbox"][name="attr_crossbow_activate"]:checked.sheet-activate ~ .
 input[type="checkbox"][name="attr_bastard_sword_activate"]:checked.sheet-activate ~ .sheet-fighting .sheet-activate.sheet-row.sheet-fighting-talent-bastard_sword {
     display: table-row !important;
 }
+input[type="checkbox"][name="attr_twohanded_flails_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="twohanded_flails"].sheet-activate,
+input[type="checkbox"][name="attr_sling_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="sling"].sheet-activate,
+input[type="checkbox"][name="attr_discus_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="discus"].sheet-activate,
+input[type="checkbox"][name="attr_whip_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="whip"].sheet-activate,
+input[type="checkbox"][name="attr_chain_staff_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="chain_staff"].sheet-activate,
+input[type="checkbox"][name="attr_blowgun_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="blowgun"].sheet-activate,
+input[type="checkbox"][name="attr_siege_weapons_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="siege_weapons"].sheet-activate,
 input[type="checkbox"][name="attr_twohanded_swords_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="twohanded_swords"].sheet-activate,
 input[type="checkbox"][name="attr_twohanded_baton_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="twohanded_baton"].sheet-activate,
 input[type="checkbox"][name="attr_throwing_spear_activate"]:checked.sheet-activate ~ .sheet-fighting option[value="throwing_spear"].sheet-activate,
