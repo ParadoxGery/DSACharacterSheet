@@ -118,6 +118,11 @@ input[type="checkbox"][name="attr_bastard_sword_activate"]:checked.sheet-activat
     display: inherit !important;
 }
 
+.sheet-talents input[type="checkbox"].sheet-activate:checked + .sheet-activate.sheet-row {
+    display: table-row !important;
+}
+
+.sheet-talents .sheet-row.sheet-activate,
 .sheet-fighting select > option.sheet-activate,
 .sheet-fighting .sheet-fighting-talents .sheet-activate {
     display: none !important;

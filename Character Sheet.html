@@ -453,7 +453,8 @@
                             <!--ROLL-->
                             <div class="sheet-cell"></div>
                         </div>
-                        <div class="sheet-row sheet-talent-acrobatics">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_acrobatics_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-acrobatics">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_acrobatics_desc">Akrobatik</span>
@@ -474,6 +475,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Akrobatik}} {{name=@{character_name} }} {{roll=[[@{fw_acrobatics} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Akrobatik}} {{name=@{character_name} }} {{roll=[[@{fw_acrobatics} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-athletics">
@@ -497,9 +499,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Athletik}} {{name=@{character_name} }} {{roll=[[@{fw_athletics} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Athletik}} {{name=@{character_name} }} {{roll=[[@{fw_athletics} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-jugglery">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_flying_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-flying">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_flying_desc">Fliegen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_flying_test">MU/IN/GE</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_flying">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Fliegen}} {{name=@{character_name} }} {{roll=[[@{fw_flying} - {1d20cs1cf20 - [[@{MU}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fliegen}} {{name=@{character_name} }} {{roll=[[@{fw_flying} - {1d20cs1cf20 - [[@{MU}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_jugglery_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-jugglery">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_jugglery_desc">Gaukeleien</span>
@@ -520,6 +549,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Gaukeleien}} {{name=@{character_name} }} {{roll=[[@{fw_jugglery} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Gaukeleien}} {{name=@{character_name} }} {{roll=[[@{fw_jugglery} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-climbing">
@@ -543,6 +573,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Klettern}} {{name=@{character_name} }} {{roll=[[@{fw_climbing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Klettern}} {{name=@{character_name} }} {{roll=[[@{fw_climbing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-bodycontrol">
@@ -566,9 +597,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Körperbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_bodycontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Körperbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_bodycontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-riding">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_riding_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-riding">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_riding_desc">Reiten</span>
@@ -589,6 +622,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Reiten}} {{name=@{character_name} }} {{roll=[[@{fw_riding} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Reiten}} {{name=@{character_name} }} {{roll=[[@{fw_riding} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-sneaking">
@@ -612,6 +646,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Schleichen}} {{name=@{character_name} }} {{roll=[[@{fw_sneaking} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schleichen}} {{name=@{character_name} }} {{roll=[[@{fw_sneaking} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-swimming">
@@ -635,6 +670,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Schwimmen}} {{name=@{character_name} }} {{roll=[[@{fw_swimming} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schwimmen}} {{name=@{character_name} }} {{roll=[[@{fw_swimming} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-selfcontrol">
@@ -658,6 +694,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Selbstbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_selfcontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Selbstbeherrschung}} {{name=@{character_name} }} {{roll=[[@{fw_selfcontrol} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-hiding">
@@ -681,6 +718,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Sich Verstecken}} {{name=@{character_name} }} {{roll=[[@{fw_hiding} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sich Verstecken}} {{name=@{character_name} }} {{roll=[[@{fw_hiding} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-singing">
@@ -704,6 +742,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Singen}} {{name=@{character_name} }} {{roll=[[@{fw_singing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Singen}} {{name=@{character_name} }} {{roll=[[@{fw_singing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-senses">
@@ -727,9 +766,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Sinnesschärfe}} {{name=@{character_name} }} {{roll=[[@{fw_senses} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sinnesschärfe}} {{name=@{character_name} }} {{roll=[[@{fw_senses} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-voiceacting">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_skiing_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-skiing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_skiing_desc">Skifahren</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_skiing_test">GE/GE/KO</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_skiing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Skifahren}} {{name=@{character_name} }} {{roll=[[@{fw_skiing} - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Skifahren}} {{name=@{character_name} }} {{roll=[[@{fw_skiing} - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_voiceacting_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-voiceacting">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_voiceacting_desc">Stimmen Imitieren</span>
@@ -750,6 +816,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Stimmen Imitieren}} {{name=@{character_name} }} {{roll=[[@{fw_voiceacting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Stimmen Imitieren}} {{name=@{character_name} }} {{roll=[[@{fw_voiceacting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-dancing">
@@ -773,9 +840,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Tanzen}} {{name=@{character_name} }} {{roll=[[@{fw_dancing} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Tanzen}} {{name=@{character_name} }} {{roll=[[@{fw_dancing} - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-pickpocketing">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_pickpocketing_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-pickpocketing">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_pickpocketing_desc">Taschendiebstahl</span>
@@ -796,6 +865,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Taschendiebstahl}} {{name=@{character_name} }} {{roll=[[@{fw_pickpocketing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Taschendiebstahl}} {{name=@{character_name} }} {{roll=[[@{fw_pickpocketing} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-quaffing">
@@ -819,6 +889,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Zechen}} {{name=@{character_name} }} {{roll=[[@{fw_quaffing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Zechen}} {{name=@{character_name} }} {{roll=[[@{fw_quaffing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <!--/physical talents-->
@@ -842,7 +913,8 @@
                                 <!--ROLL-->
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-bewitching">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_bewitching_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-bewitching">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_bewitching_desc">Betören</span>
@@ -863,9 +935,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Betören}} {{name=@{character_name} }} {{roll=[[@{fw_bewitching} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Betören}} {{name=@{character_name} }} {{roll=[[@{fw_bewitching} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-etiquette">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_etiquette_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-etiquette">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_etiquette_desc">Etikette</span>
@@ -886,9 +960,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Etikette}} {{name=@{character_name} }} {{roll=[[@{fw_etiquette} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Etikette}} {{name=@{character_name} }} {{roll=[[@{fw_etiquette} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-street-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_street_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-street-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_street-wise_desc">Gassenwissen</span>
@@ -899,7 +975,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_street-wise">
+                                <input type="number" title="FW" name="attr_fw_street_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -908,10 +984,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Gassenwissen}} {{name=@{character_name} }} {{roll=[[@{fw_street-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Gassenwissen}} {{name=@{character_name} }} {{roll=[[@{fw_street_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Gassenwissen}} {{name=@{character_name} }} {{roll=[[@{fw_street_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-teaching">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_teaching_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-teaching">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_teaching_desc">Lehren</span>
@@ -932,6 +1010,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Lehren}} {{name=@{character_name} }} {{roll=[[@{fw_teaching} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Lehren}} {{name=@{character_name} }} {{roll=[[@{fw_teaching} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-human-wise">
@@ -945,7 +1024,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_human-wise">
+                                <input type="number" title="FW" name="attr_fw_human_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -954,10 +1033,62 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Menschenkenntnis}} {{name=@{character_name} }} {{roll=[[@{fw_human-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Menschenkenntnis}} {{name=@{character_name} }} {{roll=[[@{fw_human_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Menschenkenntnis}} {{name=@{character_name} }} {{roll=[[@{fw_human_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-disguising">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_acting_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-acting">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_acting_desc">Schauspielerei</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_acting_test">MU/KL/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_acting">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Schauspielerei}} {{name=@{character_name} }} {{roll=[[@{fw_acting} - {1d20cs1cf20 - [[@{MU}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schauspielerei}} {{name=@{character_name} }} {{roll=[[@{fw_acting} - {1d20cs1cf20 - [[@{MU}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_writing_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-writing">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_writing_desc">Schriftlicher Ausdruck</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_writing_test">KL/IN/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_writing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Schriftlicher Ausdruck}} {{name=@{character_name} }} {{roll=[[@{fw_writing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schriftlicher Ausdruck}} {{name=@{character_name} }} {{roll=[[@{fw_writing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_disguising_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-disguising">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_disguising_desc">Sich Verkleiden</span>
@@ -978,6 +1109,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Sich Verkleiden}} {{name=@{character_name} }} {{roll=[[@{fw_disguising} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sich Verkleiden}} {{name=@{character_name} }} {{roll=[[@{fw_disguising} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-persuading">
@@ -1001,9 +1133,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Überreden}} {{name=@{character_name} }} {{roll=[[@{fw_persuading} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Überreden}} {{name=@{character_name} }} {{roll=[[@{fw_persuading} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-convincing">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_convincing_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-convincing">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_convincing_desc">Überzeugen</span>
@@ -1024,6 +1158,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Überzeugen}} {{name=@{character_name} }} {{roll=[[@{fw_convincing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Überzeugen}} {{name=@{character_name} }} {{roll=[[@{fw_convincing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <!--/social talents-->
@@ -1068,9 +1203,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Fährtensuche}} {{name=@{character_name} }} {{roll=[[@{fw_tracking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fährtensuche}} {{name=@{character_name} }} {{roll=[[@{fw_tracking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-trapping">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_trapping_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-trapping">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_trapping_desc">Fallenstellen</span>
@@ -1091,9 +1228,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Fallenstellen}} {{name=@{character_name} }} {{roll=[[@{fw_trapping} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fallenstellen}} {{name=@{character_name} }} {{roll=[[@{fw_trapping} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-shackling">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_shackling_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-shackling">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_shackling_desc">Fesseln</span>
@@ -1114,9 +1253,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Fesseln}} {{name=@{character_name} }} {{roll=[[@{fw_shackling} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fesseln}} {{name=@{character_name} }} {{roll=[[@{fw_shackling} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-fishing">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_fishing_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-fishing">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_fishing_desc">Fischen</span>
@@ -1137,6 +1278,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Fischen}} {{name=@{character_name} }} {{roll=[[@{fw_fishing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fischen}} {{name=@{character_name} }} {{roll=[[@{fw_fishing} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-orientating">
@@ -1160,9 +1302,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Orientierung}} {{name=@{character_name} }} {{roll=[[@{fw_orientating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Orientierung}} {{name=@{character_name} }} {{roll=[[@{fw_orientating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-weather-forecast">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_weather_forevast_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-weather-forecast">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_weather-forecast_desc">Wettervorhersage</span>
@@ -1173,7 +1317,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_weather-forecast">
+                                <input type="number" title="FW" name="attr_fw_weather_forecast">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1182,7 +1326,8 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Wettervorhersagen}} {{name=@{character_name} }} {{roll=[[@{fw_weather-forecast} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Wettervorhersagen}} {{name=@{character_name} }} {{roll=[[@{fw_weather_forecast} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Wettervorhersagen}} {{name=@{character_name} }} {{roll=[[@{fw_weather_forecast} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wilderness">
@@ -1206,6 +1351,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Wildnisleben}} {{name=@{character_name} }} {{roll=[[@{fw_wilderness} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Wildnisleben}} {{name=@{character_name} }} {{roll=[[@{fw_wilderness} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <!--/nature talents-->
@@ -1276,7 +1422,8 @@
                                 <!--ROLL-->
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-anatomy">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_anatomy_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-anatomy">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_anatomy_desc">Anatomie</span>
@@ -1297,9 +1444,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Anatomie}} {{name=@{character_name} }} {{roll=[[@{fw_anatomy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Anatomie}} {{name=@{character_name} }} {{roll=[[@{fw_anatomy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-board-card-game-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_architecture_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-architecture">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_architecture_desc">Baukunst</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_architecture_test">KL/KL/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_architecture">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Baukunst}} {{name=@{character_name} }} {{roll=[[@{fw_architecture} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Baukunst}} {{name=@{character_name} }} {{roll=[[@{fw_architecture} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_board_card_game_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-board-card-game-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_board-card-game-wise_desc">Brett-/Kartenspiel</span>
@@ -1310,7 +1484,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_board-card-game-wise">
+                                <input type="number" title="FW" name="attr_fw_board_card_game_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1319,10 +1493,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Brett-/Kartenspiel}} {{name=@{character_name} }} {{roll=[[@{fw_board-card-game-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Brett-/Kartenspiel}} {{name=@{character_name} }} {{roll=[[@{fw_board_card_game_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Brett-/Kartenspiel}} {{name=@{character_name} }} {{roll=[[@{fw_board_card_game_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-geography">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_geography_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-geography">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_geography_desc">Geographie</span>
@@ -1343,9 +1519,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Geographie}} {{name=@{character_name} }} {{roll=[[@{fw_geography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Geographie}} {{name=@{character_name} }} {{roll=[[@{fw_geography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-history-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_history_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-history-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_history-wise_desc">Geschichtswissen</span>
@@ -1356,7 +1534,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_history-wise">
+                                <input type="number" title="FW" name="attr_fw_history_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1365,10 +1543,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Geschichtswissen}} {{name=@{character_name} }} {{roll=[[@{fw_history-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Geschichtswissen}} {{name=@{character_name} }} {{roll=[[@{fw_history_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Geschichtswissen}} {{name=@{character_name} }} {{roll=[[@{fw_history_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-geology">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_geology_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-geology">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_geology_desc">Gesteinskunde</span>
@@ -1389,6 +1569,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Gesteinskunde}} {{name=@{character_name} }} {{roll=[[@{fw_geology} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Gesteinskunde}} {{name=@{character_name} }} {{roll=[[@{fw_geology} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-gods-cults">
@@ -1402,7 +1583,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_gods-cults">
+                                <input type="number" title="FW" name="attr_fw_gods_cults">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1411,10 +1592,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Götter/Kulte}} {{name=@{character_name} }} {{roll=[[@{fw_gods-cults} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Götter/Kulte}} {{name=@{character_name} }} {{roll=[[@{fw_gods_cults} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Götter/Kulte}} {{name=@{character_name} }} {{roll=[[@{fw_gods_cults} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-heraldry">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_heraldry_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-heraldry">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_heraldry_desc">Heraldik</span>
@@ -1435,9 +1618,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Heraldik}} {{name=@{character_name} }} {{roll=[[@{fw_heraldry} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Heraldik}} {{name=@{character_name} }} {{roll=[[@{fw_heraldry} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-war-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_metallurgy_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-metallurgy">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_metallurgy_desc">Hüttenkunde</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_metallurgy_test">KL/IN/KO</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_metallurgy">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Hüttenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_metallurgy} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Hüttenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_metallurgy} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_war_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-war-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_war-wise_desc">Kriegskunst</span>
@@ -1448,7 +1658,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_war-wise">
+                                <input type="number" title="FW" name="attr_fw_war_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1457,10 +1667,37 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Kriegskunst}} {{name=@{character_name} }} {{roll=[[@{fw_war-wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Kriegskunst}} {{name=@{character_name} }} {{roll=[[@{fw_war_wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Kriegskunst}} {{name=@{character_name} }} {{roll=[[@{fw_war_wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-magic-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cryptography_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-cryptography">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_cryptography_desc">Kryptografie</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_cryptography_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_cryptography">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Kryptografie}} {{name=@{character_name} }} {{roll=[[@{fw_cryptography} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Kryptografie}} {{name=@{character_name} }} {{roll=[[@{fw_cryptography} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_magic_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-magic-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_magic-wise_desc">Magiekunde</span>
@@ -1471,7 +1708,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_magic-wise">
+                                <input type="number" title="FW" name="attr_fw_magic_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1480,10 +1717,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Magiekunde}} {{name=@{character_name} }} {{roll=[[@{fw_magic-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Magiekunde}} {{name=@{character_name} }} {{roll=[[@{fw_magic_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Magiekunde}} {{name=@{character_name} }} {{roll=[[@{fw_magic_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-mechanic">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_mechanic_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-mechanic">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_mechanic_desc">Mechanik</span>
@@ -1504,9 +1743,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Mechanik}} {{name=@{character_name} }} {{roll=[[@{fw_mechanic} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Mechanik}} {{name=@{character_name} }} {{roll=[[@{fw_mechanic} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-plant-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_plant_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-plant-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_plant-wise_desc">Pflanzenkunde</span>
@@ -1517,7 +1758,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_plant-wise">
+                                <input type="number" title="FW" name="attr_fw_plant_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1526,7 +1767,33 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Pflanzenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_plant-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Pflanzenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_plant_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Pflanzenkunde}} {{name=@{character_name} }} {{roll=[[@{fw_plant_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_philosophy_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-philosophy">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_philosophy_desc">Philosophie</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_philosophy_test">KL/KL/IN</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_philosophy">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Philosophie}} {{name=@{character_name} }} {{roll=[[@{fw_philosophy} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Philosophie}} {{name=@{character_name} }} {{roll=[[@{fw_philosophy} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-mathematics">
@@ -1550,9 +1817,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Mathematik}} {{name=@{character_name} }} {{roll=[[@{fw_mathematics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Mathematik}} {{name=@{character_name} }} {{roll=[[@{fw_mathematics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-law-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_law_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-law-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_law-wise_desc">Rechtskunde</span>
@@ -1563,7 +1832,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_law-wise">
+                                <input type="number" title="FW" name="attr_fw_law_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1572,7 +1841,8 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Rechtskunde}} {{name=@{character_name} }} {{roll=[[@{fw_law-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Rechtskunde}} {{name=@{character_name} }} {{roll=[[@{fw_law_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Rechtskunde}} {{name=@{character_name} }} {{roll=[[@{fw_law_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-legend-wise">
@@ -1586,7 +1856,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_legend-wise">
+                                <input type="number" title="FW" name="attr_fw_legend_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1595,10 +1865,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Sagen/Legenden}} {{name=@{character_name} }} {{roll=[[@{fw_legend-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Sagen/Legenden}} {{name=@{character_name} }} {{roll=[[@{fw_legend_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sagen/Legenden}} {{name=@{character_name} }} {{roll=[[@{fw_legend_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-estimating">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_estimating_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-estimating">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_estimating_desc">Schätzen</span>
@@ -1619,9 +1891,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Schätzen}} {{name=@{character_name} }} {{roll=[[@{fw_estimating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schätzen}} {{name=@{character_name} }} {{roll=[[@{fw_estimating} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-language-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_language_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-language-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_language-wise_desc">Sprachkunde</span>
@@ -1632,7 +1906,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_language-wise">
+                                <input type="number" title="FW" name="attr_fw_language_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1641,10 +1915,37 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Sprachkunde}} {{name=@{character_name} }} {{roll=[[@{fw_language-wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Sprachkunde}} {{name=@{character_name} }} {{roll=[[@{fw_language_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sprachkunde}} {{name=@{character_name} }} {{roll=[[@{fw_language_wise} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-astronomy">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_statecraft_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-statecraft">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_statecraft_desc">Staatskunst</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_statecraft_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_statecraft">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Staatskunst}} {{name=@{character_name} }} {{roll=[[@{fw_statecraft} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Staatskunst}} {{name=@{character_name} }} {{roll=[[@{fw_statecraft} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_astronomy_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-astronomy">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_astronomy_desc">Sternkunde</span>
@@ -1665,9 +1966,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Sternkunde}} {{name=@{character_name} }} {{roll=[[@{fw_astronomy} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Sternkunde}} {{name=@{character_name} }} {{roll=[[@{fw_astronomy} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-animal-wise">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_animal_wise_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-animal-wise">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_animal-wise_desc">Tierkunde</span>
@@ -1678,7 +1981,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_animal-wise">
+                                <input type="number" title="FW" name="attr_fw_animal_wise">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1686,7 +1989,8 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Tierkunde}} {{name=@{character_name} }} {{roll=[[@{fw_animal-wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Tierkunde}} {{name=@{character_name} }} {{roll=[[@{fw_animal_wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Tierkunde}} {{name=@{character_name} }} {{roll=[[@{fw_animal_wise} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <!--/knowledge talents-->
@@ -1710,7 +2014,8 @@
                                 <!--ROLL-->
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-drill">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_drill_activate" value="1" checked>
+                        <div class="sheet-row sheet-activate sheet-talent-drill">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_drill_desc">Abrichten</span>
@@ -1731,9 +2036,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Abrichten}} {{name=@{character_name} }} {{roll=[[@{fw_drill} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Abrichten}} {{name=@{character_name} }} {{roll=[[@{fw_drill} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-agriculture">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_agriculture_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-agriculture sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_agriculture_desc">Ackerbau</span>
@@ -1754,9 +2061,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Ackerbau}} {{name=@{character_name} }} {{roll=[[@{fw_agriculture} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Ackerbau}} {{name=@{character_name} }} {{roll=[[@{fw_agriculture} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-alchemy">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_alchemy_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-alchemy sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_alchemy_desc">Alchimie</span>
@@ -1777,9 +2086,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Alchimie}} {{name=@{character_name} }} {{roll=[[@{fw_alchemy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Alchimie}} {{name=@{character_name} }} {{roll=[[@{fw_alchemy} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-mining">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_mining_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-mining sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_mining_desc">Bergbau</span>
@@ -1800,9 +2111,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Bergbau}} {{name=@{character_name} }} {{roll=[[@{fw_mining} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Bergbau}} {{name=@{character_name} }} {{roll=[[@{fw_mining} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-bow-crafting">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_bow_crafting_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-bow-crafting sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_bow-crafting_desc">Bogenbau</span>
@@ -1813,7 +2126,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_bow-crafting">
+                                <input type="number" title="FW" name="attr_fw_bow_crafting">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1822,9 +2135,11 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Bogenbau}} {{name=@{character_name} }} {{roll=[[@{fw_bow-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Bogenbau}} {{name=@{character_name} }} {{roll=[[@{fw_bow_crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Bogenbau}} {{name=@{character_name} }} {{roll=[[@{fw_bow_crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_boat_driving_activate" value="1" checked>
                         <div class="sheet-row sheet-talent-boat-driving">
                             <div class="sheet-cell">
                                 <!--TALENT-->
@@ -1836,7 +2151,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_boat-driving">
+                                <input type="number" title="FW" name="attr_fw_boat_driving">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1845,10 +2160,62 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Boote Fahren}} {{name=@{character_name} }} {{roll=[[@{fw_boat-driving} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Boote Fahren}} {{name=@{character_name} }} {{roll=[[@{fw_boat_driving} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Boote Fahren}} {{name=@{character_name} }} {{roll=[[@{fw_boat_driving} - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-vehicle-driving">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_brewing_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-brewing sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_brewing_desc">Brauer</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_brewing_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_brewing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Brauer}} {{name=@{character_name} }} {{roll=[[@{fw_brewing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Brauer}} {{name=@{character_name} }} {{roll=[[@{fw_brewing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_printing_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-printing sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_printing_desc">Drucker</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_printing_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_printing">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Drucker}} {{name=@{character_name} }} {{roll=[[@{fw_printing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Drucker}} {{name=@{character_name} }} {{roll=[[@{fw_printing} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_vehicle_driving_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-vehicle-driving sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_vehicle-driving_desc">Fahrzeug Lenken</span>
@@ -1859,7 +2226,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_vehicle-driving">
+                                <input type="number" title="FW" name="attr_fw_vehicle_driving">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1868,9 +2235,11 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Fahrzeuge Lenken}} {{name=@{character_name} }} {{roll=[[@{fw_vehicle-driving} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Fahrzeuge Lenken}} {{name=@{character_name} }} {{roll=[[@{fw_vehicle_driving} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fahrzeuge Lenken}} {{name=@{character_name} }} {{roll=[[@{fw_vehicle_driving} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cheating_activate" value="1" checked>
                         <div class="sheet-row sheet-talent-cheating">
                             <div class="sheet-cell">
                                 <!--TALENT-->
@@ -1892,9 +2261,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Falschspiel}} {{name=@{character_name} }} {{roll=[[@{fw_cheating} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Falschspiel}} {{name=@{character_name} }} {{roll=[[@{fw_cheating} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-precision-mechanics">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_precision_mechanics_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-precision-mechanics sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_precision-mechanics_desc">Feinmechanik</span>
@@ -1905,7 +2276,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_precision-mechanics">
+                                <input type="number" title="FW" name="attr_fw_precision_mechanics">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -1914,10 +2285,37 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Feinmechanik}} {{name=@{character_name} }} {{roll=[[@{fw_precision-mechanics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Feinmechanik}} {{name=@{character_name} }} {{roll=[[@{fw_precision_mechanics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Feinmechanik}} {{name=@{character_name} }} {{roll=[[@{fw_precision_mechanics} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-butcher">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_knapping_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-knapping sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_knapping_desc">Feuersteinbearbeitung</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_knapping_test">KL/FF/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_knapping">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Feuersteinbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_knapping} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Feuersteinbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_knapping} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_butcher_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-butcher sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_butchery_desc">Fleischer</span>
@@ -1938,9 +2336,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Fleischer}} {{name=@{character_name} }} {{roll=[[@{fw_butchery} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Fleischer}} {{name=@{character_name} }} {{roll=[[@{fw_butchery} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-skinning">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_skinning_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-skinning sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_skinning_desc">Gerber/Kürschner</span>
@@ -1961,9 +2361,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Gerber/Kürschner}} {{name=@{character_name} }} {{roll=[[@{fw_skinning} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Gerber/Kürschner}} {{name=@{character_name} }} {{roll=[[@{fw_skinning} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-blacksmith">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_glass_art_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-glass_art sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_glass_art_desc">Glaskunst</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_glass_art_test">FF/FF/KO</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_glass_art">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Glaskunst}} {{name=@{character_name} }} {{roll=[[@{fw_glass_art} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Glaskunst}} {{name=@{character_name} }} {{roll=[[@{fw_glass_art} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KO}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_blacksmith_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-blacksmith sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_blacksmith_desc">Grobschmied</span>
@@ -1984,9 +2411,61 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Grobschmied}} {{name=@{character_name} }} {{roll=[[@{fw_blacksmith} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Grobschmied}} {{name=@{character_name} }} {{roll=[[@{fw_blacksmith} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ko}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-poison-medicine">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_trading_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-trading sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_trading_desc">Handel</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_trading_test">KL/IN/CH</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_trading">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Handel}} {{name=@{character_name} }} {{roll=[[@{fw_trading} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Handel}} {{name=@{character_name} }} {{roll=[[@{fw_trading} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_housekeeping_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-housekeeping sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_housekeeping_desc">Hauswirtschaft</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_housekeeping_test">IN/CH/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_housekeeping">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Hauswirtschaft}} {{name=@{character_name} }} {{roll=[[@{fw_housekeeping} - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Hauswirtschaft}} {{name=@{character_name} }} {{roll=[[@{fw_housekeeping} - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{CH}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_poison_medicine_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-poison-medicine sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_poison-medicine_desc">Heilkunde Gift</span>
@@ -1997,7 +2476,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_poison-medicine">
+                                <input type="number" title="FW" name="attr_fw_poison_medicine">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2006,10 +2485,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Gift}} {{name=@{character_name} }} {{roll=[[@{fw_poison-medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Gift}} {{name=@{character_name} }} {{roll=[[@{fw_poison_medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Heilkunde Gift}} {{name=@{character_name} }} {{roll=[[@{fw_poison_medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-illness-medicine">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_illness_medicine_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-illness-medicine sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_illness-medicine_desc">Heilkunde Krankheiten</span>
@@ -2020,7 +2501,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_illness-medicine">
+                                <input type="number" title="FW" name="attr_fw_illness_medicine">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2029,7 +2510,8 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Krankheiten}} {{name=@{character_name} }} {{roll=[[@{fw_illness-medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Krankheiten}} {{name=@{character_name} }} {{roll=[[@{fw_illness_medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Heilkunde Krankheiten}} {{name=@{character_name} }} {{roll=[[@{fw_illness_medicine} - {1d20cs1cf20 - [[@{mu}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wound-medicine">
@@ -2043,7 +2525,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_wound-medicine">
+                                <input type="number" title="FW" name="attr_fw_wound_medicine">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2052,7 +2534,8 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Wunden}} {{name=@{character_name} }} {{roll=[[@{fw_wound-medicine} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Heilkunde Wunden}} {{name=@{character_name} }} {{roll=[[@{fw_wound_medicine} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Heilkunde Wunden}} {{name=@{character_name} }} {{roll=[[@{fw_wound_medicine} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-wood-crafting">
@@ -2066,7 +2549,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_wood-crafting">
+                                <input type="number" title="FW" name="attr_fw_wood_crafting">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2075,10 +2558,37 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Holzbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_wood-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Holzbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_wood_crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Holzbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_wood_crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-cartography">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_instrument_maker_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-instrument_maker sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_instrument_maker_desc">Instrumentenbauer</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_instrument_maker_test">KL/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_instrument_maker">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+                                
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Instrumentenbauer}} {{name=@{character_name} }} {{roll=[[@{fw_instrument_maker} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Instrumentenbauer}} {{name=@{character_name} }} {{roll=[[@{fw_instrument_maker} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cartography_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-cartography sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_cartography_desc">Kartographie</span>
@@ -2099,6 +2609,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Kartopraphie}} {{name=@{character_name} }} {{roll=[[@{fw_cartography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Kartopraphie}} {{name=@{character_name} }} {{roll=[[@{fw_cartography} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-cooking">
@@ -2122,6 +2633,32 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Kochen}} {{name=@{character_name} }} {{roll=[[@{fw_cooking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Kochen}} {{name=@{character_name} }} {{roll=[[@{fw_cooking} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_crystal_culture_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-crystal_culture sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_crystal_culture_desc">Kristallzucht</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_crystal_culture_test">KL/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_crystal_culture">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Kristallzucht}} {{name=@{character_name} }} {{roll=[[@{fw_crystal_culture} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Kristallzucht}} {{name=@{character_name} }} {{roll=[[@{fw_crystal_culture} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-leather-crafting">
@@ -2145,6 +2682,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Lederbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_leather-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Lederbearbeitung}} {{name=@{character_name} }} {{roll=[[@{fw_leather-crafting} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <div class="sheet-row sheet-talent-drawing">
@@ -2168,9 +2706,61 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Malen/Zeichnen}} {{name=@{character_name} }} {{roll=[[@{fw_drawing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM&{template:talent} {{talent=Malen/Zeichnen}} {{name=@{character_name} }} {{roll=[[@{fw_drawing} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-music-making">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_bricklayer_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-bricklayer sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_bricklayer_desc">Maurer</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_bricklayer_test">FF/GE/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_bricklayer">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Maurer}} {{name=@{character_name} }} {{roll=[[@{fw_bricklayer} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Maurer}} {{name=@{character_name} }} {{roll=[[@{fw_bricklayer} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{GE}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_founding_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-founding sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_founding_desc">Metallguss</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_founding_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_founding">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Metallguss}} {{name=@{character_name} }} {{roll=[[@{fw_founding} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Metallguss}} {{name=@{character_name} }} {{roll=[[@{fw_founding} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_music_making_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-music-making sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_music-making_desc">Musizieren</span>
@@ -2181,7 +2771,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_music-making">
+                                <input type="number" title="FW" name="attr_fw_music_making">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2190,10 +2780,12 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Musizieren}} {{name=@{character_name} }} {{roll=[[@{fw_music-making} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Musizieren}} {{name=@{character_name} }} {{roll=[[@{fw_music_making} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Musizieren}} {{name=@{character_name} }} {{roll=[[@{fw_music_making} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ch}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-lock-picking">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_lock_picking_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-lock-picking sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_lock-picking_desc">Schlösser Knacken</span>
@@ -2204,7 +2796,7 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--FW-->
-                                <input type="number" title="FW" name="attr_fw_lock-picking">
+                                <input type="number" title="FW" name="attr_fw_lock_picking">
                             </div>
                             <div class="sheet-cell">
                                 <!--INFO-->
@@ -2213,10 +2805,61 @@
                             </div>
                             <div class="sheet-cell">
                                 <!--ROLL-->
-                                <button type="roll" value="&{template:talent} {{talent=Schlösser Knacken}} {{name=@{character_name} }} {{roll=[[@{fw_lock-picking} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="&{template:talent} {{talent=Schlösser Knacken}} {{name=@{character_name} }} {{roll=[[@{fw_lock_picking} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schlösser Knacken}} {{name=@{character_name} }} {{roll=[[@{fw_lock_picking} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-seafaring">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_distill_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-distill sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_distill_desc">Schnaps Brennen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_distill_test">KL/IN/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_distill">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Schnaps Brennen}} {{name=@{character_name} }} {{roll=[[@{fw_distill} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schnaps Brennen}} {{name=@{character_name} }} {{roll=[[@{fw_distill} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-talent-tailoring">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_tailoring_desc">Schneidern</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_tailoring_test">KL/FF/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_tailoring">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Schneidern}} {{name=@{character_name} }} {{roll=[[@{fw_tailoring} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Schneidern}} {{name=@{character_name} }} {{roll=[[@{fw_tailoring} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_seafaring_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-seafaring sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_seafaring_desc">Seefahrt</span>
@@ -2237,9 +2880,36 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Seefahrt}} {{name=@{character_name} }} {{roll=[[@{fw_seafaring} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Seefahrt}} {{name=@{character_name} }} {{roll=[[@{fw_seafaring} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ge}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-mason">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_ropemaker_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-ropemaker sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_ropemaker_desc">Seiler</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_ropemaker_test">FF/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_ropemaker">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Seiler}} {{name=@{character_name} }} {{roll=[[@{fw_ropemaker} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Seiler}} {{name=@{character_name} }} {{roll=[[@{fw_ropemaker} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_mason_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-mason sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_mason_desc">Steinmetz</span>
@@ -2260,9 +2930,11 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Steinmetz}} {{name=@{character_name} }} {{roll=[[@{fw_mason} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Steinmetz}} {{name=@{character_name} }} {{roll=[[@{fw_mason} - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-jeweler">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_jeweler_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-jeweler sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_jeweler_desc">Steinschneider/Juwelier</span>
@@ -2283,9 +2955,61 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Steinschneider/Juwelier}} {{name=@{character_name} }} {{roll=[[@{fw_jeweler} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Steinschneider/Juwelier}} {{name=@{character_name} }} {{roll=[[@{fw_jeweler} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-tattooer">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cartwright_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-cartwright">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_cartwright_desc">Stellmacher</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_cartwright_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_cartwright">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Stellmacher}} {{name=@{character_name} }} {{roll=[[@{fw_cartwright} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Stellmacher}} {{name=@{character_name} }} {{roll=[[@{fw_cartwright} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_colorize_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-colorize sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_colorize_desc">Stoffe Färben</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_colorize_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_colorize">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Stoffe Färben}} {{name=@{character_name} }} {{roll=[[@{fw_colorize} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Stoffe Färben}} {{name=@{character_name} }} {{roll=[[@{fw_colorize} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_tattooer_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-tattooer sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_tattooer_desc">Tätowierer</span>
@@ -2306,9 +3030,111 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Tätowierer}} {{name=@{character_name} }} {{roll=[[@{fw_tattooer} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Tätowierer}} {{name=@{character_name} }} {{roll=[[@{fw_tattooer} - {1d20cs1cf20 - [[@{in}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
-                        <div class="sheet-row sheet-talent-carpenter">
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_potter_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-potter sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_potter_desc">Töpfer</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_potter_test">KL/FF/FF</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_potter">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Töpfer}} {{name=@{character_name} }} {{roll=[[@{fw_potter} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Töpfer}} {{name=@{character_name} }} {{roll=[[@{fw_potter} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_breeding_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-breeding sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_breeding_desc">Viehzucht</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_breeding_test">KL/IN/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_breeding">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Viehzucht}} {{name=@{character_name} }} {{roll=[[@{fw_breeding} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Viehzucht}} {{name=@{character_name} }} {{roll=[[@{fw_breeding} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{IN}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_weaving_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-weaving sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_weaving_desc">Webkunst</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_weaving_test">FF/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_weaving">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Webkunst}} {{name=@{character_name} }} {{roll=[[@{fw_weaving} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Webkunst}} {{name=@{character_name} }} {{roll=[[@{fw_weaving} - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_vintner_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-vintner sheet-activate">
+                            <div class="sheet-cell">
+                                <!--TALENT-->
+                                <span data-i18n="character_vintner_desc">Vinzer</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--PROBE-->
+                                <span data-i18n="character_vintner_test">KL/FF/KK</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <!--FW-->
+                                <input type="number" title="FW" name="attr_fw_vintner">
+                            </div>
+                            <div class="sheet-cell">
+                                <!--INFO-->
+
+                                <!--TODO info popup-->
+                            </div>
+                            <div class="sheet-cell">
+                                <!--ROLL-->
+                                <button type="roll" value="&{template:talent} {{talent=Vinzer}} {{name=@{character_name} }} {{roll=[[@{fw_vintner} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Vinzer}} {{name=@{character_name} }} {{roll=[[@{fw_vintner} - {1d20cs1cf20 - [[@{KL}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{FF}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{KK}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
+                            </div>
+                        </div>
+                        <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_carpenter_activate" value="1" checked>
+                        <div class="sheet-row sheet-talent-carpenter sheet-activate">
                             <div class="sheet-cell">
                                 <!--TALENT-->
                                 <span data-i18n="character_carpenter_desc">Zimmermann</span>
@@ -2329,6 +3155,7 @@
                             <div class="sheet-cell">
                                 <!--ROLL-->
                                 <button type="roll" value="&{template:talent} {{talent=Zimmermann}} {{name=@{character_name} }} {{roll=[[@{fw_carpenter} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                                <button type="roll" value="/w GM &{template:talent} {{talent=Zimmermann}} {{name=@{character_name} }} {{roll=[[@{fw_carpenter} - {1d20cs1cf20 - [[@{kl}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{ff}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 - {1d20cs1cf20 - [[@{kk}]] + ?{Erleichtert(+) / Erschwert(-)|0},0d1}kh1 ]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" >GM</button>
                             </div>
                         </div>
                         <!--/crafting talents-->
