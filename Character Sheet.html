@@ -4,43 +4,73 @@
     <!--basic attributes-->
     <div class="sheet-table sheet-attribute-table sheet-top-right">
         <div class="sheet-row sheet-attribute-list">
-            <div class="sheet-cell sheet-mu"><label><span data-i18n="attr_mu">MU</span><br><input type="number" name="attr_MU" value="8"></label></div>
-            <div class="sheet-cell sheet-kl"><label><span data-i18n="attr_kl">KL</span><br><input type="number" name="attr_KL" value="8"></label></div>
-            <div class="sheet-cell sheet-in"><label><span data-i18n="attr_in">IN</span><br><input type="number" name="attr_IN" value="8"></label></div>
-            <div class="sheet-cell sheet-ch"><label><span data-i18n="attr_ch">CH</span><br><input type="number" name="attr_CH" value="8"></label></div>
-            <div class="sheet-cell sheet-ff"><label><span data-i18n="attr_ff">FF</span><br><input type="number" name="attr_FF" value="8"></label></div>
-            <div class="sheet-cell sheet-ge"><label><span data-i18n="attr_ge">GE</span><br><input type="number" name="attr_GE" value="8"></label></div>
-            <div class="sheet-cell sheet-ko"><label><span data-i18n="attr_ko">KO</span><br><input type="number" name="attr_KO" value="8"></label></div>
-            <div class="sheet-cell sheet-kk"><label><span data-i18n="attr_kk">KK</span><br><input type="number" name="attr_KK" value="8"></label></div>
+            <div class="sheet-cell sheet-mu">
+                <label>
+                    <span data-i18n="attr_mu">MU</span>
+                    <br>
+                    <input type="number" name="attr_MU" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Mut}} {{roll=[[1d20cs1cf20]]}} {{attr=mu}} {{value=[[@{mu} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-kl">
+                <label>
+                    <span data-i18n="attr_kl">KL</span>
+                    <br>
+                    <input type="number" name="attr_KL" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Klugheit}} {{roll=[[1d20cs1cf20]]}} {{attr=kl}} {{value=[[@{kl} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-in">
+                <label>
+                    <span data-i18n="attr_in">IN</span>
+                    <br>
+                    <input type="number" name="attr_IN" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Intuition}} {{roll=[[1d20cs1cf20]]}} {{attr=in}} {{value=[[@{in} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-ch">
+                <label>
+                    <span data-i18n="attr_ch">CH</span>
+                    <br>
+                    <input type="number" name="attr_CH" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Charisma}} {{roll=[[1d20cs1cf20]]}} {{attr=ch}} {{value=[[@{ch} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-ff">
+                <label>
+                    <span data-i18n="attr_ff">FF</span>
+                    <br>
+                    <input type="number" name="attr_FF" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Fingerfertigkeit}} {{roll=[[1d20cs1cf20]]}} {{attr=ff}} {{value=[[@{ff} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-ge">
+                <label>
+                    <span data-i18n="attr_ge">GE</span>
+                    <br>
+                    <input type="number" name="attr_GE" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Gewandheit}} {{roll=[[1d20cs1cf20]]}} {{attr=ge}} {{value=[[@{ge} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-ko">
+                <label>
+                    <span data-i18n="attr_ko">KO</span>
+                    <br>
+                    <input type="number" name="attr_KO" value="8">
+                </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Konstitution}} {{roll=[[1d20cs1cf20]]}} {{attr=ko}} {{value=[[@{ko} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
+            <div class="sheet-cell sheet-kk">
+                <label>
+                <span data-i18n="attr_kk">KK</span>
+                <br>
+                <input type="number" name="attr_KK" value="8">
+            </label>
+                <button type="roll" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{roll=[[1d20cs1cf20]]}} {{attr=kk}} {{value=[[@{kk} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+            </div>
             <input class="sheet-hidden" type="number" name="attr_basis_at" value="5">
             <input class="sheet-hidden" type="number" name="attr_basis_pa" value="5">
             <input class="sheet-hidden" type="number" name="attr_basis_fk" value="5">
-        </div>
-        <div class="sheet-row">
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Mut}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{mu} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Klugheit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{kl} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Intuition}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{in} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Charisma}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ch} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Fingerfertigkeit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ff} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Gewandheit}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ge} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Konstitution}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ko} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
-            <div class="sheet-cell">
-                <button type="roll" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{kk} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
-            </div>
         </div>
     </div>
     <!--TODO roll buttons translation-->
@@ -4689,37 +4719,29 @@
 </div>
 
 <rolltemplate class="sheet-rolltemplate-attribute">
-    <div class="sheet-template-head">
-        <span>{{eigenschaft}}</span><span data-i18n="template_test"> Probe</span>
+    <div class="sheet-template-head sheet-{{attr}}">
+        <span>{{eigenschaft}}</span>
     </div>
-    <div class="sheet-template-result sheet-template-roll">
-        <span data-i18n="template_roll">Wurf:</span>{{roll}}
+    <div class="sheet-table">
+        <div class="sheet-row">
+            <div class="sheet-template-result sheet-template-roll">
+                <span style="font-family: dicefontd20;">R </span>{{roll}}
+            </div>
+            <div class="sheet-template-result">
+                <span><= {{value}}</span>
+            </div>
+            {{#rollGreater() roll value}}
+            <div class="sheet-template-result sheet-template-fail">
+                <span>&#10008;</span>
+            </div>
+            {{/rollGreater() roll value}}
+            {{#^rollGreater() roll value}}
+            <div class="sheet-template-result sheet-template-success">
+                <span>&#10004;</span>
+            </div>
+            {{/^rollGreater() roll value}}
+        </div>
     </div>
-    {{#rollGreater() mod 0}}
-    <div class="sheet-template-result sheet-template-mod-pos">
-        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-    </div>
-    {{/rollGreater() mod 0}}
-    {{#rollLess() mod 0}}
-    <div class="sheet-template-result sheet-template-mod-neg">
-        <span data-i18n="template_mod">Modifikator: </span><span>{{mod}}</span>
-    </div>
-    {{/rollLess() mod 0}}
-    {{#rollGreater() roll value}}
-    <div class="sheet-template-result sheet-template-fail">
-        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_fail">Mißlungen</span>
-    </div>
-    {{/rollGreater() roll value}}
-    {{#rollTotal() roll value}}
-    <div class="sheet-template-result sheet-template-success">
-        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
-    </div>
-    {{/rollTotal() roll value}}
-    {{#rollLess() roll value}}
-    <div class="sheet-template-result sheet-template-success">
-        <span data-i18n="template_result">Ergebnis: </span><span data-i18n="template_success">Gelungen</span>
-    </div>
-    {{/rollLess() roll value}}
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-atpa">
