@@ -238,6 +238,34 @@ input[type="number"] {
 
 
 /*template markup*/
+
+.sheet-rolltemplate-talent .sheet-table {
+    display: table; !important;
+    width: 100%;
+}
+
+.sheet-rolltemplate-talent .sheet-row {
+    display: table-row; !important;
+    width: 100%;
+}
+
+.sheet-rolltemplate-talent .sheet-cell {
+    display: table-cell; !important;
+}
+
+.sheet-rolltemplate-attribute .sheet-diagonal-gradient,
+.sheet-rolltemplate-talent .sheet-diagonal-gradient,
+.sheet-rolltemplate-atpa .sheet-diagonal-gradient,
+.sheet-rolltemplate-tp .sheet-diagonal-gradient {
+    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 49%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0.01) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#03000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /*box shadow inline*/
+    -webkit-box-shadow:inset 1px 1px 100px 5px #B5882F;
+    box-shadow:inset 1px 1px 100px 5px #B5882F;
+}
+
 .sheet-rolltemplate-tp {
     background-color: grey;
     color: white;
@@ -259,15 +287,101 @@ input[type="number"] {
     margin: 10px 0;
 }
 .sheet-rolltemplate-talent {
+    text-align: center;
+    box-shadow: 1px 1px 5px 1px #030303;
+    /*
     background-color: grey;
     color: white;
-    text-align: center;
     border-radius: 5px;
     -webkit-box-shadow: 1px 1px 5px 5px #030303;
     box-shadow: 1px 1px 5px 5px #030303;
     text-shadow: 1px 1px 1px #000000;
     margin: 10px 0;
+    */
 }
+
+.sheet-rolltemplate-talent .sheet-template-attribute {
+    display: table-cell;
+    width: 33.33%;
+    padding: 5px 0;
+    line-height: 170%;
+}
+
+.sheet-rolltemplate-talent .sheet-template-result {
+    display: table-cell;
+    width: 50%;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 30px;
+    border-top:solid black;
+}
+
+.sheet-rolltemplate-talent .sheet-template-diff {
+    border-top: solid black 1px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.sheet-mu,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-mu {
+    -webkit-box-shadow:inset 0 0 40px 0 #D5242B;
+    box-shadow:inset 0 0 40px 0 #D5242B;
+}
+
+.sheet-kl,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-kl {
+    -webkit-box-shadow:inset 0 0 40px 0 #934387;
+    box-shadow:inset 0 0 40px 0 #934387;
+}
+
+.sheet-in,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-in {
+    -webkit-box-shadow:inset 0 0 40px 0 #5FA349;
+    box-shadow:inset 0 0 40px 0 #5FA349;
+}
+
+.sheet-ch,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-ch {
+    -webkit-box-shadow:inset 0 0 40px 0 #111B1A;
+    box-shadow:inset 0 0 40px 0 #111B1A;
+}
+
+.sheet-ff,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-ff {
+    -webkit-box-shadow:inset 0 0 40px 0 #E7D21F;
+    box-shadow:inset 0 0 40px 0 #E7D21F;
+}
+
+.sheet-ge,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-ge {
+    -webkit-box-shadow:inset 0 0 40px 0 #24488B;
+    box-shadow:inset 0 0 40px 0 #24488B;
+}
+
+.sheet-ko,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-ko {
+    -webkit-box-shadow:inset 0 0 40px 0 #EBEBE9;
+    box-shadow:inset 0 0 40px 0 #EBEBE9;
+}
+
+.sheet-kk,
+.sheet-rolltemplate-talent .sheet-template-attribute.sheet-kk {
+    -webkit-box-shadow:inset 0 0 40px 0 #E58F25;
+    box-shadow:inset 0 0 40px 0 #E58F25;
+}
+
+.sheet-rolltemplate-talent .sheet-template-success,
+.sheet-rolltemplate-talent .sheet-template-mod-pos {
+    -webkit-box-shadow:inset 0 0 40px 0 rgba(95, 163, 73, 0.53);
+    box-shadow:inset 0 0 40px 0 rgba(95, 163, 73, 0.53);
+}
+
+.sheet-rolltemplate-talent .sheet-template-fail,
+.sheet-rolltemplate-talent .sheet-template-mod-neg {
+    -webkit-box-shadow:inset 0 0 40px 0 rgba(213, 36, 43, 0.53);
+    box-shadow:inset 0 0 40px 0 rgba(213, 36, 43, 0.53);
+}
+
 .sheet-rolltemplate-attribute {
     background-color: grey;
     color: white;
@@ -294,6 +408,8 @@ input[type="number"] {
     background-color: black;
     font-size: 150%;
     height: 150%;
+    color: whitesmoke;
+    padding: 5px;
 }
 .sheet-rolltemplate-attribute .sheet-template-head {
     background-color: black;
@@ -369,7 +485,7 @@ input[type="number"] {
     padding: 5px;
 }
 .sheet-rolltemplate-talent > div {
-    padding: 5px;
+
 }
 .sheet-rolltemplate-attribute > div {
     padding: 5px;

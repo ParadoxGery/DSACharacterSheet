@@ -329,7 +329,7 @@
   "template_pa_roll": "PA Wurf: ",
   "template_fk_roll": "FK Wurf: ",
   "template_dodge_roll": "Ausweichen Wurf:",
-  "template_mod": "Modifikator:",
+  "template_mod": "MOD:",
   "template_result": "Ergebnis:",
   "template_fail": "Mißlungen",
   "template_success": "Gelungen",
