@@ -338,5 +338,12 @@
   "template_parry": "Parieren",
   "template_dodge": "Ausweichen",
   "template_fp": "FP: ",
-  "template_qs": "QS: "
+  "template_qs": "QS: ",
+  "template_move": "Manöver",
+  "template_block": "Schildblock",
+
+  "attack": "Angriff",
+  "defend": "Verteidigen",
+  "shield_pa": "S PA"
+
 }
