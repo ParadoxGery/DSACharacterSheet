@@ -213,6 +213,8 @@ input.sheet-hidden-input {
     height: 13px;
     margin-bottom: 10px;
 }
+input.sheet-navigation.sheet-npc:not(:checked) ~ div.sheet-navigation.sheet-character,
+input.sheet-navigation.sheet-npc:checked ~ div.sheet-navigation.sheet-npc,
 input.sheet-navigation.sheet-config:checked ~ div.sheet-navigation.sheet-config,
 input.sheet-navigation.sheet-fighting-ranged:checked ~ div.sheet-navigation.sheet-fighting-ranged,
 input.sheet-navigation.sheet-fighting-melee:checked ~ div.sheet-navigation.sheet-fighting-melee,
