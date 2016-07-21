@@ -344,6 +344,9 @@
 
   "attack": "Angriff",
   "defend": "Verteidigen",
-  "shield_pa": "S PA"
+  "shield_pa": "S PA",
+  "ini": "Initiative",
+  "dodge": "Ausweichen",
+  "bonus_tp": "Bonus TP"
 
 }

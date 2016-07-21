@@ -469,9 +469,9 @@
                         <!--/headline of talents-->
 
                         <!--physical talents-->
-                        <div class="sheet-row">
+                        <div class="sheet-row sheet-kk">
                             <!--TALENT-->
-                            <div class="sheet-cell">
+                            <div class="sheet-cell sheet-kk">
                                 <span data-i18n="character_physical_talents_desc">KÖRPER (D)</span>
                             </div>
                             <!--PROBE-->
@@ -926,8 +926,8 @@
                         <!--/physical talents-->
                         <div class="sheet-row sheet-empty-row"></div>
                         <!--social talents-->
-                        <div class="sheet-row">
-                            <div class="sheet-cell">
+                        <div class="sheet-row sheet-ch">
+                            <div class="sheet-cell sheet-ch">
                                 <!--TALENT-->
                                 <span data-i18n="character_social_talents_desc">GESELLSCHAFT (B)</span>
                             </div>
@@ -1195,8 +1195,8 @@
                         <!--/social talents-->
                         <div class="sheet-row sheet-empty-row"></div>
                         <!--nature talents-->
-                        <div class="sheet-row">
-                            <div class="sheet-cell">
+                        <div class="sheet-row sheet-in">
+                            <div class="sheet-cell sheet-in">
                                 <!--TALENT-->
                                 <span data-i18n="character_nature_talents_desc">NATUR (B)</span>
                             </div>
@@ -1435,8 +1435,8 @@
                         <!--/headline of talents-->
 
                         <!--knowledge talents-->
-                        <div class="sheet-row">
-                            <div class="sheet-cell">
+                        <div class="sheet-row sheet-kl">
+                            <div class="sheet-cell sheet-kl">
                                 <!--TALENT-->
                                 <span data-i18n="character_knowledge_talents_desc">WISSEN (B)</span>
                             </div>
@@ -2027,8 +2027,8 @@
                         <!--/knowledge talents-->
                         <div class="sheet-row sheet-empty-row"></div>
                         <!--crafting talents-->
-                        <div class="sheet-row">
-                            <div class="sheet-cell">
+                        <div class="sheet-row sheet-ff">
+                            <div class="sheet-cell sheet-ff">
                                 <!--TALENT-->
                                 <span data-i18n="character_crafting_talents_desc">HANDWERK (B)</span>
                             </div>
@@ -3430,7 +3430,6 @@
                                 <button type="roll" name="roll_MTP1" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
                             </div>
                         </div>
-
                         <div class="sheet-row">
                             <div class="sheet-cell">
                                 <span data-i18n="defend">Verteidigen</span>
@@ -3464,29 +3463,147 @@
                                 <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod})]]}}" >S-PA</button>
                             </div>
                         </div>
-
                     </div>
-
-
-
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-2" name="attr_active_melee_rolls" value="2">
                 <div class="sheet-navigation sheet-melee-weapon-2">
-                    <button type="roll" value="&{template:combat} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_2_at}]]}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_2_pa}]]}}" >PA</button>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="attack">Angriff</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_at">AT</span>
+                                    <input type="number" title="AT" name="attr_melee_weapon_2_at" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="ATMOD" name="attr_at_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_AT2" value="&{template:combat} {{dmg=TP1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_at} + (@{at_mod})]]}}" >AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_TP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_MAT2" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_2_at} + @{at_mod})*?{AT multiplikator|1})]]}}" >M-AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_MTP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="defend">Verteidigen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_pa">PA</span>
+                                    <input type="number" title="PA" name="attr_melee_weapon_2_pa" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="PAMOD" name="attr_pa_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_PA2" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[@{melee_weapon_2_pa} + (@{pa_mod})]]}}" >PA</button>
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="checkbox" title="Schild?" name="attr_use_shield" value="1">
+                            </div>
+                            <input class="sheet-hidden sheet-use-shield" type="checkbox" name="attr_use_shield" value="1">
+                            <div class="sheet-cell sheet-navigation sheet-use-shield">
+                                <label>
+                                    <span data-i18n="shield_pa">S PA</span>
+                                    <input type="number" title="Schild PA" name="attr_shield_pa" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-navigation sheet-use-shield sheet-fighting-roll">
+                                <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod})]]}}" >S-PA</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-melee-weapon-3" name="attr_active_melee_rolls" value="3">
                 <div class="sheet-navigation sheet-melee-weapon-3">
-                    <button type="roll" value="&{template:combat} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_3_at}]]}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
-                    <button type="roll" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{melee_weapon_3_pa}]]}}" >PA</button>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="attack">Angriff</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_at">AT</span>
+                                    <input type="number" title="AT" name="attr_melee_weapon_3_at" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="ATMOD" name="attr_at_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_AT3" value="&{template:combat} {{dmg=TP3}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_at} + (@{at_mod})]]}}" >AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_TP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_MAT3" value="&{template:combat} {{dmg=MTP3}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_3_at} + @{at_mod})*?{AT multiplikator|1})]]}}" >M-AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_MTP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="defend">Verteidigen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_pa">PA</span>
+                                    <input type="number" title="PA" name="attr_melee_weapon_3_pa" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="PAMOD" name="attr_pa_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_PA3" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[@{melee_weapon_3_pa} + (@{pa_mod})]]}}" >PA</button>
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="checkbox" title="Schild?" name="attr_use_shield" value="1">
+                            </div>
+                            <input class="sheet-hidden sheet-use-shield" type="checkbox" name="attr_use_shield" value="1">
+                            <div class="sheet-cell sheet-navigation sheet-use-shield">
+                                <label>
+                                    <span data-i18n="shield_pa">S PA</span>
+                                    <input type="number" title="Schild PA" name="attr_shield_pa" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-navigation sheet-use-shield sheet-fighting-roll">
+                                <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod})]]}}" >S-PA</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/weapon 3 roll-->
 
@@ -3675,24 +3792,102 @@
                 <!--weapon 1 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-1" name="attr_active_ranged_rolls" value="1">
                 <div class="sheet-navigation sheet-ranged-weapon-1">
-                    <button type="roll" value="&{template:combat} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_1_fk}]]}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_1_tp}+?{Range TP+| @{ranged_weapon_1_ranges_1}, @{ranged_weapon_1_tp+_1} | @{ranged_weapon_1_ranges_2}, @{ranged_weapon_1_tp+_2} | @{ranged_weapon_1_ranges_3}, @{ranged_weapon_1_tp+_3} | @{ranged_weapon_1_ranges_4}, @{ranged_weapon_1_tp+_4} | @{ranged_weapon_1_ranges_5}, @{ranged_weapon_1_tp+_5}}]] }}" >TP</button>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_weapon_fk">FK</span>
+                                    <input type="number" title="AT" name="attr_ranged_weapon_1_fk" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="FKMOD" name="attr_fk_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="bonus_tp">Bonus TP</span>
+                                    <input type="number" name="attr_bonus_ftp" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FK1" value="&{template:combat} {{dmg=FTP1}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_1_fk}]]}} + (@{fk_mod})" >FK</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FTP1" value="&{template:tp} {{damage=[[@{ranged_weapon_1_tp}+?{Range TP+| @{ranged_weapon_1_ranges_1}, @{ranged_weapon_1_tp+_1} | @{ranged_weapon_1_ranges_2}, @{ranged_weapon_1_tp+_2} | @{ranged_weapon_1_ranges_3}, @{ranged_weapon_1_tp+_3} | @{ranged_weapon_1_ranges_4}, @{ranged_weapon_1_tp+_4} | @{ranged_weapon_1_ranges_5}, @{ranged_weapon_1_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/weapon 1 roll-->
 
                 <!--weapon 2 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-2" name="attr_active_ranged_rolls" value="2">
                 <div class="sheet-navigation sheet-ranged-weapon-2">
-                    <button type="roll" value="&{template:combat} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_2_fk}]]}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}+?{Range TP+| @{ranged_weapon_2_ranges_1}, @{ranged_weapon_2_tp+_1} | @{ranged_weapon_2_ranges_2}, @{ranged_weapon_2_tp+_2} | @{ranged_weapon_2_ranges_3}, @{ranged_weapon_2_tp+_3} | @{ranged_weapon_2_ranges_4}, @{ranged_weapon_2_tp+_4} | @{ranged_weapon_2_ranges_5}, @{ranged_weapon_2_tp+_5}}]] }}" >TP</button>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_weapon_fk">FK</span>
+                                    <input type="number" title="AT" name="attr_ranged_weapon_2_fk" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="FKMOD" name="attr_fk_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="bonus_tp">Bonus TP</span>
+                                    <input type="number" name="attr_bonus_ftp" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FK2" value="&{template:combat} {{dmg=FTP2}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_2_fk}]]}} + (@{fk_mod})" >FK</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FTP2" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}+?{Range TP+| @{ranged_weapon_2_ranges_1}, @{ranged_weapon_2_tp+_1} | @{ranged_weapon_2_ranges_2}, @{ranged_weapon_2_tp+_2} | @{ranged_weapon_2_ranges_3}, @{ranged_weapon_2_tp+_3} | @{ranged_weapon_2_ranges_4}, @{ranged_weapon_2_tp+_4} | @{ranged_weapon_2_ranges_5}, @{ranged_weapon_2_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/weapon 2 roll-->
 
                 <!--weapon 3 roll-->
                 <input type="radio" title="AKTIV" class="sheet-hidden sheet-ranged-weapon-3" name="attr_active_ranged_rolls" value="3">
                 <div class="sheet-navigation sheet-ranged-weapon-3">
-                    <button type="roll" value="&{template:combat} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{ranged_weapon_3_fk}]]}}" >AT</button>
-                    <button type="roll" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}+?{Range TP+| @{ranged_weapon_3_ranges_1}, @{ranged_weapon_3_tp+_1} | @{ranged_weapon_3_ranges_2}, @{ranged_weapon_3_tp+_2} | @{ranged_weapon_3_ranges_3}, @{ranged_weapon_3_tp+_3} | @{ranged_weapon_3_ranges_4}, @{ranged_weapon_3_tp+_4} | @{ranged_weapon_3_ranges_5}, @{ranged_weapon_3_tp+_5}}]] }}" >TP</button>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_weapon_fk">FK</span>
+                                    <input type="number" title="AT" name="attr_ranged_weapon_3_fk" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="FKMOD" name="attr_fk_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="bonus_tp">Bonus TP</span>
+                                    <input type="number" name="attr_bonus_ftp" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FK3" value="&{template:combat} {{dmg=FTP3}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_3_fk}]]}} + (@{fk_mod})" >FK</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_FTP3" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}+?{Range TP+| @{ranged_weapon_3_ranges_1}, @{ranged_weapon_3_tp+_1} | @{ranged_weapon_3_ranges_2}, @{ranged_weapon_3_tp+_2} | @{ranged_weapon_3_ranges_3}, @{ranged_weapon_3_tp+_3} | @{ranged_weapon_3_ranges_4}, @{ranged_weapon_3_tp+_4} | @{ranged_weapon_3_ranges_5}, @{ranged_weapon_3_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/weapon 3 roll-->
 
@@ -3705,7 +3900,7 @@
             <!--/ranged-->
 
 
-            <input class="sheet-hidden" type="number" title="WOUND-MOD" name="attr_wound_mod">
+            <input class="sheet-hidden" type="number" title="WOUND-MOD" name="attr_wound_mod" value="0">
 
             <!--fighting-talents-->
             <div class="sheet-navigation sheet-fighting-talents">
@@ -4339,10 +4534,41 @@
         </div>
 
         <!--dodge roll-->
-        <div>
-            <button type="roll" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge}]]}}">Ausweichen</button>
-            <br>
-            <button type="roll" value="/r 1d6+@{character_ini} &{tracker}">Initiative</button>
+        <div class="sheet-table sheet-auto-table sheet-side-padded">
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <span data-i18n="dodge">Ausweichen</span>
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" name="attr_character_dodge" value="0" readonly>
+                </div>
+                <div class="sheet-cell">
+                    <label>
+                        <span data-i18n="mod">MOD</span>
+                        <input type="number" name="attr_dodge_mod" value="0">
+                    </label>
+                </div>
+                <div class="sheet-cell sheet-fighting-roll">
+                    <button type="roll" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{character_dodge} + @{dodge_mod}]]}}"></button>
+                </div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-cell">
+                    <span data-i18n="ini">Initiative</span>
+                </div>
+                <div class="sheet-cell">
+                    <input type="number" name="attr_character_ini" value="0" readonly>
+                </div>
+                <div class="sheet-cell">
+                    <label>
+                        <span data-i18n="mod">MOD</span>
+                        <input type="number" name="attr_ini_mod" value="0">
+                    </label>
+                </div>
+                <div class="sheet-cell sheet-fighting-roll">
+                    <button type="roll" value="/r 1d6+@{character_ini} + @{ini_mod} &{tracker}"></button>
+                </div>
+            </div>
         </div>
         <!--/dodge roll-->
 
@@ -4865,6 +5091,7 @@
             <div class="sheet-template-result sheet-template-success">
                 <span>&#10004;</span>
             </div>
+            {{#at}}
             <div class="sheet-template-result">
                 {{#rollWasCrit() roll}}
                 [CRIT](~{{character}}|{{dmg}})
@@ -4873,6 +5100,17 @@
                 [TP](~{{character}}|{{dmg}})
                 {{/^rollWasCrit() roll}}
             </div>
+            {{/at}}
+            {{#fk}}
+            <div class="sheet-template-result">
+                {{#rollWasCrit() roll}}
+                [CRIT](~{{character}}|{{dmg}})
+                {{/rollWasCrit() roll}}
+                {{#^rollWasCrit() roll}}
+                [TP](~{{character}}|{{dmg}})
+                {{/^rollWasCrit() roll}}
+            </div>
+            {{/fk}}
             {{/^rollGreater() roll value}}
         </div>
     </div>
