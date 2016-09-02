@@ -33,6 +33,9 @@ div.sheet-spacer,
 .sheet-row.sheet-three-col-row > .sheet-cell {
     width: 33%;
 }
+.sheet-row.sheet-three-col-row > .sheet-cell > textarea {
+    max-width: 96.5%;
+}
 
 .sheet-row.sheet-vmiddle .sheet-cell {
     vertical-align: middle;
@@ -72,6 +75,11 @@ div.sheet-spacer,
 
 .sheet-centered {
     margin: 0 auto;
+}
+
+input.sheet-edit.sheet-right{
+    float: right;
+    margin-top: -21px;
 }
 
 /*talent activation*/
@@ -137,6 +145,7 @@ input[type="checkbox"][name="attr_bastard_sword_activate"]:checked.sheet-activat
     width: 400px;
     position: relative;
 }
+
 
 .sheet-table.sheet-attribute-table.sheet-right {
     float: right;
@@ -213,12 +222,15 @@ input.sheet-hidden-input {
     height: 13px;
     margin-bottom: 10px;
 }
+input.sheet-navigation.sheet-edit:checked + div.sheet-navigation.sheet-edit,
 input.sheet-navigation.sheet-npc:not(:checked) ~ div.sheet-navigation.sheet-character,
 input.sheet-navigation.sheet-npc:checked ~ div.sheet-navigation.sheet-npc,
 input.sheet-navigation.sheet-config:checked ~ div.sheet-navigation.sheet-config,
+input.sheet-navigation.sheet-brawl:checked ~ div.sheet-navigation.sheet-brawl,
 input.sheet-navigation.sheet-fighting-ranged:checked ~ div.sheet-navigation.sheet-fighting-ranged,
 input.sheet-navigation.sheet-fighting-melee:checked ~ div.sheet-navigation.sheet-fighting-melee,
 input.sheet-navigation.sheet-fighting-talents:checked ~ div.sheet-navigation.sheet-fighting-talents,
+input.sheet-navigation.sheet-magic:checked ~ div.sheet-navigation.sheet-magic,
 input.sheet-navigation.sheet-fighting:checked ~ div.sheet-navigation.sheet-fighting,
 input.sheet-navigation.sheet-talents:checked ~ div.sheet-navigation.sheet-talents,
 input.sheet-navigation.sheet-general:checked ~ div.sheet-navigation.sheet-general {
@@ -334,6 +346,7 @@ button[type="roll"]:hover:before {
 }
 
 /*template markup*/
+.sheet-rolltemplate-spell .sheet-table,
 .sheet-rolltemplate-combat .sheet-table,
 .sheet-rolltemplate-attribute .sheet-table,
 .sheet-rolltemplate-talent .sheet-table {
@@ -341,6 +354,7 @@ button[type="roll"]:hover:before {
     width: 100%;
 }
 
+.sheet-rolltemplate-spell .sheet-row,
 .sheet-rolltemplate-combat .sheet-row,
 .sheet-rolltemplate-attribute .sheet-row,
 .sheet-rolltemplate-talent .sheet-row {
@@ -348,12 +362,14 @@ button[type="roll"]:hover:before {
     width: 100%;
 }
 
+.sheet-rolltemplate-spell .sheet-cell,
 .sheet-rolltemplate-combat .sheet-cell,
 .sheet-rolltemplate-attribute .sheet-cell,
 .sheet-rolltemplate-talent .sheet-cell {
     display: table-cell; !important;
 }
 
+.sheet-rolltemplate-spell .sheet-diagonal-gradient,
 .sheet-rolltemplate-attribute .sheet-diagonal-gradient,
 .sheet-rolltemplate-talent .sheet-diagonal-gradient,
 .sheet-rolltemplate-combat .sheet-diagonal-gradient,
@@ -413,6 +429,7 @@ button[type="roll"]:hover:before {
     box-shadow:inset 0 0 5px 0 black;
 }
 
+.sheet-rolltemplate-spell,
 .sheet-rolltemplate-talent {
     text-align: center;
     -webkit-box-shadow: 1px 1px 5px 1px #030303;
@@ -428,6 +445,12 @@ button[type="roll"]:hover:before {
     */
 }
 
+.sheet-rolltemplate-spell .sheet-align-left {
+    text-align: left;
+    font-size: smaller;
+}
+
+.sheet-rolltemplate-spell .sheet-template-attribute,
 .sheet-rolltemplate-talent .sheet-template-attribute {
     display: table-cell;
     width: 33.33%;
@@ -435,6 +458,7 @@ button[type="roll"]:hover:before {
     line-height: 170%;
 }
 
+.sheet-rolltemplate-spell .sheet-template-result,
 .sheet-rolltemplate-talent .sheet-template-result {
     display: table-cell;
     width: 50%;
@@ -444,6 +468,7 @@ button[type="roll"]:hover:before {
     border-top:solid black;
 }
 
+.sheet-rolltemplate-spell .sheet-template-diff,
 .sheet-rolltemplate-talent .sheet-template-diff {
     border-top: solid black 1px;
     width: 100%;
@@ -451,6 +476,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-mu,
+.sheet-rolltemplate-spell .sheet-mu,
 .sheet-rolltemplate-attribute .sheet-mu,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-mu {
     -webkit-box-shadow:inset 0 0 40px 0 #D5242B;
@@ -458,6 +484,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-kl,
+.sheet-rolltemplate-spell .sheet-kl,
 .sheet-rolltemplate-attribute .sheet-kl,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-kl {
     -webkit-box-shadow:inset 0 0 40px 0 #934387;
@@ -465,6 +492,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-in,
+.sheet-rolltemplate-spell .sheet-in,
 .sheet-rolltemplate-attribute .sheet-in,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-in {
     -webkit-box-shadow:inset 0 0 40px 0 #5FA349;
@@ -472,6 +500,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-ch,
+.sheet-rolltemplate-spell .sheet-ch,
 .sheet-rolltemplate-attribute .sheet-ch,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-ch {
     -webkit-box-shadow:inset 0 0 40px 0 #111B1A;
@@ -479,6 +508,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-ff,
+.sheet-rolltemplate-spell .sheet-ff,
 .sheet-rolltemplate-attribute .sheet-ff,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-ff {
     -webkit-box-shadow:inset 0 0 40px 0 #E7D21F;
@@ -486,6 +516,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-ge,
+.sheet-rolltemplate-spell .sheet-ge,
 .sheet-rolltemplate-attribute .sheet-ge,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-ge {
     -webkit-box-shadow:inset 0 0 40px 0 #24488B;
@@ -493,6 +524,7 @@ button[type="roll"]:hover:before {
 }
 
 .sheet-ko,
+.sheet-rolltemplate-spell .sheet-ko,
 .sheet-rolltemplate-attribute .sheet-ko,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-ko {
     -webkit-box-shadow:inset 0 0 40px 0 #EBEBE9;
@@ -501,12 +533,15 @@ button[type="roll"]:hover:before {
 
 .sheet-rolltemplate-tp .sheet-template-result,
 .sheet-kk,
+.sheet-rolltemplate-spell .sheet-kk,
 .sheet-rolltemplate-attribute .sheet-kk,
 .sheet-rolltemplate-talent .sheet-template-attribute.sheet-kk {
     -webkit-box-shadow:inset 0 0 40px 0 #E58F25;
     box-shadow:inset 0 0 40px 0 #E58F25;
 }
 
+.sheet-rolltemplate-spell .sheet-template-success,
+.sheet-rolltemplate-spell .sheet-template-mod-pos,
 .sheet-rolltemplate-tp .sheet-template-success,
 .sheet-rolltemplate-attribute .sheet-template-success,
 .sheet-rolltemplate-talent .sheet-template-success,
@@ -515,6 +550,8 @@ button[type="roll"]:hover:before {
     box-shadow:inset 0 0 40px 0 rgba(95, 163, 73, 0.53);
 }
 
+.sheet-rolltemplate-spell .sheet-template-fail,
+.sheet-rolltemplate-spell .sheet-template-mod-neg,
 .sheet-rolltemplate-tp .sheet-template-fail,
 .sheet-rolltemplate-attribute .sheet-template-fail,
 .sheet-rolltemplate-talent .sheet-template-fail,
@@ -550,6 +587,8 @@ button[type="roll"]:hover:before {
     color: whitesmoke;
     padding: 5px;
 }
+
+.sheet-rolltemplate-spell .sheet-template-head,
 .sheet-rolltemplate-talent .sheet-template-head {
     background-color: black;
     font-size: 150%;
@@ -575,6 +614,7 @@ button[type="roll"]:hover:before {
     color: black;
     text-shadow: none;
 }
+.sheet-rolltemplate-spell > .sheet-template-result span.inlinerollresult.showtip.tipsy-n,
 .sheet-rolltemplate-talent > .sheet-template-result span.inlinerollresult.showtip.tipsy-n{
     color: black;
     text-shadow: none;
@@ -597,6 +637,9 @@ button[type="roll"]:hover:before {
 .sheet-rolltemplate-attribute .sheet-template-success {
     color: green;
 }
+.sheet-rolltemplate-spell .sheet-template-success {
+    color: green;
+}
 
 /*template fail*/
 .sheet-rolltemplate-tp .sheet-template-fail {
@@ -611,8 +654,11 @@ button[type="roll"]:hover:before {
 .sheet-rolltemplate-attribute .sheet-template-fail {
     color: red;
 }
+.sheet-rolltemplate-spell .sheet-template-fail {
+    color: red;
+}
 
-/*template styling*/
+    /*template styling*/
 .sheet-rolltemplate-tp > div {
     padding: 5px;
 }

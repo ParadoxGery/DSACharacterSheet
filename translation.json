@@ -320,6 +320,7 @@
   "character_fighting_desc": "KAMPF",
   "character_config_desc": "KONFIG",
   "character_fighting_talents_desc": "KAMPFTECHNIK",
+  "character_fighting_brawl_desc": "RAUFEN",
 
   "template_test": " Probe",
   "template_roll": "Wurf",

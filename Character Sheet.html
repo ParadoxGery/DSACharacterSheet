@@ -134,7 +134,7 @@
                                 <input type="number" name="attr_dodgemod" value="0">
                             </div>
                             <div class="sheet-cell">
-                                <button type="roll" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{dodge} + @{dodgemod}]]}}">Ausweichen</button>
+                                <button type="roll" name="roll_Dodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{dodge} + @{dodgemod}]]}}">Ausweichen</button>
                             </div>
                         </div>
                         <div class="sheet-row">
@@ -143,7 +143,7 @@
                             </div>
                             <div class="sheet-cell"></div>
                             <div class="sheet-cell">
-                                <button type="roll" value="/r 1d6+@{character_ini} &{tracker}">Initiative</button>
+                                <button type="roll" name="roll_Ini" value="/r 1d6+@{character_ini} &{tracker}">Initiative</button>
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,8 @@
         <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
         <input type="radio" class="sheet-hidden-input sheet-navigation sheet-config" name="attr_pagenumber" title="PAGE 4" value="4">
         <span class="sheet-navigation" data-i18n="character_config_desc">KONFIG</span>
-
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-magic" name="attr_pagenumber" title="PAGE 5" value="5">
+        <span class="sheet-navigation" data-i18n="character_magic_desc">MAGIE</span>
 
         <!--hidden input for talent activation TODO LABEL-->
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_bastard_sword_activate">
@@ -3255,6 +3256,8 @@
                 <span class="sheet-navigation" data-i18n="character_fighting-melee_desc">NAHKAMPF</span>
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-ranged" name="attr_fighting_pagenumber" title="PAGE 2" value="2">
                 <span class="sheet-navigation" data-i18n="character_fighting-ranged_desc">FERNKAMPF</span>
+                <input type="radio" class="sheet-hidden-input sheet-navigation sheet-brawl" name="attr_fighting_pagenumber" title="PAGE 3" value="3">
+                <span class="sheet-navigation" data-i18n="character_fighting_brawl_desc">RAUFEN/RINGEN</span>
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 4" value="4">
                 <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">KAMPFTECHNIK</span>
                 <!-- TODO
@@ -3481,7 +3484,7 @@
                                     <button type="roll" name="roll_MAT1" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_1_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MTP1" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
+                                    <button type="roll" name="roll_MTP1" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
                             </div>
                             <div class="sheet-row">
@@ -3551,7 +3554,7 @@
                                     <button type="roll" name="roll_MAT2" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MTP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
+                                    <button type="roll" name="roll_MTP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
                             </div>
                             <div class="sheet-row">
@@ -3621,7 +3624,7 @@
                                     <button type="roll" name="roll_MAT3" value="&{template:combat} {{dmg=MTP3}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MTP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp} (?{TP Bonus|0})]]}}" >M-TP</button>
+                                    <button type="roll" name="roll_MTP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
                             </div>
                             <div class="sheet-row">
@@ -3953,6 +3956,68 @@
                 </div>
                 <!--/ranged-->
 
+                <!--brawl-->
+                <div class="sheet-navigation sheet-brawl">
+                    <span data-i18n="character_brawl_desc">Raufen</span>
+                    <div class="sheet-table">
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="attack">Angriff</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_at">AT</span>
+                                    <input type="number" title="AT" name="attr_at_brawl" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="ATMOD" name="attr_at_brawl_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-80pxcell">
+                                <label>
+                                    <span data-i18n="character_weapon_tp_desc">TP</span>
+                                    <input type="text" name="attr_brawl_dmg" value="1d6">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_BrawlAT" value="&{template:combat} {{dmg=BrawlTP}} {{character=@{character_name}}} {{at=1}} {{weapon=Raufen }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{at_brawl} + (@{at_brawl_mod}) - (@{armor_be}) - (2*@{wounds})]]}}" >AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_BrawlTP" value="&{template:tp} {{damage=[[@{brawl_dmg}]]}}" >TP</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_BrawlMAT" value="&{template:combat} {{dmg=BrawlMTP}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=Raufen }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{at_brawl} + (@{at_brawl_mod}) - (@{armor_be}) - (2*@{wounds}))*?{AT multiplikator|1})]]}}" >M-AT</button>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_BrawlMTP" value="&{template:tp} {{damage=[[@{brawl_dmg} + (?{TP Bonus|0})]]}}" >M-TP</button>
+                            </div>
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-cell">
+                                <span data-i18n="defend">Verteidigen</span>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="character_pa">PA</span>
+                                    <input type="number" title="PA" name="attr_pa_brawl" value="0" readonly>
+                                </label>
+                            </div>
+                            <div class="sheet-cell">
+                                <label>
+                                    <span data-i18n="mod">MOD</span>
+                                    <input type="number" title="PAMOD" name="attr_pa_brawl_mod" value="0">
+                                </label>
+                            </div>
+                            <div class="sheet-cell sheet-fighting-roll">
+                                <button type="roll" name="roll_BrawlPA" value="&{template:combat} {{pa=1}} {{weapon=Raufen }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{pa_brawl} + (@{pa_brawl_mod}) - (@{armor_be}) - (2*@{wounds})]]}}" >PA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/brawl-->
 
                 <input class="sheet-hidden" type="number" title="WOUND-MOD" name="attr_wound_mod" value="0">
 
@@ -4603,7 +4668,7 @@
                         </label>
                     </div>
                     <div class="sheet-cell sheet-fighting-roll">
-                        <button type="roll" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{character_dodge} + @{dodge_mod} - (@{armor_be})]]}}"></button>
+                        <button type="roll" name="roll_Dodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{character_dodge} + @{dodge_mod} - (@{armor_be})]]}}"></button>
                     </div>
                 </div>
                 <div class="sheet-row">
@@ -4620,11 +4685,29 @@
                         </label>
                     </div>
                     <div class="sheet-cell sheet-fighting-roll">
-                        <button type="roll" value="/r 1d6+@{character_ini} + @{ini_mod} &{tracker}"></button>
+                        <button type="roll" name="roll_Ini" value="/r 1d6+@{character_ini} + @{ini_mod} &{tracker}"></button>
                     </div>
                 </div>
             </div>
             <!--/dodge roll-->
+
+            <hr>
+
+            <!--combat hp-->
+            <div class="sheet-full">
+                <span data-i18n="attr_health">LEBENSENERGIE</span>
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell sheet-80pxcell">
+                            <input type="number" name="attr_character_le">
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" name="attr_character_le_max" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/combat hp-->
 
             <hr>
             <!--wounds-->
@@ -4751,7 +4834,91 @@
             </div>
         </div>
         <div class="sheet-magic sheet-navigation">
-
+            <fieldset class="repeating_spells">
+                <!-- TODO edit checkbox -->
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" name="attr_name" />
+                        </div>
+                        <div class="sheet-cell">
+                            <button type="roll" name="roll_spellroll" value="&{template:spell} {{spell=@{name} }} {{spellcost=@{spellcost}}} {{spellduration=@{spellduration}}} {{technic=@{technic}}} {{result=@{result}}} {{variants=@{variants}}} {{casttime=@{casttime}}} {{value=[[ [[@{taw}]] - [[{[[1d20cs1cf20]] - [[@{attr1} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{attr2} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{attr3} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=@{attr1}}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=@{attr2}}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=@{attr3}}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} " ></button>
+                        </div>
+                        <div class="sheet-cell">
+                            <div class="sheet-table">
+                                <div class="sheet-row">
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr1">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr2">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr3">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TAW" name="attr_taw">
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" class="sheet-navigation sheet-edit sheet-right" name="attr_edit" title="EDIT">
+                <div class="sheet-navigation sheet-edit">
+                    <div class="sheet-table">
+                        <div class="sheet-row sheet-three-col-row">
+                            <div class="sheet-cell">
+                                <input type="text" title="Zauberdauer" name="attr_casttime">
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="text" title="Zauberkosten" name="attr_spellcost">
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="text" title="Wirkdauer" name="attr_spellduration">
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-three-col-row">
+                            <div class="sheet-cell">
+                                <textarea title="TECHNIK" name="attr_technic"></textarea>
+                            </div>
+                            <div class="sheet-cell">
+                                <textarea title="WIRKUNG" name="attr_result"></textarea>
+                            </div>
+                            <div class="sheet-cell">
+                                <textarea title="VARIANTEN" name="attr_variants"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </div>
         <div class="sheet-divine sheet-navigation">
 
@@ -5136,11 +5303,6 @@
             <div class="sheet-template-result sheet-template-fail">
                 <span>&#10008;</span>
             </div>
-            {{#rollWasFumble() roll}}
-            <div class="sheet-template-result sheet-template-fail">
-                [[2d6]]
-            </div>
-            {{/rollWasFumble() roll}}
             {{/rollGreater() roll value}}
             {{#^rollGreater() roll value}}
             <div class="sheet-template-result sheet-template-success">
@@ -5320,6 +5482,194 @@
             </div>
             {{/rollLess() mod 0}}
         </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-spell">
+    <div class="sheet-template-head">
+        <span>{{spell}}</span>
+    </div>
+    <div class="sheet-table">
+        <div class="sheet-row">
+            <div class="sheet-{{first}} sheet-template-attribute">
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span style="font-family: dicefontd20">R</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{firstRoll}}</span>
+                        </div>
+                    </div>
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span><=</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{firstValue}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheet-template-diff">
+                    {{#^rollTotal() firstDiff 0}}
+                    <span>{{firstDiff}}</span>
+                    {{/^rollTotal() firstDiff 0}}
+                    {{#rollTotal() firstDiff 0}}
+                    <span>&#10004;</span>
+                    {{/rollTotal() firstDiff 0}}
+                </div>
+            </div>
+            <div class="sheet-{{second}} sheet-template-attribute">
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span style="font-family: dicefontd20">R</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{secondRoll}}</span>
+                        </div>
+                    </div>
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span><=</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{secondValue}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheet-template-diff">
+                    {{#^rollTotal() secondDiff 0}}
+                    <span>{{secondDiff}}</span>
+                    {{/^rollTotal() secondDiff 0}}
+                    {{#rollTotal() secondDiff 0}}
+                    <span>&#10004;</span>
+                    {{/rollTotal() secondDiff 0}}
+                </div>
+            </div>
+            <div class="sheet-{{third}} sheet-template-attribute">
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span style="font-family: dicefontd20">R</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{thirdRoll}}</span>
+                        </div>
+                    </div>
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <span><=</span>
+                        </div>
+                        <div class="sheet-cell">
+                            <span>{{thirdValue}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheet-template-diff">
+                    {{#^rollTotal() thirdDiff 0}}
+                    <span>{{thirdDiff}}</span>
+                    {{/^rollTotal() thirdDiff 0}}
+                    {{#rollTotal() thirdDiff 0}}
+                    <span>&#10004;</span>
+                    {{/rollTotal() thirdDiff 0}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-table">
+        <div class="sheet-row">
+            {{#rollGreater() value -1}}
+            <div class="sheet-template-result sheet-template-success">
+                {{#rollBetween() value 0 3}}
+                <span data-i18n="template_qs">QS: </span><span>1</span>
+                {{/rollBetween() value 0 3}}
+                {{#rollBetween() value 4 6}}
+                <span data-i18n="template_qs">QS: </span><span>2</span>
+                {{/rollBetween() value 4 6}}
+                {{#rollBetween() value 7 9}}
+                <span data-i18n="template_qs">QS: </span><span>3</span>
+                {{/rollBetween() value 7 9}}
+                {{#rollBetween() value 10 12}}
+                <span data-i18n="template_qs">QS: </span><span>4</span>
+                {{/rollBetween() value 10 12}}
+                {{#rollBetween() value 13 15}}
+                <span data-i18n="template_qs">QS: </span><span>5</span>
+                {{/rollBetween() value 13 15}}
+                {{#rollBetween() value 16 18}}
+                <span data-i18n="template_qs">QS: </span><span>6</span>
+                {{/rollBetween() value 16 18}}
+                {{#rollBetween() value 19 21}}
+                <span data-i18n="template_qs">QS: </span><span>7</span>
+                {{/rollBetween() value 19 21}}
+            </div>
+            {{/rollGreater() value -1}}
+            {{#rollLess() value 0}}
+            <div class="sheet-template-result sheet-template-fail">
+                <span>&#10008;</span>
+            </div>
+            {{/rollLess() value 0}}
+            {{#rollGreater() mod 0}}
+            <div class="sheet-template-result sheet-template-mod-pos">
+                <span data-i18n="template_mod">MOD: </span><span>{{mod}}</span>
+            </div>
+            {{/rollGreater() mod 0}}
+            {{#rollLess() mod 0}}
+            <div class="sheet-template-result sheet-template-mod-neg">
+                <span data-i18n="template_mod">MOD: </span><span>{{mod}}</span>
+            </div>
+            {{/rollLess() mod 0}}
+        </div>
+    </div>
+    <div class="sheet-table sheet-align-left">
+        {{#casttime}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Zauberdauer:</h4>
+                <p>{{casttime}}</p>
+            </div>
+        </div>
+        {{/casttime}}
+        {{#spellduration}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Wirkdauer:</h4>
+                <p>{{spellduration}}</p>
+            </div>
+        </div>
+        {{/spellduration}}
+        {{#spellcost}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Zauberkosten:</h4>
+                <p>{{spellcost}}</p>
+            </div>
+        </div>
+        {{/spellcost}}
+        {{#technic}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Technik:</h4>
+                <p>{{technic}}</p>
+            </div>
+        </div>
+        {{/technic}}
+        {{#result}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Wirkung:</h4>
+                <p>{{result}}</p>
+            </div>
+        </div>
+        {{/result}}
+        {{#variants}}
+        <div class="sheet-row">
+            <div class="sheet-cell">
+                <h4>Varianten/Modifikationen:</h4>
+                <p>{{variants}}</p>
+            </div>
+        </div>
+        {{/variants}}
     </div>
 </rolltemplate>
 
