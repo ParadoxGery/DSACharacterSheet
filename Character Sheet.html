@@ -66,7 +66,7 @@
                 <br>
                 <input type="number" name="attr_KK" value="8">
             </label>
-                <button type="roll" name="roll_Körperkraft" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{roll=[[1d20cs1cf20]]}} {{attr=kk}} {{value=[[@{kk} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
+                <button type="roll" name="roll_Koerperkraft" value="&{template:attribute} {{eigenschaft=Körperkraft}} {{roll=[[1d20cs1cf20]]}} {{attr=kk}} {{value=[[@{kk} +(?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}" ></button>
             </div>
             <input class="sheet-hidden" type="number" name="attr_basis_at" value="5">
             <input class="sheet-hidden" type="number" name="attr_basis_pa" value="5">
@@ -203,7 +203,93 @@
                 </div>
             </div>
         </div>
-
+        <div>
+            <p data-i18n="character_magic_desc">MAGIE</p>
+            <fieldset class="repeating_spells">
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" name="attr_name" />
+                        </div>
+                        <div class="sheet-cell">
+                            <button type="roll" name="roll_spellroll" value="&{template:spell} {{spell=@{name} }} {{spellcost=@{spellcost}}} {{spellduration=@{spellduration}}} {{technic=@{technic}}} {{result=@{result}}} {{variants=@{variants}}} {{casttime=@{casttime}}} {{value=[[ [[@{taw}]] - [[{[[1d20cs1cf20]] - [[@{attr1} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{attr2} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{attr3} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=@{attr1}}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=@{attr2}}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=@{attr3}}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} " ></button>
+                        </div>
+                        <div class="sheet-cell">
+                            <div class="sheet-table">
+                                <div class="sheet-row">
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr1">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr2">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <select name="attr_attr3">
+                                            <option value="@{MU}">MU</option>
+                                            <option value="@{KL}">KL</option>
+                                            <option value="@{IN}">IN</option>
+                                            <option value="@{CH}">CH</option>
+                                            <option value="@{FF}">FF</option>
+                                            <option value="@{GE}">GE</option>
+                                            <option value="@{KO}">KO</option>
+                                            <option value="@{KK}">KK</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" title="TAW" name="attr_taw">
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" class="sheet-navigation sheet-edit sheet-right" name="attr_edit" title="EDIT">
+                <div class="sheet-navigation sheet-edit">
+                    <div class="sheet-table">
+                        <div class="sheet-row sheet-three-col-row">
+                            <div class="sheet-cell">
+                                <input type="text" title="Zauberdauer" name="attr_casttime">
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="text" title="Zauberkosten" name="attr_spellcost">
+                            </div>
+                            <div class="sheet-cell">
+                                <input type="text" title="Wirkdauer" name="attr_spellduration">
+                            </div>
+                        </div>
+                        <div class="sheet-row sheet-three-col-row">
+                            <div class="sheet-cell">
+                                <textarea title="TECHNIK" name="attr_technic"></textarea>
+                            </div>
+                            <div class="sheet-cell">
+                                <textarea title="WIRKUNG" name="attr_result"></textarea>
+                            </div>
+                            <div class="sheet-cell">
+                                <textarea title="VARIANTEN" name="attr_variants"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
     </div>
 
     <div class="sheet-character sheet-navigation">
@@ -213,10 +299,10 @@
         <span class="sheet-navigation" data-i18n="character_talents_desc">TALENTE</span>
         <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting" name="attr_pagenumber" title="PAGE 3" value="3">
         <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-config" name="attr_pagenumber" title="PAGE 4" value="4">
-        <span class="sheet-navigation" data-i18n="character_config_desc">KONFIG</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-magic" name="attr_pagenumber" title="PAGE 5" value="5">
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-magic" name="attr_pagenumber" title="PAGE 4" value="4">
         <span class="sheet-navigation" data-i18n="character_magic_desc">MAGIE</span>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-config" name="attr_pagenumber" title="PAGE 5" value="5">
+        <span class="sheet-navigation" data-i18n="character_config_desc">KONFIG</span>
 
         <!--hidden input for talent activation TODO LABEL-->
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_bastard_sword_activate">
@@ -224,6 +310,8 @@
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_crossbow_activate">
 
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_bow_activate">
+
+        <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_sling_activate">
 
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_fencing_weapon_activate">
 
@@ -246,6 +334,8 @@
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_twohanded_baton_activate">
 
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_twohanded_swords_activate">
+
+        <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_twohanded_flails_activate">
 
 
         <!--/hidden input for talent activation-->
@@ -681,8 +771,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Körperbeherschung" value="&{template:talent} {{talent=Körperbeherschung}} {{value=[[ [[@{fw_bodycontrol}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_KörperbeherschungGM" value="/w GM &{template:talent} {{talent=Körperbeherschung}} {{value=[[ [[@{fw_bodycontrol}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Koerperbeherschung" value="&{template:talent} {{talent=Körperbeherschung}} {{value=[[ [[@{fw_bodycontrol}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_KoerperbeherschungGM" value="/w GM &{template:talent} {{talent=Körperbeherschung}} {{value=[[ [[@{fw_bodycontrol}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_riding_activate" value="1" checked>
@@ -803,8 +893,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Sich Verstecken" value="&{template:talent} {{talent=Sich Verstecken}} {{value=[[ [[@{fw_hiding}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Sich VersteckenGM" value="/w GM &{template:talent} {{talent=Sich Verstecken}} {{value=[[ [[@{fw_hiding}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SichVerstecken" value="&{template:talent} {{talent=Sich Verstecken}} {{value=[[ [[@{fw_hiding}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SichVersteckenGM" value="/w GM &{template:talent} {{talent=Sich Verstecken}} {{value=[[ [[@{fw_hiding}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-singing">
@@ -851,8 +941,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Sinnenschärfe" value="&{template:talent} {{talent=Sinnenschärfe}} {{value=[[ [[@{fw_senses}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_SinnenschärfeGM" value="/w GM &{template:talent} {{talent=Sinnenschärfe}} {{value=[[ [[@{fw_senses}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Sinnenschaerfe" value="&{template:talent} {{talent=Sinnenschärfe}} {{value=[[ [[@{fw_senses}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SinnenschaerfeGM" value="/w GM &{template:talent} {{talent=Sinnenschärfe}} {{value=[[ [[@{fw_senses}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_skiing_activate" value="1" checked>
@@ -901,8 +991,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Stimmen Imitieren" value="&{template:talent} {{talent=Stimmen Imitieren}} {{value=[[ [[@{fw_voiceacting}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Stimmen ImitierenGM" value="/w GM &{template:talent} {{talent=Stimmen Imitieren}} {{value=[[ [[@{fw_voiceacting}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_StimmenImitieren" value="&{template:talent} {{talent=Stimmen Imitieren}} {{value=[[ [[@{fw_voiceacting}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_StimmenImitierenGM" value="/w GM &{template:talent} {{talent=Stimmen Imitieren}} {{value=[[ [[@{fw_voiceacting}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-dancing">
@@ -1020,8 +1110,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Betören" value="&{template:talent} {{talent=Betören}} {{value=[[ [[@{fw_bewitching}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_BetörenGM" value="/w GM &{template:talent} {{talent=Betören}} {{value=[[ [[@{fw_bewitching}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Betoeren" value="&{template:talent} {{talent=Betören}} {{value=[[ [[@{fw_bewitching}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_BetoerenGM" value="/w GM &{template:talent} {{talent=Betören}} {{value=[[ [[@{fw_bewitching}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_etiquette_activate" value="1" checked>
@@ -1169,8 +1259,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Schriftlicher Ausdruck" value="&{template:talent} {{talent=Schriftlicher Ausdruck}} {{value=[[ [[@{fw_writing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Schriftlicher AusdruckGM" value="/w GM &{template:talent} {{talent=Schriftlicher Ausdruck}} {{value=[[ [[@{fw_writing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SchriftlicherAusdruck" value="&{template:talent} {{talent=Schriftlicher Ausdruck}} {{value=[[ [[@{fw_writing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SchriftlicherAusdruckGM" value="/w GM &{template:talent} {{talent=Schriftlicher Ausdruck}} {{value=[[ [[@{fw_writing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_disguising_activate" value="1" checked>
@@ -1194,8 +1284,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Sich Verkleiden" value="&{template:talent} {{talent=Sich Verkleiden}} {{value=[[ [[@{fw_disguising}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Sich VerkleidenGM" value="/w GM &{template:talent} {{talent=Sich Verkleiden}} {{value=[[ [[@{fw_disguising}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SichVerkleiden" value="&{template:talent} {{talent=Sich Verkleiden}} {{value=[[ [[@{fw_disguising}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SichVerkleidenGM" value="/w GM &{template:talent} {{talent=Sich Verkleiden}} {{value=[[ [[@{fw_disguising}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ge}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-persuading">
@@ -1218,8 +1308,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Überreden" value="&{template:talent} {{talent=Überreden}} {{value=[[ [[@{fw_persuading}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_ÜberredenGM" value="/w GM &{template:talent} {{talent=Überreden}} {{value=[[ [[@{fw_persuading}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_ueberreden" value="&{template:talent} {{talent=Überreden}} {{value=[[ [[@{fw_persuading}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_ueberredenGM" value="/w GM &{template:talent} {{talent=Überreden}} {{value=[[ [[@{fw_persuading}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_convincing_activate" value="1" checked>
@@ -1243,8 +1333,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Überzeugen" value="&{template:talent} {{talent=Überzeugen}} {{value=[[ [[@{fw_convincing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_ÜberzeugenGM" value="/w GM &{template:talent} {{talent=Überzeugen}} {{value=[[ [[@{fw_convincing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_ueberzeugen" value="&{template:talent} {{talent=Überzeugen}} {{value=[[ [[@{fw_convincing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_ueberzeugenGM" value="/w GM &{template:talent} {{talent=Überzeugen}} {{value=[[ [[@{fw_convincing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <!--/social talents-->
@@ -1288,8 +1378,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Fährtensuche" value="&{template:talent} {{talent=Fährtensuche}} {{value=[[ [[@{fw_tracking}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_FährtensucheGM" value="/w GM &{template:talent} {{talent=Fährtensuche}} {{value=[[ [[@{fw_tracking}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Faehrtensuche" value="&{template:talent} {{talent=Fährtensuche}} {{value=[[ [[@{fw_tracking}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_FaehrtensucheGM" value="/w GM &{template:talent} {{talent=Fährtensuche}} {{value=[[ [[@{fw_tracking}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_trapping_activate" value="1" checked>
@@ -1579,8 +1669,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Brett-/Kartenspiel" value="&{template:talent} {{talent=Brett-/Kartenspiel}} {{value=[[ [[@{fw_board_card_game_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Brett-/KartenspielGM" value="/w GM &{template:talent} {{talent=Brett-/Kartenspiel}} {{value=[[ [[@{fw_board_card_game_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_BrettKartenspiel" value="&{template:talent} {{talent=Brett-/Kartenspiel}} {{value=[[ [[@{fw_board_card_game_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_BrettKartenspielGM" value="/w GM &{template:talent} {{talent=Brett-/Kartenspiel}} {{value=[[ [[@{fw_board_card_game_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_geography_activate" value="1" checked>
@@ -1678,8 +1768,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Götter/Kulte" value="&{template:talent} {{talent=Götter/Kulte}} {{value=[[ [[@{fw_gods_cults}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Götter/KulteGM" value="/w GM &{template:talent} {{talent=Götter/Kulte}} {{value=[[ [[@{fw_gods_cults}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_GoetterKulte" value="&{template:talent} {{talent=Götter/Kulte}} {{value=[[ [[@{fw_gods_cults}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_GoetterKulteGM" value="/w GM &{template:talent} {{talent=Götter/Kulte}} {{value=[[ [[@{fw_gods_cults}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_heraldry_activate" value="1" checked>
@@ -1728,8 +1818,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Hüttenkunde" value="&{template:talent} {{talent=Hüttenkunde}} {{value=[[ [[@{fw_metallurgy}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_HüttenkundeGM" value="/w GM &{template:talent} {{talent=Hüttenkunde}} {{value=[[ [[@{fw_metallurgy}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Huettenkunde" value="&{template:talent} {{talent=Hüttenkunde}} {{value=[[ [[@{fw_metallurgy}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_HuettenkundeGM" value="/w GM &{template:talent} {{talent=Hüttenkunde}} {{value=[[ [[@{fw_metallurgy}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_war_wise_activate" value="1" checked>
@@ -1951,8 +2041,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Sagen/Legenden" value="&{template:talent} {{talent=Sagen/Legenden}} {{value=[[ [[@{fw_legend_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Sagen/LegendenGM" value="/w GM &{template:talent} {{talent=Sagen/Legenden}} {{value=[[ [[@{fw_legend_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SagenLegenden" value="&{template:talent} {{talent=Sagen/Legenden}} {{value=[[ [[@{fw_legend_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SagenLegendenGM" value="/w GM &{template:talent} {{talent=Sagen/Legenden}} {{value=[[ [[@{fw_legend_wise}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_estimating_activate" value="1" checked>
@@ -1976,8 +2066,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Schätzen" value="&{template:talent} {{talent=Schätzen}} {{value=[[ [[@{fw_estimating}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_SchätzenGM" value="/w GM &{template:talent} {{talent=Schätzen}} {{value=[[ [[@{fw_estimating}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Schaetzen" value="&{template:talent} {{talent=Schätzen}} {{value=[[ [[@{fw_estimating}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SchaetzenGM" value="/w GM &{template:talent} {{talent=Schätzen}} {{value=[[ [[@{fw_estimating}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_language_wise_activate" value="1" checked>
@@ -2246,8 +2336,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Boote Fahren" value="&{template:talent} {{talent=Boote Fahren}} {{value=[[ [[@{fw_boat_driving}]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=ge}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ko}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Boote FahrenGM" value="/w GM &{template:talent} {{talent=Boote Fahren}} {{value=[[ [[@{fw_boat_driving}]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=ge}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ko}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_BooteFahren" value="&{template:talent} {{talent=Boote Fahren}} {{value=[[ [[@{fw_boat_driving}]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=ge}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ko}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_BooteFahrenGM" value="/w GM &{template:talent} {{talent=Boote Fahren}} {{value=[[ [[@{fw_boat_driving}]] - [[{[[1d20cs1cf20]] - [[@{ge} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=ge}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ko}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_brewing_activate" value="1" checked>
@@ -2321,8 +2411,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Fahrzeuge Lenken" value="&{template:talent} {{talent=Fahrzeuge Lenken}} {{value=[[ [[@{fw_vehicle_driving}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Fahrzeuge LenkenGM" value="/w GM &{template:talent} {{talent=Fahrzeuge Lenken}} {{value=[[ [[@{fw_vehicle_driving}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_FahrzeugeLenken" value="&{template:talent} {{talent=Fahrzeuge Lenken}} {{value=[[ [[@{fw_vehicle_driving}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_FahrzeugeLenkenGM" value="/w GM &{template:talent} {{talent=Fahrzeuge Lenken}} {{value=[[ [[@{fw_vehicle_driving}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cheating_activate" value="1" checked>
@@ -2446,8 +2536,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Gerber/Kürschner" value="&{template:talent} {{talent=Gerber/Kürschner}} {{value=[[ [[@{fw_skinning}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Gerber/KürschnerGM" value="/w GM &{template:talent} {{talent=Gerber/Kürschner}} {{value=[[ [[@{fw_skinning}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_GerberKuerschner" value="&{template:talent} {{talent=Gerber/Kürschner}} {{value=[[ [[@{fw_skinning}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_GerberKuerschnerGM" value="/w GM &{template:talent} {{talent=Gerber/Kürschner}} {{value=[[ [[@{fw_skinning}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ko} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ko}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_glass_art_activate" value="1" checked>
@@ -2571,8 +2661,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Helkunde Gift" value="&{template:talent} {{talent=Helkunde Gift}} {{value=[[ [[@{fw_poison_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Helkunde GiftGM" value="/w GM &{template:talent} {{talent=Helkunde Gift}} {{value=[[ [[@{fw_poison_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_HelkundeGift" value="&{template:talent} {{talent=Helkunde Gift}} {{value=[[ [[@{fw_poison_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_HelkundeGiftGM" value="/w GM &{template:talent} {{talent=Helkunde Gift}} {{value=[[ [[@{fw_poison_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=in}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_illness_medicine_activate" value="1" checked>
@@ -2596,8 +2686,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Heilkunde Krankheiten" value="&{template:talent} {{talent=Heilkunde Krankheiten}} {{value=[[ [[@{fw_illness_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Heilkunde KrankheitenGM" value="/w GM &{template:talent} {{talent=Heilkunde Krankheiten}} {{value=[[ [[@{fw_illness_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_HeilkundeKrankheiten" value="&{template:talent} {{talent=Heilkunde Krankheiten}} {{value=[[ [[@{fw_illness_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_HeilkundeKrankheitenGM" value="/w GM &{template:talent} {{talent=Heilkunde Krankheiten}} {{value=[[ [[@{fw_illness_medicine}]] - [[{[[1d20cs1cf20]] - [[@{mu} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=mu}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=kl}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-wound-medicine">
@@ -2620,8 +2710,33 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Heilkunde Wunden" value="&{template:talent} {{talent=Heilkunde Wunden}} {{value=[[ [[@{fw_wound_medicine}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Heilkunde WundenGM" value="/w GM &{template:talent} {{talent=Heilkunde Wunden}} {{value=[[ [[@{fw_wound_medicine}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_HeilkundeWunden" value="&{template:talent} {{talent=Heilkunde Wunden}} {{value=[[ [[@{fw_wound_medicine}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_HeilkundeWundenGM" value="/w GM &{template:talent} {{talent=Heilkunde Wunden}} {{value=[[ [[@{fw_wound_medicine}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_illness_medicine_activate" value="1" checked>
+                            <div class="sheet-row sheet-talent-soul-medicine sheet-activate">
+                                <div class="sheet-cell">
+                                    <!--TALENT-->
+                                    <span data-i18n="character_soul-medicine_desc">Heilkunde Seele</span>
+                                </div>
+                                <div class="sheet-cell">
+                                    <!--PROBE-->
+                                    <span data-i18n="character_soul-medicine_test">IN/CH/CH</span>
+                                </div>
+                                <div class="sheet-cell">
+                                    <!--FW-->
+                                    <input type="number" title="FW" name="attr_fw_soul_medicine">
+                                </div>
+                                <div class="sheet-cell">
+                                    <!--INFO-->
+
+                                    <!--TODO info popup-->
+                                </div>
+                                <div class="sheet-cell">
+                                    <!--ROLL-->
+                                    ​<button type="roll" name="roll_Heilkunde_Seele" value="&{template:talent} {{talent=Heilkunde Seele}} {{value=[[ [[@{fw_soul_medicine}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_Heilkunde_SeeleGM" value="/w GM &{template:talent} {{talent=Heilkunde Seele}} {{value=[[ [[@{fw_soul_medicine}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ch}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-wood-crafting">
@@ -2791,8 +2906,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Malen/Zeichnen" value="&{template:talent} {{talent=Malen/Zeichnen}} {{value=[[ [[@{fw_drawing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Malen/ZeichnenGM" value="/w GM &{template:talent} {{talent=Malen/Zeichnen}} {{value=[[ [[@{fw_drawing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_MalenZeichnen" value="&{template:talent} {{talent=Malen/Zeichnen}} {{value=[[ [[@{fw_drawing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_MalenZeichnenGM" value="/w GM &{template:talent} {{talent=Malen/Zeichnen}} {{value=[[ [[@{fw_drawing}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_bricklayer_activate" value="1" checked>
@@ -2891,8 +3006,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Schlösser Knacken" value="&{template:talent} {{talent=Schlösser Knacken}} {{value=[[ [[@{fw_lock_picking}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Schlösser KnackenGM" value="/w GM &{template:talent} {{talent=Schlösser Knacken}} {{value=[[ [[@{fw_lock_picking}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SchloesserKnacken" value="&{template:talent} {{talent=Schlösser Knacken}} {{value=[[ [[@{fw_lock_picking}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SchloesserKnackenGM" value="/w GM &{template:talent} {{talent=Schlösser Knacken}} {{value=[[ [[@{fw_lock_picking}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_distill_activate" value="1" checked>
@@ -2916,8 +3031,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Schnaps Brennen" value="&{template:talent} {{talent=Schnaps Brennen}} {{value=[[ [[@{fw_distill}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Schnaps BrennenGM" value="/w GM &{template:talent} {{talent=Schnaps Brennen}} {{value=[[ [[@{fw_distill}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SchnapsBrennen" value="&{template:talent} {{talent=Schnaps Brennen}} {{value=[[ [[@{fw_distill}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SchnapsBrennenGM" value="/w GM &{template:talent} {{talent=Schnaps Brennen}} {{value=[[ [[@{fw_distill}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=in}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <div class="sheet-row sheet-talent-tailoring">
@@ -3040,8 +3155,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Steinschneider/Juwelier" value="&{template:talent} {{talent=Steinschneider/Juwelier}} {{value=[[ [[@{fw_jeweler}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Steinschneider/JuwelierGM" value="/w GM &{template:talent} {{talent=Steinschneider/Juwelier}} {{value=[[ [[@{fw_jeweler}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_SteinschneiderJuwelier" value="&{template:talent} {{talent=Steinschneider/Juwelier}} {{value=[[ [[@{fw_jeweler}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_SteinschneiderJuwelierGM" value="/w GM &{template:talent} {{talent=Steinschneider/Juwelier}} {{value=[[ [[@{fw_jeweler}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_cartwright_activate" value="1" checked>
@@ -3090,8 +3205,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Stoffe Färben" value="&{template:talent} {{talent=Stoffe Färben}} {{value=[[ [[@{fw_colorize}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_Stoffe FärbenGM" value="/w GM &{template:talent} {{talent=Stoffe Färben}} {{value=[[ [[@{fw_colorize}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_StoffeFaerben" value="&{template:talent} {{talent=Stoffe Färben}} {{value=[[ [[@{fw_colorize}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_StoffeFaerbenGM" value="/w GM &{template:talent} {{talent=Stoffe Färben}} {{value=[[ [[@{fw_colorize}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{kk} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=kk}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_tattooer_activate" value="1" checked>
@@ -3115,8 +3230,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Tätowierer" value="&{template:talent} {{talent=Tätowierer}} {{value=[[ [[@{fw_tattooer}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_TätowiererGM" value="/w GM &{template:talent} {{talent=Tätowierer}} {{value=[[ [[@{fw_tattooer}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Taetowierer" value="&{template:talent} {{talent=Tätowierer}} {{value=[[ [[@{fw_tattooer}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_TaetowiererGM" value="/w GM &{template:talent} {{talent=Tätowierer}} {{value=[[ [[@{fw_tattooer}]] - [[{[[1d20cs1cf20]] - [[@{in} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=in}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_potter_activate" value="1" checked>
@@ -3140,8 +3255,8 @@
                                 </div>
                                 <div class="sheet-cell">
                                     <!--ROLL-->
-                                    ​<button type="roll" name="roll_Töpfer" value="&{template:talent} {{talent=Töpfer}} {{value=[[ [[@{fw_potter}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
-                                    ​<button type="roll" name="roll_TöpferGM" value="/w GM &{template:talent} {{talent=Töpfer}} {{value=[[ [[@{fw_potter}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
+                                    ​<button type="roll" name="roll_Toepfer" value="&{template:talent} {{talent=Töpfer}} {{value=[[ [[@{fw_potter}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}"></button>
+                                    ​<button type="roll" name="roll_ToepferGM" value="/w GM &{template:talent} {{talent=Töpfer}} {{value=[[ [[@{fw_potter}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ff}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
                             <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_breeding_activate" value="1" checked>
@@ -3475,17 +3590,19 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_AT1" value="&{template:combat} {{dmg=TP1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_1_at} + (@{at_mod}) - (@{armor_be})]]}}" >AT</button>
+                                    <button type="roll" name="roll_AT1" value="&{template:combat} {{dmg=TP1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_1_at} + (@{at_mod}) ]]}}" >AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_TP1" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp}]]}}" >TP</button>
                                 </div>
+                                <!--
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MAT1" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_1_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
+                                    <button type="roll" name="roll_MAT1" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_1_at} + (@{at_mod}) )*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MTP1" value="&{template:tp} {{damage=[[@{melee_weapon_1_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
+                                -->
                             </div>
                             <div class="sheet-row">
                                 <div class="sheet-cell">
@@ -3504,7 +3621,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_PA1" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_1_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >PA</button>
+                                    <button type="roll" name="roll_PA1" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_1_pa} + (@{pa_mod}) ]]}}" >PA</button>
                                 </div>
                                 <div class="sheet-cell">
                                     <input type="checkbox" title="Schild?" name="attr_use_shield" value="1">
@@ -3517,10 +3634,43 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-navigation sheet-use-shield sheet-fighting-roll">
-                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >S-PA</button>
+                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) ]]}}" >S-PA</button>
                                 </div>
                             </div>
                         </div>
+
+                        <fieldset class="repeating_moves_one">
+                            <div class="sheet-table sheet-padded">
+                                <div class="sheet-row">
+                                    <div class="sheet-cell">
+                                        <input type="text" name="attr_move" title="Manöver">
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP1}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_1_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="sheet-navigation sheet-edit sheet-right" name="attr_edit" title="EDIT">
+                            <div class="sheet-navigation sheet-edit">
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <input type="number" title="Manövermodifikator" name="attr_move_mod">
+                                        </div>
+                                        <div class="sheet-cell">
+                                            <input type="text" title="Wirkung der Ansage" name="attr_callresult">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <textarea title="Wirkung" name="attr_move_info"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
                     <!--/weapon 1 roll-->
 
@@ -3545,13 +3695,13 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_AT2" value="&{template:combat} {{dmg=TP1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_at} + (@{at_mod}) - (@{armor_be})]]}}" >AT</button>
+                                    <button type="roll" name="roll_AT2" value="&{template:combat} {{dmg=TP1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_at} + (@{at_mod}) ]]}}" >AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_TP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MAT2" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
+                                    <button type="roll" name="roll_MAT2" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) )*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MTP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
@@ -3574,7 +3724,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_PA2" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >PA</button>
+                                    <button type="roll" name="roll_PA2" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_pa} + (@{pa_mod}) ]]}}" >PA</button>
                                 </div>
                                 <div class="sheet-cell">
                                     <input type="checkbox" title="Schild?" name="attr_use_shield" value="1">
@@ -3587,7 +3737,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-navigation sheet-use-shield sheet-fighting-roll">
-                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >S-PA</button>
+                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) ]]}}" >S-PA</button>
                                 </div>
                             </div>
                         </div>
@@ -3615,13 +3765,13 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_AT3" value="&{template:combat} {{dmg=TP3}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_at} + (@{at_mod}) - (@{armor_be})]]}}" >AT</button>
+                                    <button type="roll" name="roll_AT3" value="&{template:combat} {{dmg=TP3}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_at} + (@{at_mod}) ]]}}" >AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_TP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_MAT3" value="&{template:combat} {{dmg=MTP3}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) - (@{armor_be}))*?{AT multiplikator|1})]]}}" >M-AT</button>
+                                    <button type="roll" name="roll_MAT3" value="&{template:combat} {{dmg=MTP3}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) )*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MTP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
@@ -3644,7 +3794,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_PA3" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >PA</button>
+                                    <button type="roll" name="roll_PA3" value="&{template:combat} {{pa=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_pa} + (@{pa_mod}) ]]}}" >PA</button>
                                 </div>
                                 <div class="sheet-cell">
                                     <input type="checkbox" title="Schild?" name="attr_use_shield" value="1">
@@ -3657,7 +3807,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-navigation sheet-use-shield sheet-fighting-roll">
-                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) - (@{armor_be})]]}}" >S-PA</button>
+                                    <button type="roll" name="roll_PAS" value="&{template:combat} {{shield=1}} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}} {{value=[[@{shield_pa} + (@{pa_mod}) ]]}}" >S-PA</button>
                                 </div>
                             </div>
                         </div>
@@ -3870,7 +4020,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_FK1" value="&{template:combat} {{dmg=FTP1}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_1_fk} + (@{fk_mod}) - (@{armor_be})]]}}" >FK</button>
+                                    <button type="roll" name="roll_FK1" value="&{template:combat} {{dmg=FTP1}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_1_fk} + (@{fk_mod}) ]]}}" >FK</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_FTP1" value="&{template:tp} {{damage=[[@{ranged_weapon_1_tp}+?{Range TP+| @{ranged_weapon_1_ranges_1}, @{ranged_weapon_1_tp+_1} | @{ranged_weapon_1_ranges_2}, @{ranged_weapon_1_tp+_2} | @{ranged_weapon_1_ranges_3}, @{ranged_weapon_1_tp+_3} | @{ranged_weapon_1_ranges_4}, @{ranged_weapon_1_tp+_4} | @{ranged_weapon_1_ranges_5}, @{ranged_weapon_1_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
@@ -3904,7 +4054,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_FK2" value="&{template:combat} {{dmg=FTP2}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_2_fk} + (@{fk_mod}) - (@{armor_be})]]}}" >FK</button>
+                                    <button type="roll" name="roll_FK2" value="&{template:combat} {{dmg=FTP2}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_2_fk} + (@{fk_mod}) ]]}}" >FK</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_FTP2" value="&{template:tp} {{damage=[[@{ranged_weapon_2_tp}+?{Range TP+| @{ranged_weapon_2_ranges_1}, @{ranged_weapon_2_tp+_1} | @{ranged_weapon_2_ranges_2}, @{ranged_weapon_2_tp+_2} | @{ranged_weapon_2_ranges_3}, @{ranged_weapon_2_tp+_3} | @{ranged_weapon_2_ranges_4}, @{ranged_weapon_2_tp+_4} | @{ranged_weapon_2_ranges_5}, @{ranged_weapon_2_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
@@ -3938,7 +4088,7 @@
                                     </label>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
-                                    <button type="roll" name="roll_FK3" value="&{template:combat} {{dmg=FTP3}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_3_fk} + (@{fk_mod}) - (@{armor_be})]]}}" >FK</button>
+                                    <button type="roll" name="roll_FK3" value="&{template:combat} {{dmg=FTP3}} {{character=@{character_name}}} {{fk=1}} {{weapon=@{ranged_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{ranged_weapon_3_fk} + (@{fk_mod}) ]]}}" >FK</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_FTP3" value="&{template:tp} {{damage=[[@{ranged_weapon_3_tp}+?{Range TP+| @{ranged_weapon_3_ranges_1}, @{ranged_weapon_3_tp+_1} | @{ranged_weapon_3_ranges_2}, @{ranged_weapon_3_tp+_2} | @{ranged_weapon_3_ranges_3}, @{ranged_weapon_3_tp+_3} | @{ranged_weapon_3_ranges_4}, @{ranged_weapon_3_tp+_4} | @{ranged_weapon_3_ranges_5}, @{ranged_weapon_3_tp+_5}} + @{bonus_ftp}]] }}" >TP</button>
@@ -3983,7 +4133,7 @@
                                 </label>
                             </div>
                             <div class="sheet-cell sheet-fighting-roll">
-                                <button type="roll" name="roll_BrawlAT" value="&{template:combat} {{dmg=BrawlTP}} {{character=@{character_name}}} {{at=1}} {{weapon=Raufen }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{at_brawl} + (@{at_brawl_mod}) - (@{armor_be}) - (2*@{wounds})]]}}" >AT</button>
+                                <button type="roll" name="roll_BrawlAT" value="&{template:combat} {{dmg=BrawlTP}} {{character=@{character_name}}} {{at=1}} {{weapon=Raufen }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{at_brawl} + (@{at_brawl_mod})  - (2*@{wounds})]]}}" >AT</button>
                             </div>
                             <div class="sheet-cell sheet-fighting-roll">
                                 <button type="roll" name="roll_BrawlTP" value="&{template:tp} {{damage=[[@{brawl_dmg}]]}}" >TP</button>
@@ -4835,7 +4985,6 @@
         </div>
         <div class="sheet-magic sheet-navigation">
             <fieldset class="repeating_spells">
-                <!-- TODO edit checkbox -->
                 <div class="sheet-table">
                     <div class="sheet-row">
                         <div class="sheet-cell">
@@ -5274,7 +5423,7 @@
         {{/fk}}
         {{#move}}
         <div class="sheet-template-subhead">
-            <span data-i18n="template_move">Manöver</span>
+            <span data-i18n="template_move">{{move}}</span>
         </div>
         {{/move}}
         {{#shield}}
@@ -5297,14 +5446,39 @@
             </div>
         </div>
     </div>
+    {{#rollGreater() roll value}}
     <div class="sheet-table">
         <div class="sheet-row">
-            {{#rollGreater() roll value}}
             <div class="sheet-template-result sheet-template-fail">
                 <span>&#10008;</span>
             </div>
-            {{/rollGreater() roll value}}
-            {{#^rollGreater() roll value}}
+        </div>
+    </div>
+    {{/rollGreater() roll value}}
+    {{#^rollGreater() roll value}}
+    {{#callresult}}
+    <div class="sheet-table">
+        <div class="sheet-row">
+            <div class="sheet-template-result">
+                <p>{{callresult}}:</p>
+            </div>
+            <div class="sheet-template-result">
+                <p>{{call}}</p>
+            </div>
+        </div>
+    </div>
+    {{/callresult}}
+    {{#info}}
+    <div class="sheet-table">
+        <div class="sheet-row">
+            <div class="sheet-template-result">
+                <p>{{info}}</p>
+            </div>
+        </div>
+    </div>
+    {{/info}}
+    <div class="sheet-table">
+        <div class="sheet-row">
             <div class="sheet-template-result sheet-template-success">
                 <span>&#10004;</span>
             </div>
@@ -5318,9 +5492,10 @@
                 {{/^rollWasCrit() roll}}
             </div>
             {{/dmg}}
-            {{/^rollGreater() roll value}}
         </div>
     </div>
+    {{/^rollGreater() roll value}}
+
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-tp">
@@ -5730,25 +5905,28 @@ on("change:active_ranged_weapon",function(){
     });
 });
 
-var meleeTriggers = " change:basis_at change:basis_pa change:wounds";
+var meleeTriggers = " change:basis_at change:basis_pa change:wounds change:armor_be";
 meleeTriggers +=    " change:at_bastard_sword change:pa_bastard_sword";
 meleeTriggers +=    " change:at_dagger change:pa_dagger";
 meleeTriggers +=    " change:at_fencing_weapons change:pa_fencing_weapons";
 meleeTriggers +=    " change:at_baton change:pa_baton";
 meleeTriggers +=    " change:at_infantry_weapons change:pa_infantry_weapons";
+meleeTriggers +=    " change:at_chain_staff_weapons change:pa_chain_staff_weapons";
 meleeTriggers +=    " change:at_chain_weapons change:pa_chain_weapons";
 meleeTriggers +=    " change:at_lancing change:pa_lancing";
+meleeTriggers +=    " change:at_whip change:pa:whip";
 meleeTriggers +=    " change:at_sabre change:pa_sabre";
 meleeTriggers +=    " change:at_sword change:pa_sword";
 meleeTriggers +=    " change:at_spear change:pa_spear";
 meleeTriggers +=    " change:at_staff change:pa_staff";
+meleeTriggers +=    " change:at_twohanded_flails change:pa_twohanded_flails";
 meleeTriggers +=    " change:at_twohanded_baton change:pa_twohanded_baton";
 meleeTriggers +=    " change:at_twohanded_swords change:pa_twohanded_swords";
 
 on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapon_1_talent" + meleeTriggers,function(){
     var weapon_at = 0;
     var weapon_pa = 0;
-    getAttrs(["melee_weapon_1_at_mod", "melee_weapon_1_pa_mod", "melee_weapon_1_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+    getAttrs(["melee_weapon_1_at_mod", "melee_weapon_1_pa_mod", "melee_weapon_1_talent", "basis_at", "basis_pa"],function(values) {
         getWeaponTalentValues(values.melee_weapon_1_talent,function(talent) {
             weapon_at += parseInt(values.melee_weapon_1_at_mod);
             weapon_at += parseInt(values.basis_at);
@@ -5757,7 +5935,6 @@ on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapo
             weapon_pa += parseInt(values.melee_weapon_1_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
-            weapon_pa -= 2*parseInt(values.wounds);
 
             setAttrs({
                 melee_weapon_1_at: weapon_at,
@@ -5770,7 +5947,7 @@ on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapo
 on("change:melee_weapon_2_at_mod change:melee_weapon_2_pa_mod change:melee_weapon_2_talent" + meleeTriggers,function(){
     var weapon_at = 0;
     var weapon_pa = 0;
-    getAttrs(["melee_weapon_2_at_mod", "melee_weapon_2_pa_mod", "melee_weapon_2_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+    getAttrs(["melee_weapon_2_at_mod", "melee_weapon_2_pa_mod", "melee_weapon_2_talent", "basis_at", "basis_pa"],function(values) {
         getWeaponTalentValues(values.melee_weapon_2_talent,function(talent) {
             weapon_at += parseInt(values.melee_weapon_2_at_mod);
             weapon_at += parseInt(values.basis_at);
@@ -5779,7 +5956,6 @@ on("change:melee_weapon_2_at_mod change:melee_weapon_2_pa_mod change:melee_weapo
             weapon_pa += parseInt(values.melee_weapon_2_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
-            weapon_pa -= 2*parseInt(values.wounds);
 
             setAttrs({
                 melee_weapon_2_at: weapon_at,
@@ -5792,7 +5968,7 @@ on("change:melee_weapon_2_at_mod change:melee_weapon_2_pa_mod change:melee_weapo
 on("change:melee_weapon_3_at_mod change:melee_weapon_3_pa_mod change:melee_weapon_3_talent" + meleeTriggers,function(){
     var weapon_at = 0;
     var weapon_pa = 0;
-    getAttrs(["melee_weapon_3_at_mod", "melee_weapon_3_pa_mod", "melee_weapon_3_talent", "wounds", "basis_at", "basis_pa"],function(values) {
+    getAttrs(["melee_weapon_3_at_mod", "melee_weapon_3_pa_mod", "melee_weapon_3_talent", "basis_at", "basis_pa"],function(values) {
         getWeaponTalentValues(values.melee_weapon_3_talent,function(talent) {
             weapon_at += parseInt(values.melee_weapon_3_at_mod);
             weapon_at += parseInt(values.basis_at);
@@ -5801,7 +5977,6 @@ on("change:melee_weapon_3_at_mod change:melee_weapon_3_pa_mod change:melee_weapo
             weapon_pa += parseInt(values.melee_weapon_3_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
-            weapon_pa -= 2*parseInt(values.wounds);
 
             setAttrs({
                 melee_weapon_3_at: weapon_at,
@@ -5813,15 +5988,23 @@ on("change:melee_weapon_3_at_mod change:melee_weapon_3_pa_mod change:melee_weapo
 
 //---ranged weapons---//
 
-var rangedTriggers = " change:basis_fk change:wounds change:fw_crossbow change:fw_bow change:fw_throwing_axe change:fw_throwing_knife change:fw_throwing_spear";
+var rangedTriggers =    " change:armor_be change:basis_fk change:wounds" +
+                        " change:fw_crossbow" +
+                        " change:fw_siege_weapons" +
+                        " change:fw_blowgun" +
+                        " change:fw_bow" +
+                        " change:fw_discus" +
+                        " change:fw_sling" +
+                        " change:fw_throwing_axe" +
+                        " change:fw_throwing_knife" +
+                        " change:fw_throwing_spear";
 
 on("change:ranged_weapon_1_talent" + rangedTriggers,function(){
     var weapon_fk = 0;
-    getAttrs(["ranged_weapon_1_talent", "basis_fk", "wounds"],function(values) {
+    getAttrs(["ranged_weapon_1_talent", "basis_fk"],function(values) {
         getWeaponTalentValues(values.ranged_weapon_1_talent,function(talent){
             weapon_fk += parseInt(values.basis_fk);
             weapon_fk += talent.fw;
-            weapon_fk -= 2*parseInt(values.wounds);
             
             setAttrs({
                 ranged_weapon_1_fk: weapon_fk
@@ -5832,11 +6015,10 @@ on("change:ranged_weapon_1_talent" + rangedTriggers,function(){
 
 on("change:ranged_weapon_2_talent" + rangedTriggers,function(){
     var weapon_fk = 0;
-    getAttrs(["ranged_weapon_2_talent", "basis_fk", "wounds"],function(values) {
+    getAttrs(["ranged_weapon_2_talent", "basis_fk"],function(values) {
         getWeaponTalentValues(values.ranged_weapon_2_talent,function(talent){
             weapon_fk += parseInt(values.basis_fk);
             weapon_fk += talent.fw;
-            weapon_fk -= 2*parseInt(values.wounds);
             
             setAttrs({
                 ranged_weapon_2_fk: weapon_fk
@@ -5847,11 +6029,10 @@ on("change:ranged_weapon_2_talent" + rangedTriggers,function(){
 
 on("change:ranged_weapon_3_talent" + rangedTriggers,function(){
     var weapon_fk = 0;
-    getAttrs(["ranged_weapon_3_talent", "basis_fk", "wounds"],function(values) {
+    getAttrs(["ranged_weapon_3_talent", "basis_fk"],function(values) {
         getWeaponTalentValues(values.ranged_weapon_3_talent,function(talent){
             weapon_fk += parseInt(values.basis_fk);
             weapon_fk += talent.fw;
-            weapon_fk -= 2*parseInt(values.wounds);
 
             setAttrs({
                 ranged_weapon_3_fk: weapon_fk
@@ -5870,10 +6051,11 @@ var getWeaponTalentValues = function(talentname,callback) {
     var atName = "at_"+talentname;
     var paName = "pa_"+talentname;
     var fwName = "fw_"+talentname;
-    getAttrs([atName,paName,fwName],function(values){
-        result.at = parseInt(values[atName]);
-        result.pa = parseInt(values[paName]);
-        result.fw = parseInt(values[fwName]);
+    getAttrs([atName,paName,fwName, "wounds", "armor_be"],function(values){
+        var mod = 2*parseInt(values.wounds) + parseInt(values.armor_be);
+        result.at = parseInt(values[atName]) - mod;
+        result.pa = parseInt(values[paName]) - mod;
+        result.fw = parseInt(values[fwName]) - mod;
         callback(result);
     });
 }
