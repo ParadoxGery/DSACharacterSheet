@@ -3700,12 +3700,14 @@
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_TP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp}]]}}" >TP</button>
                                 </div>
+                                <!--
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MAT2" value="&{template:combat} {{dmg=MTP1}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) )*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MTP2" value="&{template:tp} {{damage=[[@{melee_weapon_2_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
+                                -->
                             </div>
                             <div class="sheet-row">
                                 <div class="sheet-cell">
@@ -3741,6 +3743,38 @@
                                 </div>
                             </div>
                         </div>
+                        <fieldset class="repeating_moves_one">
+                            <div class="sheet-table sheet-padded">
+                                <div class="sheet-row">
+                                    <div class="sheet-cell">
+                                        <input type="text" name="attr_move" title="Manöver">
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP2}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="sheet-navigation sheet-edit sheet-right" name="attr_edit" title="EDIT">
+                            <div class="sheet-navigation sheet-edit">
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <input type="number" title="Manövermodifikator" name="attr_move_mod">
+                                        </div>
+                                        <div class="sheet-cell">
+                                            <input type="text" title="Wirkung der Ansage" name="attr_callresult">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <textarea title="Wirkung" name="attr_move_info"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
                     <!--/weapon 2 roll-->
 
@@ -3770,12 +3804,14 @@
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_TP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp}]]}}" >TP</button>
                                 </div>
+                                <!--
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MAT3" value="&{template:combat} {{dmg=MTP3}} {{move=1}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20 - (?{Erleichtert(+) / Erschwert(-)|0})]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) )*?{AT multiplikator|1})]]}}" >M-AT</button>
                                 </div>
                                 <div class="sheet-cell sheet-fighting-roll">
                                     <button type="roll" name="roll_MTP3" value="&{template:tp} {{damage=[[@{melee_weapon_3_tp} + (?{TP Bonus|0})]]}}" >M-TP</button>
                                 </div>
+                                -->
                             </div>
                             <div class="sheet-row">
                                 <div class="sheet-cell">
@@ -3811,14 +3847,42 @@
                                 </div>
                             </div>
                         </div>
+                        <fieldset class="repeating_moves_one">
+                            <div class="sheet-table sheet-padded">
+                                <div class="sheet-row">
+                                    <div class="sheet-cell">
+                                        <input type="text" name="attr_move" title="Manöver">
+                                    </div>
+                                    <div class="sheet-cell">
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP3}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="sheet-navigation sheet-edit sheet-right" name="attr_edit" title="EDIT">
+                            <div class="sheet-navigation sheet-edit">
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <input type="number" title="Manövermodifikator" name="attr_move_mod">
+                                        </div>
+                                        <div class="sheet-cell">
+                                            <input type="text" title="Wirkung der Ansage" name="attr_callresult">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sheet-table">
+                                    <div class="sheet-row">
+                                        <div class="sheet-cell">
+                                            <textarea title="Wirkung" name="attr_move_info"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
                     <!--/weapon 3 roll-->
 
                     <!--/weapon rolls-->
-
-                    <!--active melee abilities-->
-                    <!--TODO show active abilities-->
-                    <!--/active melee abilities-->
                 </div>
                 <!--/melee-->
 
@@ -3984,13 +4048,6 @@
                         </div>
                         <!--/weapon 3-->
 
-                        <!--TODO remove debug
-                        <input type="number" title="FK" name="attr_ranged_weapon_1_fk" readonly>
-                        <input type="number" title="FK" name="attr_ranged_weapon_2_fk" readonly>
-                        <input type="number" title="FK" name="attr_ranged_weapon_3_fk" readonly>
-                        <br>
-                        <input class="" type="number" title="PA" name="attr_basis_fk" readonly>
-                        -->
                     </div>
                     <!--/weapon information-->
 
