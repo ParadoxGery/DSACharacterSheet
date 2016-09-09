@@ -71,6 +71,7 @@
             <input class="sheet-hidden" type="number" name="attr_basis_at" value="5">
             <input class="sheet-hidden" type="number" name="attr_basis_pa" value="5">
             <input class="sheet-hidden" type="number" name="attr_basis_fk" value="5">
+            <input type="hidden" name="attr_wounds" value=0>
         </div>
     </div>
     <!--TODO roll buttons translation-->
@@ -3639,14 +3640,14 @@
                             </div>
                         </div>
 
-                        <fieldset class="repeating_moves_one">
+                        <fieldset class="repeating_movesone">
                             <div class="sheet-table sheet-padded">
                                 <div class="sheet-row">
                                     <div class="sheet-cell">
                                         <input type="text" name="attr_move" title="Manöver">
                                     </div>
                                     <div class="sheet-cell">
-                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP1}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_1_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP1}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_1_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_1_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) ]]}}"></button>
                                     </div>
                                 </div>
                             </div>
@@ -3743,14 +3744,14 @@
                                 </div>
                             </div>
                         </div>
-                        <fieldset class="repeating_moves_one">
+                        <fieldset class="repeating_movestwo">
                             <div class="sheet-table sheet-padded">
                                 <div class="sheet-row">
                                     <div class="sheet-cell">
                                         <input type="text" name="attr_move" title="Manöver">
                                     </div>
                                     <div class="sheet-cell">
-                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP2}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_2_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP2}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_2_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_2_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) ]]}}"></button>
                                     </div>
                                 </div>
                             </div>
@@ -3847,14 +3848,14 @@
                                 </div>
                             </div>
                         </div>
-                        <fieldset class="repeating_moves_one">
+                        <fieldset class="repeating_movesthree">
                             <div class="sheet-table sheet-padded">
                                 <div class="sheet-row">
                                     <div class="sheet-cell">
-                                        <input type="text" name="attr_move" title="Manöver">
+                                        <input type="text" name="attr_move">
                                     </div>
                                     <div class="sheet-cell">
-                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP3}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[round((@{melee_weapon_3_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) )]]}}"></button>
+                                        <button type="roll" name="roll_MAT" value="&{template:combat} {{dmg=TP3}} {{info=@{move_info}}} {{call=?{Ansage(+/-)|0}}} {{callresult=@{callresult}}} {{move=@{move}}} {{character=@{character_name}}} {{at=1}} {{weapon=@{melee_weapon_3_name} }} {{roll=[[1d20cs1cf20]]}} {{value=[[@{melee_weapon_3_at} + (@{at_mod}) + (?{Ansage(+/-)|0}) + (@{move_mod}) ]]}}"></button>
                                     </div>
                                 </div>
                             </div>
@@ -5480,7 +5481,7 @@
         {{/fk}}
         {{#move}}
         <div class="sheet-template-subhead">
-            <span data-i18n="template_move">{{move}}</span>
+            <span>{{move}}</span>
         </div>
         {{/move}}
         {{#shield}}
@@ -5988,7 +5989,6 @@ on("change:melee_weapon_1_at_mod change:melee_weapon_1_pa_mod change:melee_weapo
             weapon_at += parseInt(values.melee_weapon_1_at_mod);
             weapon_at += parseInt(values.basis_at);
             weapon_at += talent.at;
-            weapon_at -= 2*parseInt(values.wounds);
             weapon_pa += parseInt(values.melee_weapon_1_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
@@ -6009,7 +6009,6 @@ on("change:melee_weapon_2_at_mod change:melee_weapon_2_pa_mod change:melee_weapo
             weapon_at += parseInt(values.melee_weapon_2_at_mod);
             weapon_at += parseInt(values.basis_at);
             weapon_at += talent.at;
-            weapon_at -= 2*parseInt(values.wounds);
             weapon_pa += parseInt(values.melee_weapon_2_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
@@ -6030,7 +6029,6 @@ on("change:melee_weapon_3_at_mod change:melee_weapon_3_pa_mod change:melee_weapo
             weapon_at += parseInt(values.melee_weapon_3_at_mod);
             weapon_at += parseInt(values.basis_at);
             weapon_at += talent.at;
-            weapon_at -= 2*parseInt(values.wounds);
             weapon_pa += parseInt(values.melee_weapon_3_pa_mod);
             weapon_pa += parseInt(values.basis_pa);
             weapon_pa += talent.pa;
@@ -6110,9 +6108,9 @@ var getWeaponTalentValues = function(talentname,callback) {
     var fwName = "fw_"+talentname;
     getAttrs([atName,paName,fwName, "wounds", "armor_be"],function(values){
         var mod = 2*parseInt(values.wounds) + parseInt(values.armor_be);
-        result.at = parseInt(values[atName]) - mod;
-        result.pa = parseInt(values[paName]) - mod;
-        result.fw = parseInt(values[fwName]) - mod;
+        result.at = (parseInt(values[atName])) - mod;
+        result.pa = (parseInt(values[paName])) - mod;
+        result.fw = (parseInt(values[fwName])) - mod;
         callback(result);
     });
 }
