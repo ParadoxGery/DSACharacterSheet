@@ -219,8 +219,8 @@ input.sheet-hidden-input {
     opacity: 0;
     width: 90px;
     cursor: pointer;
-    height: 13px;
-    margin-bottom: 10px;
+    height: 20px;
+    padding-bottom: 10px;
 }
 input.sheet-navigation.sheet-edit:checked + div.sheet-navigation.sheet-edit,
 input.sheet-navigation.sheet-npc:not(:checked) ~ div.sheet-navigation.sheet-character,
@@ -237,9 +237,10 @@ input.sheet-navigation.sheet-general:checked ~ div.sheet-navigation.sheet-genera
     display: inherit !important;
 }
 
-input.sheet-navigation:checked + span.sheet-navigation {
-    background-color: black;
-    color: white;
+input.sheet-navigation:checked + div.sheet-navigation.sheet-navigation-head {
+    background-color: #97200A;
+    box-shadow: #7D2801 0 0 3px 0;
+    text-shadow: whitesmoke 1px 1px 5px;
 }
 input.sheet-ranged-weapon-1:checked ~ div.sheet-navigation.sheet-ranged-weapon-1,
 input.sheet-ranged-weapon-2:checked ~ div.sheet-navigation.sheet-ranged-weapon-2,
@@ -254,11 +255,24 @@ input.sheet-melee-weapon-3:checked ~ div.sheet-navigation.sheet-melee-weapon-3{
     display: table-cell !important;
 }
 
-span.sheet-navigation {
-    margin-left: -90px;
+div.sheet-navigation.sheet-navigation-head {
+    margin-left: -95px;
     padding: 5px;
     margin-bottom: 5px;
     width: 90px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    z-index: -1;
+    text-align: center;
+}
+
+input.sheet-navigation.sheet-right {
+    position: absolute;
+    right:0;
+}
+input.sheet-navigation.sheet-right + div.sheet-navigation.sheet-right {
+    float: right;
 }
 
 div.sheet-navigation {
@@ -406,9 +420,14 @@ button[type="roll"]:hover:before {
     border-bottom: solid black 1px;
 }
 
+.sheet-rolltemplate-talent .sheet-template-subhead,
+.sheet-rolltemplate-spell .sheet-template-subhead,
+.sheet-rolltemplate-attribute .sheet-template-subhead,
 .sheet-rolltemplate-combat .sheet-template-subhead {
-    font-size: 70%;
+    font-size: 85%;
     padding-top: 5px;
+    color: whitesmoke;
+    background-color: black;
 }
 
 .sheet-rolltemplate-combat a[href^="~"] {
@@ -575,12 +594,23 @@ button[type="roll"]:hover:before {
 }
 
 /*template head*/
+.sheet-rolltemplate-attribute .sheet-template-head img,
+.sheet-rolltemplate-talent .sheet-template-head img,
+.sheet-rolltemplate-spell .sheet-template-head img,
+.sheet-rolltemplate-combat .sheet-template-head img,
+.sheet-rolltemplate-tp .sheet-template-head img {
+    position: absolute;
+    right: 10px;
+    height: 20px;
+}
+
 .sheet-rolltemplate-tp .sheet-template-head {
     background-color: black;
     font-size: 150%;
     padding: 5px;
     color: whitesmoke;
 }
+
 .sheet-rolltemplate-combat .sheet-template-head {
     background-color: black;
     font-size: 150%;

@@ -135,7 +135,7 @@
                                 <input type="number" name="attr_dodgemod" value="0">
                             </div>
                             <div class="sheet-cell">
-                                <button type="roll" name="roll_Dodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{dodge} + @{dodgemod}]]}}">Ausweichen</button>
+                                <button type="roll" name="roll_npcdodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{dodge} + @{dodgemod}]]}}">Ausweichen</button>
                             </div>
                         </div>
                         <div class="sheet-row">
@@ -294,18 +294,27 @@
     </div>
 
     <div class="sheet-character sheet-navigation">
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-general" name="attr_pagenumber" title="PAGE 1" value="1" checked>
-        <span class="sheet-navigation" data-i18n="character_general_desc">PERSON</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-talents" name="attr_pagenumber" title="PAGE 2" value="2">
-        <span class="sheet-navigation" data-i18n="character_talents_desc">TALENTE</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting" name="attr_pagenumber" title="PAGE 3" value="3">
-        <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-magic" name="attr_pagenumber" title="PAGE 4" value="4">
-        <span class="sheet-navigation" data-i18n="character_magic_desc">MAGIE</span>
-        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-config" name="attr_pagenumber" title="PAGE 5" value="5">
-        <span class="sheet-navigation" data-i18n="character_config_desc">KONFIG</span>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-general" name="attr_pagenumber" title="Person" value="1" checked>
+        <div class="sheet-navigation sheet-navigation-head">
+            <span class="sheet-navigation" data-i18n="character_general_desc">PERSON</span>
+        </div>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-talents" name="attr_pagenumber" title="Talente" value="2">
+        <div class="sheet-navigation sheet-navigation-head">
+            <span class="sheet-navigation" data-i18n="character_talents_desc">TALENTE</span>
+        </div>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting" name="attr_pagenumber" title="Kampf" value="3">
+        <div class="sheet-navigation sheet-navigation-head">
+            <span class="sheet-navigation" data-i18n="character_fighting_desc">KAMPF</span>
+        </div>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-magic" name="attr_pagenumber" title="Magie" value="4">
+        <div class="sheet-navigation sheet-navigation-head">
+            <span class="sheet-navigation" data-i18n="character_magic_desc">MAGIE</span>
+        </div>
+        <input type="radio" class="sheet-hidden-input sheet-navigation sheet-config sheet-right" name="attr_pagenumber" title="Konfig" value="5">
+        <div class="sheet-navigation sheet-navigation-head sheet-right">
+            <span class="sheet-navigation" data-i18n="character_config_desc">KONFIG</span>
+        </div>
 
-        <!--hidden input for talent activation TODO LABEL-->
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_bastard_sword_activate">
 
         <input value="1" type="checkbox" class="sheet-activate sheet-hidden" name="attr_crossbow_activate">
@@ -2715,7 +2724,7 @@
                                     ​<button type="roll" name="roll_HeilkundeWundenGM" value="/w GM &{template:talent} {{talent=Heilkunde Wunden}} {{value=[[ [[@{fw_wound_medicine}]] - [[{[[1d20cs1cf20]] - [[@{kl} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ch} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] - [[{[[1d20cs1cf20]] - [[@{ff} + (?{Erleichtert(+) / Erschwert(-)|0}) ]],0}kh1]] ]]}} {{first=kl}} {{firstValue=$[[2]]}} {{firstRoll=$[[1]]}} {{firstDiff=$[[3]]}} {{second=ch}} {{secondValue=$[[5]]}} {{secondRoll=$[[4]]}} {{secondDiff=$[[6]]}} {{third=ff}} {{thirdValue=$[[8]]}} {{thirdRoll=$[[7]]}} {{thirdDiff=$[[9]]}} {{mod=[[?{Erleichtert(+) / Erschwert(-)|0}]]}}">GM</button>
                                 </div>
                             </div>
-                            <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_illness_medicine_activate" value="1" checked>
+                            <input type="checkbox" class="sheet-activate sheet-hidden" name="attr_soul_medicine_activate" value="1" checked>
                             <div class="sheet-row sheet-talent-soul-medicine sheet-activate">
                                 <div class="sheet-cell">
                                     <!--TALENT-->
@@ -3369,17 +3378,21 @@
         <div class="sheet-fighting sheet-navigation">
             <div class="sheet-full">
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-melee" name="attr_fighting_pagenumber" title="PAGE 1" value="1" checked>
-                <span class="sheet-navigation" data-i18n="character_fighting-melee_desc">NAHKAMPF</span>
+                <div class="sheet-navigation sheet-navigation-head">
+                    <span class="sheet-navigation" data-i18n="character_fighting-melee_desc">NAHKAMPF</span>
+                </div>
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-ranged" name="attr_fighting_pagenumber" title="PAGE 2" value="2">
-                <span class="sheet-navigation" data-i18n="character_fighting-ranged_desc">FERNKAMPF</span>
+                <div class="sheet-navigation sheet-navigation-head">
+                    <span class="sheet-navigation" data-i18n="character_fighting-ranged_desc">FERNKAMPF</span>
+                </div>
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-brawl" name="attr_fighting_pagenumber" title="PAGE 3" value="3">
-                <span class="sheet-navigation" data-i18n="character_fighting_brawl_desc">RAUFEN/RINGEN</span>
+                <div class="sheet-navigation sheet-navigation-head">
+                    <span class="sheet-navigation" data-i18n="character_fighting_brawl_desc">RAUFEN/RINGEN</span>
+                </div>
                 <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-talents" name="attr_fighting_pagenumber" title="PAGE 4" value="4">
-                <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">KAMPFTECHNIK</span>
-                <!-- TODO
-                <input type="radio" class="sheet-hidden-input sheet-navigation sheet-fighting-abilities" name="attr_fighting_pagenumber" title="PAGE 5" value="5">
-                <span class="sheet-navigation" data-i18n="character_fighting-abilities_desc">KAMPF-SONDERFERTIGKEITEN</span>
-                -->
+                <div class="sheet-navigation sheet-navigation-head">
+                    <span class="sheet-navigation" data-i18n="character_fighting-talents_desc">KAMPFTECHNIK</span>
+                </div>
                 <hr>
 
                 <!--melee-->
@@ -4876,7 +4889,7 @@
                         </label>
                     </div>
                     <div class="sheet-cell sheet-fighting-roll">
-                        <button type="roll" name="roll_Dodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{character_dodge} + @{dodge_mod} - (@{armor_be})]]}}"></button>
+                        <button type="roll" name="roll_Dodge" value="&{template:combat} {{dodge=1}} {{roll=[[1d20cs1cf20]]}} {{value=[[@{character_dodge} + @{dodge_mod} - (@{armor_be} + (2*@{wounds}))]]}}"></button>
                     </div>
                 </div>
                 <div class="sheet-row">
@@ -5334,102 +5347,685 @@
                         </div>
                     </div>
                     <div class="sheet-cell">
-                        <!--
                         <div class="sheet-table">
+                            <!--physical talents-->
                             <div class="sheet-row">
-                                <div class="sheet-cell">
+                                <div class="sheet-cell sheet-kk">
                                     <span data-i18n="character_physical_talents_desc">KÖRPER (D)</span>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-acrobatics">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
                                     <label>
                                         <span data-i18n="character_acrobatics_desc">Akrobatik</span>
-                                        <input type="checkbox" value="1" name="attr_acrobatics_activate">
+                                        <input type="checkbox" class="sheet-activate " name="attr_acrobatics_activate" value="1" checked>
                                     </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-athletics">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_athletics_desc">Athletik</span>
+                                    <label>
+                                        <span data-i18n="character_flying_desc">Fliegen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_flying_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-jugglery">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_jugglery_desc">Gaukeleien</span>
+                                    <label>
+                                        <span data-i18n="character_jugglery_desc">Gaukeleien</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_jugglery_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-climbing">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_climbing_desc">Klettern</span>
+                                    <label>
+                                        <span data-i18n="character_riding_desc">Reiten</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_riding_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-bodycontrol">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_bodycontrol_desc">Körperbeherrschung</span>
+                                    <label>
+                                        <span data-i18n="character_skiing_desc">Skifahren</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_skiing_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-riding">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_riding_desc">Reiten</span>
+                                    <label>
+                                        <span data-i18n="character_voiceacting_desc">Stimmen Imitieren</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_voiceacting_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-sneaking">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_sneaking_desc">Schleichen</span>
+                                    <label>
+                                        <span data-i18n="character_pickpocketing_desc">Taschendiebstahl</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_pickpocketing_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-swimming">
-                                <div class="sheet-cell">
-                                    <span data-i18n="character_swimming_desc">Schwimmen</span>
+                            <!--/physical talents-->
+                            <div class="sheet-row">
+                                <div class="sheet-cell sheet-ch">
+                                    <span data-i18n="character_social_talents_desc">GESELLSCHAFT (B)</span>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-selfcontrol">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_selfcontrol_desc">Selbstbeherrschung</span>
+                                    <label>
+                                        <span data-i18n="character_bewitching_desc">Betören</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_bewitching_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-hiding">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_hiding_desc">Sich Verstecken</span>
+                                    <label>
+                                        <span data-i18n="character_etiquette_desc">Etikette</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_etiquette_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-singing">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_singing_desc">Singen</span>
+                                    <label>
+                                        <span data-i18n="character_street-wise_desc">Gassenwissen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_street_wise_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-senses">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_senses_desc">Sinnenschärfe</span>
+                                    <label>
+                                        <span data-i18n="character_teaching_desc">Lehren</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_teaching_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-voiceacting">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_voiceacting_desc">Stimmen Imitieren</span>
+                                    <label>
+                                        <span data-i18n="character_acting_desc">Schauspielerei</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_acting_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-dancing">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_dancing_desc">Tanzen</span>
+                                    <label>
+                                        <span data-i18n="character_writing_desc">Schriftlicher Ausdruck</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_writing_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-pickpocketing">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_pickpocketing_desc">Taschendiebstahl</span>
+                                    <label>
+                                        <span data-i18n="character_disguising_desc">Sich Verkleiden</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_disguising_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="sheet-row sheet-talent-quaffing">
+                            <div class="sheet-row">
                                 <div class="sheet-cell">
-                                    <span data-i18n="character_quaffing_desc">Zechen</span>
+                                    <label>
+                                        <span data-i18n="character_convincing_desc">Überzeugen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_convincing_activate" value="1" checked>
+                                    </label>
                                 </div>
                             </div>
+                            <!--/social talents-->
+                            <!--nature talents-->
+                            <div class="sheet-row">
+                                <div class="sheet-cell sheet-in">
+                                    <!--TALENT-->
+                                    <span data-i18n="character_nature_talents_desc">NATUR (B)</span>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_trapping_desc">Fallenstellen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_trapping_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_shackling_desc">Fesseln</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_shackling_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_fishing_desc">Fischen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_fishing_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_weather-forecast_desc">Wettervorhersage</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_weather_forevast_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--/nature talents-->
+                            <!--knowledge talents-->
+                            <div class="sheet-row">
+                                <div class="sheet-cell sheet-kl">
+                                    <!--TALENT-->
+                                    <span data-i18n="character_knowledge_talents_desc">WISSEN (B)</span>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_anatomy_desc">Anatomie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_anatomy_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_architecture_desc">Baukunst</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_architecture_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_board-card-game-wise_desc">Brett-/Kartenspiel</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_board_card_game_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_geography_desc">Geographie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_geography_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_history-wise_desc">Geschichtswissen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_history_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_geology_desc">Gesteinskunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_geology_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_heraldry_desc">Heraldik</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_heraldry_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_metallurgy_desc">Hüttenkunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_metallurgy_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_war-wise_desc">Kriegskunst</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_war_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_cryptography_desc">Kryptografie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_cryptography_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_magic-wise_desc">Magiekunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_magic_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_mechanic_desc">Mechanik</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_mechanic_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_plant-wise_desc">Pflanzenkunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_plant_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_philosophy_desc">Philosophie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_philosophy_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_law-wise_desc">Rechtskunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_law_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_estimating_desc">Schätzen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_estimating_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_language-wise_desc">Sprachkunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_language_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_statecraft_desc">Staatskunst</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_statecraft_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_astronomy_desc">Sternkunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_astronomy_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_animal-wise_desc">Tierkunde</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_animal_wise_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--/knowledge talents-->
+                            <!--crafting talents-->
+                            <div class="sheet-row">
+                                <div class="sheet-cell sheet-ff">
+                                    <!--TALENT-->
+                                    <span data-i18n="character_crafting_talents_desc">HANDWERK (B)</span>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_drill_desc">Abrichten</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_drill_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_agriculture_desc">Ackerbau</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_agriculture_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_alchemy_desc">Alchimie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_alchemy_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_mining_desc">Bergbau</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_mining_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_bow-crafting_desc">Bogenbau</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_bow_crafting_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_boat-driving_desc">Boote Fahren</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_boat_driving_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_brewing_desc">Brauer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_brewing_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_printing_desc">Drucker</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_printing_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_vehicle-driving_desc">Fahrzeug Lenken</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_vehicle_driving_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_cheating_desc">Falschspiel</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_cheating_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_precision-mechanics_desc">Feinmechanik</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_precision_mechanics_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_knapping_desc">Feuersteinbearbeitung</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_knapping_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_butchery_desc">Fleischer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_butcher_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_skinning_desc">Gerber/Kürschner</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_skinning_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_glass_art_desc">Glaskunst</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_glass_art_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_blacksmith_desc">Grobschmied</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_blacksmith_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_trading_desc">Handel</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_trading_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_housekeeping_desc">Hauswirtschaft</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_housekeeping_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_poison-medicine_desc">Heilkunde Gift</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_poison_medicine_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_illness-medicine_desc">Heilkunde Krankheiten</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_illness_medicine_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_soul-medicine_desc">Heilkunde Seele</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_soul_medicine_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_instrument_maker_desc">Instrumentenbauer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_instrument_maker_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_cartography_desc">Kartographie</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_cartography_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_crystal_culture_desc">Kristallzucht</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_crystal_culture_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_bricklayer_desc">Maurer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_bricklayer_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_founding_desc">Metallguss</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_founding_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_music-making_desc">Musizieren</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_music_making_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_lock-picking_desc">Schlösser Knacken</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_lock_picking_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_distill_desc">Schnaps Brennen</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_distill_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_seafaring_desc">Seefahrt</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_seafaring_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_ropemaker_desc">Seiler</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_ropemaker_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_mason_desc">Steinmetz</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_mason_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_jeweler_desc">Steinschneider/Juwelier</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_jeweler_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_cartwright_desc">Stellmacher</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_cartwright_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_colorize_desc">Stoffe Färben</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_colorize_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_tattooer_desc">Tätowierer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_tattooer_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_potter_desc">Töpfer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_potter_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_breeding_desc">Viehzucht</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_breeding_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_weaving_desc">Webkunst</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_weaving_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_vintner_desc">Winzer</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_vintner_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sheet-row">
+                                <div class="sheet-cell">
+                                    <label>
+                                        <span data-i18n="character_carpenter_desc">Zimmermann</span>
+                                        <input type="checkbox" class="sheet-activate " name="attr_carpenter_activate" value="1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--/crafting talents-->
                         </div>
-                        -->
-                    </div>
-
-                    <div class="sheet-cell">
-
                     </div>
                 </div>
             </div>
@@ -5442,6 +6038,7 @@
 <rolltemplate class="sheet-rolltemplate-attribute">
     <div class="sheet-template-head sheet-{{attr}}">
         <span>{{eigenschaft}}</span>
+        <img src="http://i.imgur.com/phw1eFB.png">
     </div>
     <div class="sheet-table">
         <div class="sheet-row">
@@ -5467,26 +6064,34 @@
 
 <rolltemplate class="sheet-rolltemplate-combat">
     <div class="sheet-template-head">
-        {{#at}}
-        <span data-i18n="template_attack">Angriff</span>
-        {{/at}}
-        {{#pa}}
-        <span data-i18n="template_parry">Parieren</span>
-        {{/pa}}
-        {{#dodge}}
-        <span data-i18n="template_dodge">Ausweichen</span>
-        {{/dodge}}
-        {{#fk}}
-        <span data-i18n="template_ranged">Fernkampf</span>
-        {{/fk}}
+                {{#at}}
+                <span data-i18n="template_attack">Angriff</span>
+                <img src="http://i.imgur.com/AGq5VBG.png">
+                {{/at}}
+                {{#pa}}
+                <span data-i18n="template_parry">Parieren</span>
+                <img src="http://i.imgur.com/02fV6wh.png">
+                {{/pa}}
+                {{#dodge}}
+                <span data-i18n="template_dodge">Ausweichen</span>
+                <img src="http://i.imgur.com/02fV6wh.png">
+                {{/dodge}}
+                {{#fk}}
+                <span data-i18n="template_ranged">Fernkampf</span>
+                <img src="http://i.imgur.com/58j2e8P.png">
+                {{/fk}}
+                {{#shield}}
+                <span data-i18n="template_block">Schildblock</span>
+                <img src="http://i.imgur.com/02fV6wh.png">
+                {{/shield}}
+            </div>
+        </div>
         {{#move}}
         <div class="sheet-template-subhead">
             <span>{{move}}</span>
         </div>
         {{/move}}
-        {{#shield}}
-        <span data-i18n="template_block">Schildblock</span>
-        {{/shield}}
+        
         {{#weapon}}
         <div class="sheet-template-subhead">
             <span>{{weapon}}</span>
@@ -5559,6 +6164,7 @@
 <rolltemplate class="sheet-rolltemplate-tp">
     <div class="sheet-template-head">
         <span data-i18n="template_dmg">Schaden</span>
+        <img src="http://i.imgur.com/RUJfMGe.png">
     </div>
     {{#type}}
     <div class="sheet-template-subhead">
@@ -5583,6 +6189,7 @@
 <rolltemplate class="sheet-rolltemplate-talent">
     <div class="sheet-template-head">
         <span>{{talent}}</span>
+        <img src="http://i.imgur.com/nBnv4DL.png">
     </div>
     <div class="sheet-table">
         <div class="sheet-row">
@@ -5721,6 +6328,7 @@
 <rolltemplate class="sheet-rolltemplate-spell">
     <div class="sheet-template-head">
         <span>{{spell}}</span>
+        <img src="http://i.imgur.com/9yjOsAD.png">
     </div>
     <div class="sheet-table">
         <div class="sheet-row">
