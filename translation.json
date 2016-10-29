@@ -190,7 +190,7 @@
   "character_boat-driving_test": "GE/KO/KK",
   "character_brewing_desc": "Brauer",
   "character_brewing_test": "KL/FF/KK",
-  "character_printing_desc": "Durcker",
+  "character_printing_desc": "Drucker",
   "character_printing_test": "KL/FF/KK",
   "character_vehicle-driving_desc": "Fahrzeug Lenken",
   "character_vehicle-driving_test": "IN/CH/FF",
@@ -351,6 +351,9 @@
   "shield_pa": "S PA",
   "ini": "Initiative",
   "dodge": "Ausweichen",
-  "bonus_tp": "Bonus TP"
+  "bonus_tp": "Bonus TP",
+  "ap": "AP",
+  "ap-spend": "AP ausgegeben",
+  "ap-free": "AP verfügbar"
 
 }

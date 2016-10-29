@@ -140,7 +140,7 @@
                         </div>
                         <div class="sheet-row">
                             <div class="sheet-cell">
-                                <input type="number" name="attr_ini" value="0">
+                                <input type="number" name="attr_character_ini" value="0">
                             </div>
                             <div class="sheet-cell"></div>
                             <div class="sheet-cell">
@@ -441,6 +441,30 @@
                     </div>
                     <div class="sheet-cell sheet-vmiddle">
                         <!--more attributes-->
+                        <div class="sheet-table sheet-padded sheet-attribute-table sheet-centered">
+                            <div class="sheet-row sheet-vmiddle">
+                                <div class="sheet-cell">
+                                    <span data-i18n="ap">AP</span>
+                                </div>
+                                <div class="sheet-cell">
+                                    <span data-i18n="ap-spend">AP benutzt</span>
+                                </div>
+                                <div class="sheet-cell">
+                                    <span data-i18n="ap-free">AP benutzt</span>
+                                </div>
+                            </div>
+                            <div class="sheet-row sheet-long-number sheet-vmiddle">
+                                <div class="sheet-cell">
+                                    <input type="number" name="attr_ap">
+                                </div>
+                                <div class="sheet-cell">
+                                    <input type="number" name="attr_ap_spend">
+                                </div>
+                                <div class="sheet-cell">
+                                    <input type="number" name="attr_ap_free" readonly>
+                                </div>
+                            </div>
+                        </div>
                         <div class="sheet-table sheet-padded sheet-attribute-table sheet-centered">
                             <div class="sheet-row sheet-attribute-list sheet-vmiddle">
                                 <div class="sheet-cell"></div>
@@ -5144,7 +5168,20 @@
 
         </div>
         <div class="sheet-inventory sheet-navigation">
-
+            <fieldset class="repeating_inventory">
+                <div class="sheet-table">
+                    <div class="sheet-row">
+                        <div class="sheet-cell">
+                            <input type="text" name="attr_name" />
+                        </div>
+                        <div class="sheet-cell">
+                            <input type="number" name="attr_weight">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <span data-i18n="weight">Gewicht:</span>
+            <input type="number" name="attr_weight" readonly>
         </div>
         <div class="sheet-config sheet-navigation">
             <div class="sheet-table">
@@ -6516,6 +6553,33 @@
 
 <script type="text/worker">
 //---attributes---//
+
+on("change:ap change:ap_spend", function(){
+    getAttrs(["ap","ap_spend"],function(values){
+        var ap = parseInt(values.ap) - parseInt(values.ap_spend);
+        setAttrs({
+            ap_free: ap
+        });
+    });
+});
+
+on("change:repeating_inventory:weight", function(){
+    getSectionIDs("repeating_inventory", function(idarray) {
+        var attrs = array();
+        for(var i=0; i < idarray.length; i++) {
+            attrs.push("repeating_inventory_"+idarray[i]+"_weight");
+        }
+        getAttrs(attrs,function(values){
+            var maxweight = 0;
+            for(var i=0; i < values.length; i++) {
+                maxweight += parseInt(values[i]);
+            }
+            setAttrs({
+                weight: maxweight
+            });
+        });
+    });
+});
 
 on("change:mu change:ge change:kk", function(){
     var at_base = 0;

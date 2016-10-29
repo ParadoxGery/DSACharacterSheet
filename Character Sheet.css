@@ -333,7 +333,12 @@ input[type="number"]:disabled {
 }
 
 input[type="number"] {
-    max-width: 40px !important;
+    max-width: 45px !important;
+}
+
+.sheet-long-number input[type="number"] {
+    max-width: 100% !important;
+    min-width: 100px;
 }
 
 input {
